@@ -1,0 +1,23 @@
+//
+// AreasBuilder.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+
+IDI_GUI_ARROWDOWN		ICON				"..\\GuiLib\\res\\guiarrowdown.ico"
+IDI_GUI_ARROWRIGHT	ICON				"..\\GuiLib\\res\\guiarrowright.ico"
+IDR_GUI_DEFAULT		BITMAP                  "..\\GuiLib\\res\\GuiDefault.bmp"
+IDB_GUI_DOCKBAR		BITMAP                  "..\\GuiLib\\res\\guidockbar.bmp"
+IDB_GUI_DOCKBAROFFICE	BITMAP                  "..\\GuiLib\\res\\guidockoffice.bmp"
+IDB_GUI_MDIICONS		BITMAP                  "..\\GuiLib\\res\\guimdiicons.bmp"
+AFX_IDC_HSPLITBAR		CURSOR			"..\\GuiLib\\res\\cursors\\VE_SPLIT.CUR"
+AFX_IDC_VSPLITBAR		CURSOR			"..\\GuiLib\\res\\cursors\\HO_SPLIT.CUR"
+
+/////////////////////////////////////////////////////////////////////////////

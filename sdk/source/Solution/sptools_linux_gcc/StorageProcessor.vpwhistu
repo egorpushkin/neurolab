@@ -1,0 +1,36 @@
+[ActiveConfig]
+StorageProcessor/StorageProcessor.vpj=,Debug
+ConstructTool/ConstructTool.vpj=,Debug
+ProcessTool/ProcessTool.vpj=,Debug
+ProjectConverter/ProjectConverter.vpj=,Debug
+TrainTool/TrainTool.vpj=,Debug
+[Global]
+CurrentProject=ConstructTool/ConstructTool.vpj
+[ProjectDates]
+ConstructTool/ConstructTool.vpj=20061012204745000
+ProcessTool/ProcessTool.vpj=20061012204818000
+ProjectConverter/ProjectConverter.vpj=20061012204907000
+StorageProcessor/StorageProcessor.vpj=20061012212704000
+TrainTool/TrainTool.vpj=20061012204859000
+[TreeExpansion2]
++ ConstructTool/ConstructTool.vpj
++ ProcessTool/ProcessTool.vpj
++ ProjectConverter/ProjectConverter.vpj
++ StorageProcessor/StorageProcessor.vpj
+  + Source Files
+  - Other Files
++ TrainTool/TrainTool.vpj
+scroll:0
+[State]
+SCREEN: 1024 768 0 0 1024 702 0 0 N 0 0 0 0 776 578
+CWD: ConstructTool/
+FILEHIST: 9
+../../Src/SDKLibs/DataProcessing/Source/PGMFactory.cpp
+../../Src/SDKLibs/NetworkImporting/Source/Elements/CmnLayer.cpp
+../sdk_suse_slickedit.10/Components_Lib/makefile
+../../Include/Common/Common/ICommon.h
+../sdk_suse_slickedit.10/TestAreas/makefile
+../sdk_suse_slickedit.10/TestProcessing/makefile
+../../Src/Projects/IndependentNNPTools/StorageProcessor/ExternalSerializers/Tools/PrepareDataFileName.cpp
+../../Src/Projects/IndependentNNPTools/StorageProcessor/ExternalSerializers/XMLSerializationTools/StoreElement.cpp
+StorageProcessor/makefile

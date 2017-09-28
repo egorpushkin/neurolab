@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\..\Include\Common\Common.vcproj", "{5E02D658-3F48-4EAC-85AF-D9BF155D5546}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataProcessing", "..\..\Include\DataProcessing\DataProcessing.vcproj", "{156A4192-0E3E-4338-9557-36FE8DD985E7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImporting", "..\..\Include\NetworkImporting\NetworkImporting.vcproj", "{1C869038-3C05-467D-BEB7-A916BDE3CF25}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Components", "..\..\Include\Components\Components.vcproj", "{77D3FB91-6F8C-4D75-ADFB-C9933DA7C088}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrainersManager", "..\..\Include\TrainersManager\TrainersManager.vcproj", "{75584F14-D49F-4B6C-9289-1995C1A80ED6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scripting", "..\..\Include\Scripting\Scripting.vcproj", "{96C70909-DF15-4194-91DB-A01319104EE3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua", "..\..\Include\Lua\Lua.vcproj", "{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Patterns", "..\..\Include\Patterns\Patterns.vcproj", "{E53956C0-5243-4E57-BE90-65CCB6E946DB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5E02D658-3F48-4EAC-85AF-D9BF155D5546}.Debug.ActiveCfg = Debug|Win32
+		{5E02D658-3F48-4EAC-85AF-D9BF155D5546}.Release.ActiveCfg = Release|Win32
+		{156A4192-0E3E-4338-9557-36FE8DD985E7}.Debug.ActiveCfg = Debug|Win32
+		{156A4192-0E3E-4338-9557-36FE8DD985E7}.Release.ActiveCfg = Release|Win32
+		{1C869038-3C05-467D-BEB7-A916BDE3CF25}.Debug.ActiveCfg = Debug|Win32
+		{1C869038-3C05-467D-BEB7-A916BDE3CF25}.Release.ActiveCfg = Release|Win32
+		{77D3FB91-6F8C-4D75-ADFB-C9933DA7C088}.Debug.ActiveCfg = Debug|Win32
+		{77D3FB91-6F8C-4D75-ADFB-C9933DA7C088}.Release.ActiveCfg = Release|Win32
+		{75584F14-D49F-4B6C-9289-1995C1A80ED6}.Debug.ActiveCfg = Debug|Win32
+		{75584F14-D49F-4B6C-9289-1995C1A80ED6}.Release.ActiveCfg = Release|Win32
+		{96C70909-DF15-4194-91DB-A01319104EE3}.Debug.ActiveCfg = Debug|Win32
+		{96C70909-DF15-4194-91DB-A01319104EE3}.Release.ActiveCfg = Release|Win32
+		{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}.Debug.ActiveCfg = Debug|Win32
+		{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}.Release.ActiveCfg = Release|Win32
+		{E53956C0-5243-4E57-BE90-65CCB6E946DB}.Debug.ActiveCfg = Debug|Win32
+		{E53956C0-5243-4E57-BE90-65CCB6E946DB}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,1 +1,17 @@
+# IDE
 .idea
+
+# Visual Studio Intermediates
+*.aps
+*.exe
+*.idb
+*.ipch
+*.lib
+*.obj
+*.pch
+*.pdb
+*.res
+*.sdf
+*.suo
+*.tlog
+*.user

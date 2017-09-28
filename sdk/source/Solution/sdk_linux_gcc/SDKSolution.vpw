@@ -1,0 +1,12 @@
+<!DOCTYPE Workspace SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpw.dtd">
+<Workspace Version="10.0" VendorName="SlickEdit">
+	<Projects>
+		<Project File="BuilderElements/BuilderElements.vpj"/>
+		<Project File="Components_Lib/Components_Lib.vpj"/>
+		<Project File="DataProcessing_Lib/DataProcessing_Lib.vpj"/>
+		<Project File="NetworkImport/NetworkImport.vpj"/>
+		<Project File="NetworkImporting_Lib/NetworkImporting_Lib.vpj"/>
+		<Project File="TestAreas/TestAreas.vpj"/>
+		<Project File="TestProcessing/TestProcessing.vpj"/>
+	</Projects>
+</Workspace>

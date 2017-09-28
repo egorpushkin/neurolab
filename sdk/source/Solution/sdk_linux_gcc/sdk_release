@@ -1,0 +1,31 @@
+
+# SDK building
+
+cd Components_Lib
+make CFG=Release $1
+cd ..
+
+cd DataProcessing_Lib
+make CFG=Release $1
+cd ..
+
+cd NetworkImporting_Lib
+make CFG=Release $1
+cd ..
+
+cd BuilderElements
+make CFG=Release $1
+cd ..
+
+cd NetworkImport
+make CFG=Release $1
+cd ..
+
+cd TestProcessing
+make CFG=Release $1
+cd ..
+
+cd TestAreas
+make CFG=Release $1
+cd ..
+
