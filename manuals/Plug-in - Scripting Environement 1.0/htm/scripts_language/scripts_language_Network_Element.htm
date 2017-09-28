@@ -1,0 +1,1329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Network Element Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Network Element Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		This package provides an opportunity of parsing built network.		
+		See <a href="../object_model/object_model_Main.htm">Object Model</a> documentation department to get more information
+			about the architecture of neural network built in <b>Neuro Laboratory Environment</b>.
+	</div>
+	<div class="body_text">
+		The main idea of this package is to give an opportunity of manipulating network element.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					IElement Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_getElementSysName">getElementSysName</a></td>
+				<td width="65%">Returns element's system name.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getElementType">getElementType</a></td>
+				<td>Returns <a href="#_Element_ElementTypes">type</a> of the specfied element.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getElementID">getElementID</a></td>
+				<td>Returns unique identifier of network element.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_isLayer">isLayer</a></td>
+				<td>Used to verify whether specified element supports <b>ILayerCOntrol</b> interface.</td>
+			</tr>
+		</table>
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					sFunction Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_processFunction">processFunction</a></td>
+				<td width="65%">Returns the result of function calculation.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_processDerivative">processDerivative</a></td>
+				<td>Returns the result of the derivative calculation.</td>
+			</tr>	
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getFunctionName">getFunctionName</a></td>
+				<td>Returns function name.</td>
+			</tr>				
+		</table>
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					IDataFlow Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_getElementFunction">getElementFunction</a></td>
+				<td width="65%">Returns function object associated with specified element.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_isElementRequireData">isElementRequireData</a></td>
+				<td>Verifies whether element requires data for processing.</td>
+			</tr>	
+			<tr class="data_table_row">			
+				<td><a href="#_Element_setElementWaitDataState">setElementWaitDataState</a></td>
+				<td>Sets element ready flag to <b>false</b>.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_isElementReadyForProcessing">isElementReadyForProcessing</a></td>
+				<td>Verifies whether element already ready to flow data to it's outputs.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_elementFlowData">elementFlowData</a></td>
+				<td>Processes flow of network element's data to it's outputs.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_processElement">processElement</a></td>
+				<td>Processes network element calculation.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_isElementReadyForTraining">isElementReadyForTraining</a></td>
+				<td>Verifies whether element already ready to flow data to it's inputs.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_elementBackFlow">elementBackFlow</a></td>
+				<td>Processes flow of network element's data to it's inputs.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getElementData">getElementData</a></td>
+				<td>Fills specified data factory with current network element data.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_setElementData">setElementData</a></td>
+				<td>Sets network element data.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_splitElementConnectionsData">splitElementConnectionsData</a></td>
+				<td>Collects data from one of element's factories (input or output) to the specified data factory.</td>
+			</tr>							
+		</table>
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					IConnectionsFactory Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_getConnectionsCount">getConnectionsCount</a></td>
+				<td width="75%">Returns a number of connected elements.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_createConnectionsEnumerator">createConnectionsEnumerator</a></td>
+				<td width="75%">Initializes conections enumerator.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getNextConnection">getNextConnection</a></td>
+				<td>Returns connection at enumerator's position and moves it to the next one.</td>
+			</tr>	
+		</table>
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					CConnection Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_getConnectionElement">getConnectionElement</a></td>
+				<td width="75%">Returns element to which specified connection belongs.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getOppositeConnection">getOppositeConnection</a></td>
+				<td>Returns opposite connection for the specified object.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getWeightsFactory">getWeightsFactory</a></td>
+				<td>Returns connection's weights factory.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getOldWeightsFactory">getOldWeightsFactory</a></td>
+				<td>Returns connection's old weights factory.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getConnectionData">getConnectionData</a></td>
+				<td>Returns connection's data factory.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_isConnectionHasData">isConnectionHasData</a></td>
+				<td>Verifies whether connection has data.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getConnectionDeltas">getConnectionDeltas</a></td>
+				<td>Returns connection's deltas factory.</td>
+			</tr>	
+		</table>
+	</div>		
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					IDataConnector Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_getConnectionsFactory">getConnectionsFactory</a></td>
+				<td width="75%">Returnes connections factory of the specified type.</td>
+			</tr>							
+		</table>
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					ILayerControl Framework					
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_Element_setLayerInputData">setLayerInputData</a></td>
+				<td width="75%">Sets layer input data.</td>
+			</tr>							
+			<tr class="data_table_row">			
+				<td><a href="#_Element_setLayerOutputData">setLayerOutputData</a></td>
+				<td>Sets layer output data.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_Element_modifyLayerWeights">modifyLayerWeights</a></td>
+				<td>Executes internal weights modification procedure.</td>
+			</tr>				
+			<tr class="data_table_row">			
+				<td><a href="#_Element_resetLayerWeights">resetLayerWeights</a></td>
+				<td>Initializes layer weights with the specified value.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getLayerDimension">getLayerDimension</a></td>
+				<td>Returns layer dimension.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getLayerInputsCount">getLayerInputsCount</a></td>
+				<td>Returns a number of layer input signals.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getLayerWeight">getLayerWeight</a></td>
+				<td>Returns a value of the specified layer weight.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_setLayerWeight">setLayerWeight</a></td>
+				<td>Sets new value for the specified layer weight.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_getLayerDelta">getLayerDelta</a></td>
+				<td>Returns delta value for the specified layer neuron.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_Element_setLayerDelta">setLayerDelta</a></td>
+				<td>Sets delta value for the specified layer neuron.</td>
+			</tr>			
+		</table>
+	</div>
+	<div class="body_subtitle">
+		Package Constants
+	</div>	
+	<div class="body_text">
+		<a name="_Element_FactoryTypes"></a>	
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Connections Factory Types
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><b>DC_INPUTS_FACTORY</b></td>
+				<td width="70%">Element inputs factory.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><b>DC_OUTPUTS_FACTORY</b></td>
+				<td width="70%">Element outputs factory.</td>
+			</tr>			
+		</table>
+	</div>
+	<div class="body_text">
+		<a name="_Element_ElementTypes"></a>
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Element Types
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><b>ET_INPUT</b></td>
+				<td width="70%">Input element.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><b>ET_OUTPUT</b></td>
+				<td width="70%">Output element.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><b>ET_PROCESSOR</b></td>
+				<td width="70%">Processor element.</td>
+			</tr>
+		</table>
+	</div>	
+	
+	<!-- NetworkElement:getElementSysName description -->
+	<div class="body_subtitle">
+		<a name="_Element_getElementSysName"></a>	
+		<span class="method_name">getElementSysName</span>
+	</div>	
+	<pre class="body_declaration">
+String getElementSysName(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementSysName</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object to receive it's system name.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementSysName</span> Return Value
+	</div>
+	<div class="body_text">
+		String object that contains element's system name if successful; otherwise <b>nil</b>. 
+	</div>	
+		
+	<!-- NetworkElement:getElementType description -->
+	<div class="body_subtitle">
+		<a name="_Element_getElementType"></a>	
+		<span class="method_name">getElementType</span>
+	</div>	
+	<pre class="body_declaration">
+Constant getElementType(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementType</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementType</span> Return Value
+	</div>
+	<div class="body_text">
+		Function returns <a href="#_Element_ElementTypes">type</a> of network element.
+	</div>
+	
+	<!-- NetworkElement:getElementID description -->
+	<div class="body_subtitle">
+		<a name="_Element_getElementID"></a>	
+		<span class="method_name">getElementID</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getElementID(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementID</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementID</span> Return Value
+	</div>
+	<div class="body_text">
+		Function returns element's identifier.
+		This identifier is unique within the limits of every group of network elements 
+			(such as <i>Neuron</i>s, <i>Input</i>s and ect.).
+	</div>	
+	
+	<!-- NetworkElement:isLayer description -->
+	<div class="body_subtitle">
+		<a name="_Element_isLayer"></a>	
+		<span class="method_name">isLayer</span>
+	</div>	
+	<pre class="body_declaration">
+Boolean isLayer(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">isLayer</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">isLayer</span> Return Value
+	</div>
+	<div class="body_text">
+		Function returns <b>true</b> if network element data object associated with spesified userdata object supports 
+			<b>ILayerControl</b> interface.
+	</div>
+	
+	<!-- NetworkElement:processFunction description -->
+	<div class="body_subtitle">
+		<a name="_Element_processFunction"></a>	
+		<span class="method_name">processFunction</span>
+	</div>	
+	<pre class="body_declaration">
+Float processFunction(
+    Object element_function,
+    Float argument_value
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">processFunction</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies element function object.						
+		</div>
+		<i>argument_value</i></br>
+		<div class="body_note">
+			[in] Specifies value of argument that must be passed to function.						
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">processFunction</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns the result of processing function.
+	</div>	
+	
+	<!-- NetworkElement:processDerivative description -->
+	<div class="body_subtitle">
+		<a name="_Element_processDerivative"></a>	
+		<span class="method_name">processDerivative</span>
+	</div>	
+	<pre class="body_declaration">
+Float processDerivative(
+    Object element_function,
+    Float argument_value
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">processDerivative</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies element function object.						
+		</div>
+		<i>argument_value</i></br>
+		<div class="body_note">
+			[in] Specifies value of argument that must be passed to function.						
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">processDerivative</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns the result of processing derivative of the function.
+	</div>	
+	
+	<!-- NetworkElement:getFunctionName description -->
+	<div class="body_subtitle">
+		<a name="_Element_getFunctionName"></a>	
+		<span class="method_name">getFunctionName</span>
+	</div>	
+	<pre class="body_declaration">
+String getFunctionName(
+    Object element_function
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getFunctionName</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies element function object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getFunctionName</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns function system name.
+	</div>	
+	
+	<!-- NetworkElement:getElementFunction description -->
+	<div class="body_subtitle">
+		<a name="_Element_getElementFunction"></a>	
+		<span class="method_name">getElementFunction</span>
+	</div>	
+	<pre class="body_declaration">
+Object getElementFunction(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementFunction</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementFunction</span> Return Value
+	</div>
+	<div class="body_text">
+		Function returns userdata object and attaches <b>sFunction</b> object associated with the specified network element.
+	</div>
+	
+	<!-- NetworkElement:isElementRequireData description -->
+	<div class="body_subtitle">
+		<a name="_Element_isElementRequireData"></a>	
+		<span class="method_name">isElementRequireData</span>
+	</div>	
+	<pre class="body_declaration">
+Booolean isElementRequireData(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementRequireData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementRequireData</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns <b>true</b> if network element is built so that it must receive data to have an opportunity
+			to process it and flow the result to it's outputs; othevise <b>false</b>.
+		As a rule input network elements (elements of ET_INPUT type) requires data.
+		Elements of this type cannot have any input connections at all so data must be passed to them using 
+			system call <b>INetworkProcessor::SetInputData</b> 
+			(Network Processor <a href="scripts_language_Network_Processor.htm#_NetworkProcessor_setInputData">setInputData</a>
+			in case of using scripts interpreter).
+		This system method use <b>IDataFlow::RequireData</b> method to determine whether element requires data or no.
+		For example, <i>Constant Input</i> network element does not require any data for normal functioning.
+	</div>		
+	
+	<!-- NetworkElement:setElementWaitDataState description -->
+	<div class="body_subtitle">
+		<a name="_Element_setElementWaitDataState"></a>	
+		<span class="method_name">setElementWaitDataState</span>
+	</div>	
+	<pre class="body_declaration">
+Void setElementWaitDataState(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setElementWaitDataState</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+
+	<!-- NetworkElement:isElementReadyForProcessing description -->
+	<div class="body_subtitle">
+		<a name="_Element_isElementReadyForProcessing"></a>	
+		<span class="method_name">isElementReadyForProcessing</span>
+	</div>	
+	<pre class="body_declaration">
+Boolean isElementReadyForProcessing(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementReadyForProcessing</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementReadyForProcessing</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns <b>true</b> if element has already received data to all it's input connections and now ready to proces it.
+	</div>	
+	
+	<!-- NetworkElement:elementFlowData description -->
+	<div class="body_subtitle">
+		<a name="_Element_elementFlowData"></a>	
+		<span class="method_name">elementFlowData</span>
+	</div>	
+	<pre class="body_declaration">
+Void elementFlowData(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">elementFlowData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	
+	<!-- NetworkElement:processElement description -->
+	<div class="body_subtitle">
+		<a name="_Element_processElement"></a>	
+		<span class="method_name">processElement</span>
+	</div>	
+	<pre class="body_declaration">
+Void processElement(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">processElement</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	
+	<!-- NetworkElement:isElementReadyForTraining description -->
+	<div class="body_subtitle">
+		<a name="_Element_isElementReadyForTraining"></a>	
+		<span class="method_name">isElementReadyForTraining</span>
+	</div>	
+	<pre class="body_declaration">
+Boolean isElementReadyForTraining(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementReadyForTraining</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">isElementReadyForTraining</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns <b>true</b> if element has already received data to all it's output connections and now ready to proces it.
+	</div>
+	
+	<!-- NetworkElement:elementBackFlow description -->
+	<div class="body_subtitle">
+		<a name="_Element_elementBackFlow"></a>	
+		<span class="method_name">elementBackFlow</span>
+	</div>	
+	<pre class="body_declaration">
+Void elementBackFlow(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">elementBackFlow</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	
+	<!-- NetworkElement:getElementData description -->
+	<div class="body_subtitle">
+		<a name="_Element_getElementData"></a>	
+		<span class="method_name">getElementData</span>
+	</div>	
+	<pre class="body_declaration">
+Void getElementData(
+    Object network_element,
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getElementData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[out] Specifies destination data factory to collect element data.						
+			Element data is the result of element processing.
+			This data is flowed to network outputs during <a href="#_Element_elementFlowData">elementFlowData</a> call.
+		</div>		
+	</div>	
+	
+	<!-- NetworkElement:setElementData description -->
+	<div class="body_subtitle">
+		<a name="_Element_setElementData"></a>	
+		<span class="method_name">setElementData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setElementData(
+    Object network_element,
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setElementData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] Specifies source data factory to set element data.						
+		</div>		
+	</div>	
+	
+	<!-- NetworkElement:splitElementConnectionsData description -->
+	<div class="body_subtitle">
+		<a name="_Element_splitElementConnectionsData"></a>	
+		<span class="method_name">splitElementConnectionsData</span>
+	</div>	
+	<pre class="body_declaration">
+Void splitElementConnectionsData(
+    Object network_element,
+    Object data_factory,
+    Integer factory_type	
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setElementData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>element_function</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[out] Specifies data factory to store collected data.						
+		</div>
+		<i>factory_type</i></br>
+		<div class="body_note">
+			[in] Specifies factory type.						
+		</div>				
+	</div>	
+	
+	<!-- NetworkElement:getConnectionsCount description -->
+	<div class="body_subtitle">
+		<a name="_Element_getConnectionsCount"></a>	
+		<span class="method_name">getConnectionsCount</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getConnectionsCount(
+    Object connections_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionsCount</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connections_factory</i></br>
+		<div class="body_note">
+			[in] Specifies connections factory object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionsCount</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns a number of connections factory elements.
+	</div>	
+	
+	<!-- NetworkElement:createConnectionsEnumerator description -->
+	<div class="body_subtitle">
+		<a name="_Element_createConnectionsEnumerator"></a>	
+		<span class="method_name">createConnectionsEnumerator</span>
+	</div>	
+	<pre class="body_declaration">
+Void createConnectionsEnumerator(
+    Object connections_factory,
+    Integer enumerator_index	
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">createConnectionsEnumerator</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connections_factory</i></br>
+		<div class="body_note">
+			[in] Specifies connections factory object.						
+		</div>
+		<i>enumerator_index</i></br>
+		<div class="body_note">
+			[in] Specifies the number of enumerator that must be initialized.						
+			This parameter is extremely important.
+			You can specify any number from range <b>6..9</b> otherwise function call has no effect.
+			An opportunity of specifying enumerator number was added to the environment to make posible writing
+				multithreaded plug-ins and trainers.
+		</div>		
+	</div>	
+
+	<!-- NetworkElement:getNextConnection description -->
+	<div class="body_subtitle">
+		<a name="_Element_getNextConnection"></a>	
+		<span class="method_name">getNextConnection</span>
+	</div>	
+	<pre class="body_declaration">
+Object getNextConnection(
+    Object connections_factory,
+    Integer enumerator_index	
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getNextConnection</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connections_factory</i></br>
+		<div class="body_note">
+			[in] Specifies connections factory object.						
+		</div>
+		<i>enumerator_index</i></br>
+		<div class="body_note">
+			[in] Specifies the number of enumerator that must be used.						
+			You must specify here the same number that was passed during 
+				<a href="#_Element_createConnectionsEnumerator">createConnectionsEnumerator</a> call.
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getNextConnection</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- NetworkElement:getConnectionElement description -->
+	<div class="body_subtitle">
+		<a name="_Element_getConnectionElement"></a>	
+		<span class="method_name">getConnectionElement</span>
+	</div>	
+	<pre class="body_declaration">
+Object getConnectionElement(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionElement</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionElement</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- NetworkElement:getOppositeConnection description -->
+	<div class="body_subtitle">
+		<a name="_Element_getOppositeConnection"></a>	
+		<span class="method_name">getOppositeConnection</span>
+	</div>	
+	<pre class="body_declaration">
+Object getOppositeConnection(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getOppositeConnection</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionElement</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>
+	
+	<!-- NetworkElement:getWeightsFactory description -->
+	<div class="body_subtitle">
+		<a name="_Element_getWeightsFactory"></a>	
+		<span class="method_name">getWeightsFactory</span>
+	</div>	
+	<pre class="body_declaration">
+Object getWeightsFactory(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getWeightsFactory</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getWeightsFactory</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>
+	
+	<!-- NetworkElement:getOldWeightsFactory description -->
+	<div class="body_subtitle">
+		<a name="_Element_getOldWeightsFactory"></a>	
+		<span class="method_name">getOldWeightsFactory</span>
+	</div>	
+	<pre class="body_declaration">
+Object getOldWeightsFactory(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getOldWeightsFactory</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getOldWeightsFactory</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- NetworkElement:getConnectionData description -->
+	<div class="body_subtitle">
+		<a name="_Element_getConnectionData"></a>	
+		<span class="method_name">getConnectionData</span>
+	</div>	
+	<pre class="body_declaration">
+Object getConnectionData(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionData</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- NetworkElement:isConnectionHasData description -->
+	<div class="body_subtitle">
+		<a name="_Element_isConnectionHasData"></a>	
+		<span class="method_name">isConnectionHasData</span>
+	</div>	
+	<pre class="body_declaration">
+Boolean isConnectionHasData(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">isConnectionHasData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">isConnectionHasData</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns <b>true</b> if connection already received data.
+	</div>
+	
+	<!-- NetworkElement:getConnectionDeltas description -->
+	<div class="body_subtitle">
+		<a name="_Element_getConnectionDeltas"></a>	
+		<span class="method_name">getConnectionDeltas</span>
+	</div>	
+	<pre class="body_declaration">
+Object getConnectionDeltas(
+    Object connection_object
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionDeltas</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>connection_object</i></br>
+		<div class="body_note">
+			[in] Specifies connection object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionDeltas</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>
+	
+	<!-- NetworkElement:getConnectionsFactory description -->
+	<div class="body_subtitle">
+		<a name="_Element_getConnectionsFactory"></a>	
+		<span class="method_name">getConnectionsFactory</span>
+	</div>	
+	<pre class="body_declaration">
+Object getConnectionsFactory(
+    Object network_element,
+    Constant factory_type
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionsFactory</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>factory_type</i></br>
+		<div class="body_note">
+			[in] Specifies <a href="#_Element_FactoryTypes">type</a> of the factory to be returned.						
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getConnectionsFactory</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- NetworkElement:setLayerInputData description -->
+	<div class="body_subtitle">
+		<a name="_Element_setLayerInputData"></a>	
+		<span class="method_name">setLayerInputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setLayerInputData(
+    Object network_element,
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setLayerInputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] Specifies source data factory object.						
+		</div>		
+	</div>	
+			
+	<!-- NetworkElement:setLayerOutputData description -->
+	<div class="body_subtitle">
+		<a name="_Element_setLayerOutputData"></a>	
+		<span class="method_name">setLayerOutputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setLayerOutputData(
+    Object network_element,
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setLayerOutputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] Specifies source data factory object.						
+		</div>		
+	</div>	
+	
+	<!-- NetworkElement:modifyLayerWeights description -->
+	<div class="body_subtitle">
+		<a name="_Element_modifyLayerWeights"></a>	
+		<span class="method_name">modifyLayerWeights</span>
+	</div>	
+	<pre class="body_declaration">
+Void modifyLayerWeights(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">modifyLayerWeights</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	
+	<!-- NetworkElement:resetLayerWeights description -->
+	<div class="body_subtitle">
+		<a name="_Element_resetLayerWeights"></a>	
+		<span class="method_name">resetLayerWeights</span>
+	</div>	
+	<pre class="body_declaration">
+Void resetLayerWeights(
+    Object network_element,
+    Float value
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">modifyLayerWeights</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>value</i></br>
+		<div class="body_note">
+			[in] Specifies value to be set to all layer weights.						
+		</div>		
+	</div>	
+	
+	<!-- NetworkElement:getLayerDimension description -->
+	<div class="body_subtitle">
+		<a name="_Element_getLayerDimension"></a>	
+		<span class="method_name">getLayerDimension</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getLayerDimension(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerDimension</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerDimension</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns layer dimension (a number of neurons).
+	</div>	
+	
+	<!-- NetworkElement:getLayerInputsCount description -->
+	<div class="body_subtitle">
+		<a name="_Element_getLayerInputsCount"></a>	
+		<span class="method_name">getLayerInputsCount</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getLayerInputsCount(
+    Object network_element
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerInputsCount</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerInputsCount</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns a number of required inputs.
+	</div>
+	
+	<!-- NetworkElement:getLayerWeight description -->
+	<div class="body_subtitle">
+		<a name="_Element_getLayerWeight"></a>	
+		<span class="method_name">getLayerWeight</span>
+	</div>	
+	<pre class="body_declaration">
+Float getLayerWeight(
+    Object network_element,
+    Integer input_number, 
+    Integer neuron_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerWeight</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>input_number</i></br>
+		<div class="body_note">
+			[in] Specifies weight index.						
+		</div>		
+		<i>neuron_index</i></br>
+		<div class="body_note">
+			[in] Specifies index of the neuron to receive it's weight.						
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerWeight</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns weight value.
+	</div>
+	
+	<!-- NetworkElement:setLayerWeight description -->
+	<div class="body_subtitle">
+		<a name="_Element_setLayerWeight"></a>	
+		<span class="method_name">setLayerWeight</span>
+	</div>	
+	<pre class="body_declaration">
+Void setLayerWeight(
+    Object network_element,
+    Integer input_number, 
+    Integer neuron_index,
+    Float weight_value
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerWeight</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>input_number</i></br>
+		<div class="body_note">
+			[in] Specifies weight index.						
+		</div>		
+		<i>neuron_index</i></br>
+		<div class="body_note">
+			[in] Specifies index of the neuron to receive it's weight.						
+		</div>		
+		<i>weight_value</i></br>
+		<div class="body_note">
+			[in] Specifies new weight value to be set.						
+		</div>		
+	</div>	
+		
+	<!-- NetworkElement:getLayerDeltas description -->
+	<div class="body_subtitle">
+		<a name="_Element_getLayerDelta"></a>	
+		<span class="method_name">getLayerDelta</span>
+	</div>	
+	<pre class="body_declaration">
+Float getLayerDelta(
+    Object network_element,
+    Integer neuron_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerDelta</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>neuron_index</i></br>
+		<div class="body_note">
+			[in] Specifies index of the neuron to receive it's weight.						
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getLayerDelta</span> Return Value
+	</div>
+	<div class="body_text">
+		Returns delta value.
+	</div>
+	
+	<!-- NetworkElement:setLayerDelta description -->
+	<div class="body_subtitle">
+		<a name="_Element_setLayerDelta"></a>	
+		<span class="method_name">setLayerDelta</span>
+	</div>	
+	<pre class="body_declaration">
+Void setLayerDelta(
+    Object network_element,
+    Integer neuron_index,
+    Float delta_value
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setLayerDelta</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>network_element</i></br>
+		<div class="body_note">
+			[in] Specifies network element object.						
+		</div>
+		<i>neuron_index</i></br>
+		<div class="body_note">
+			[in] Specifies index of the neuron to receive it's weight.						
+		</div>		
+		<i>delta_value</i></br>
+		<div class="body_note">
+			[in] Specifies new delta value to be set.						
+		</div>		
+	</div>	
+	
+	
+	
+	
+	
+	
+	
+				
+	
+
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Network_Processing.htm">Network Processing Package</a> |	
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+			
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>			
+			

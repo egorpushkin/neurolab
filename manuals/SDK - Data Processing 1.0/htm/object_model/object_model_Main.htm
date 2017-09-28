@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Data Processing SDK - Object Model</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		Data Processing SDK - Object Model
+	</div>
+	<div class="body_text">
+		Object model built for <b>Neuro Laboratory</b> is based on the <a href="..\reference\IObject.htm">IObject</a> interface.
+	</div>
+	<div class="body_subtitle">
+		Hierarchy Chart
+	</div>	
+	<div class="body_text">
+		<map name="Object_Model">
+			<area shape="rect" coords="5, 4, 607, 18" href="../reference/IObject.htm"/>
+			<area shape="rect" coords="439, 214, 593, 228" href="../reference/IStorageController.htm"/>
+			<area shape="rect" coords="439, 235, 593, 249" href="../reference/IXMLStorageController.htm"/>						
+			<area shape="rect" coords="439, 277, 579, 291" href="../reference/IDataFactory.htm"/>			
+			<area shape="rect" coords="439, 298, 579, 312" href="../reference/IPGMFactory.htm"/>			
+			<area shape="rect" coords="439, 319, 579, 333" href="../reference/IBMPFactory.htm"/>			
+			<area shape="rect" coords="439, 340, 579, 354" href="../reference/IDataFile.htm"/>			
+		</map>
+		<img src="../ArchImages/Object_Model.gif" usemap="#Object_Model" class="figure"/>
+	</div>
+	<div class="body_text">
+		Most of these sections are implemented by internal Neuro Laboratory components.
+		You will not operate with these modules even during writing you own libraries which extend application functionality.
+		But enumeration and quick tour is importand for understanding Neuro Laboratory architect and development process.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Application Environment</span> Section
+	</div>
+	<div class="body_text">
+		This <b>IAppController</b> interface was implemented by the environment to give an opportunity of passing 
+			control interfaces (such as <b>INetworkProcessor</b>, ect.) to external application components (plug-ins, trainers).
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Neuro Factory</span> Section		
+	</div>	
+	<div class="body_text">
+		This section implements functionality of neural network processing control interfaces: 
+		<ul>
+			<li><b>INetworkProcessor</b> - performs data flow operations over built neural network.</li>
+			<li><b>IElementsCollection</b> - gives an opportunity to enumerate network elements.</li>
+			<li><b>INetworkVerifier</b> - performs network verification.</li>			
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Network Importing</span> Section		
+	</div>
+	<div class="body_text">
+		This section is implemented by external library <span class="file_name">NetworkImport.dll</span>
+			(included in <b>Network Exporter Tool</b> package) and contains functionality for importing Neuro Laboratory 
+			project files in users' applications.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Components</span> Section		
+	</div>			
+	<div class="body_text">
+		This section implements functionality for connecting external application conponents.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Plug-ins Subsystem</span> Section		
+	</div>			
+	<div class="body_text">
+		This section is implemented to give an opportunity of connection external libraries which extends functionality
+			of <b>Neuro Laboratory</b>.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Objects Messaging</span> Section		
+	</div>			
+	<div class="body_text">
+		<b>ILogProvider</b> interface can be implemented by any object. 
+		It gives an opportunity to create and display a log of performed operations.
+	</div>		
+	<div class="body_subtitle">
+		<span class="method_name">Network Output</span> Section		
+	</div>			
+	<div class="body_text">
+		This section contains control interfaces for manipulating neural network output.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Network Trainers</span> Section		
+	</div>			
+	<div class="body_text">
+		<b>ITarinersContainer</b> is implemented by the environment to give an opportunity of connecting external libraries 
+			which are called <i>trainers</i>.
+		The main idea of such a library is implementing training algorithm. 
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Storage and Data Processors</span> Sections
+	</div>
+	<div class="body_text">
+		This sections are directly connected with data processing.
+		<ul>
+			<li><b>Storage</b> - 
+				This section contains interfaces that can be implemented by any object which requires presence of 
+					serialization operations.</li>
+			<li><b>Data Processors</b> -
+				This section contains interfaces which are implemented by main data processing objects.</li>
+		</ul>
+	</div>				
+	
+	<div class="body_subtitle">
+		See Also		
+	</div>	
+	<div class="body_text">
+		<a href="../Introduction.htm">Data Processing Main</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

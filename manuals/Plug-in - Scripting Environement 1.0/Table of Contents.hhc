@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Scripting Environment 1.0">
+		<param name="Local" value="htm\default.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="htm\Introduction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Object Model">
+			<param name="Local" value="htm\object_model\object_model_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Layer Internal Data Model">
+				<param name="Local" value="htm\object_model\object_model_Layer_Architect.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Neural Network Data Model ">
+				<param name="Local" value="htm\object_model\object_model_Network_Data_Model.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Control Interfaces">
+				<param name="Local" value="htm\object_model\object_model_Network_Control_Interfaces.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Scripts Language">
+			<param name="Local" value="htm\scripts_language\scripts_language_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lua Syntax">
+				<param name="Local" value="htm\scripts_language\scripts_language_Lua_Syntax.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Log Processing Package">
+				<param name="Local" value="htm\scripts_language\scripts_language_Log_Processing.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data Processing Package">
+				<param name="Local" value="htm\scripts_language\scripts_language_Data_Processing.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Data Processor Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Data_Processor.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Data File Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Data_File.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Data Factory Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Data_Factory.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Processing Package">
+				<param name="Local" value="htm\scripts_language\scripts_language_Network_Processing.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Network Processor Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Network_Processor.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Elements Collection Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Elements_Collection.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Network Element Operations">
+					<param name="Local" value="htm\scripts_language\scripts_language_Network_Element.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Reference">
+				<param name="Local" value="htm\scripts_language\scripts_language_Reference.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Samples">
+			<param name="Local" value="htm\samples\samples_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Data Model">
+				<param name="Local" value="htm\samples\samples_Data_Model.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Hopfield Training">
+				<param name="Local" value="htm\samples\samples_Hopfield_Training.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

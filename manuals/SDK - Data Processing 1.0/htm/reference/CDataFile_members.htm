@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>CDataFile Class Members</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		CDataFile Members
+	</div>
+	<div class="body_subtitle">
+		Implemented Interfaces
+	</div>
+	<div class="body_text">
+		<a href="IObject.htm">IObject</a> |
+		<a href="IDataFile.htm">IDataFile</a> |
+		<a href="IStorageController.htm">IStorageController Members</a>
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="33%"><a href="#_Creation_Destruction">Creation/Destruction</a></td>
+				<td width="33%"><a href="#_Save_Load">Save/Load Functions</a></td>				
+				<td width="33%"><a href="#_Data_Processing">Data Processing</a></td>				
+			</tr>
+		</table>	
+	</div>
+	<div class="body_subtitle">
+		<a name="_Creation_Destruction"></a>
+		Creation/Destruction
+	</div>	
+	<div class="body_text">	
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_CDataFile_CDataFile">CDataFile</a></td>
+				<td width="65%">Constructs a <b>CDataFile</b> object.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_CDataFile_CreateNewFile">CreateNewFile</a></td>
+				<td>Creates new data file.</td>				
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_CDataFile_FreeLoadedData">FreeLoadedData</a></td>
+				<td>Releases existing data.</td>				
+			</tr>			
+		</table>		
+	</div>	
+	<div class="body_subtitle">
+		<a name="_Save_Load"></a>
+		Save/Load Functions
+	</div>
+	<div class="body_text">	
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="40%"><a href="#_CDataFile_LoadFile">LoadFile</a></td>
+				<td width="60%">Loads data file from disk.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_CDataFile_SaveToFile">SaveToFile</a></td>
+				<td>Saves data file to disk.</td>				
+			</tr>			
+		</table>	
+	</div>				
+	<div class="body_subtitle">
+		<a name="_Data_Processing"></a>
+		Data Processing
+	</div>
+	<div class="body_text">	
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="40%"><b>IsLoaded</b></td>
+				<td width="60%">Verifies whether data object is created.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetInputSymbolsCount</b></td>
+				<td>Returns a number of input symbols.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetOutputSymbolsCount</b></td>
+				<td>Returns a number of output symbols.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetInputSymbolLength</b></td>
+				<td>Returns length of input symbol.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetOutputSymbolLength</b></td>
+				<td>Returns length of output symbol.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetInputSymbol</b></td>
+				<td>Returns requested input symbol.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>GetOutputSymbol</b></td>
+				<td>Returns requested output symbol.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>AddInputSymbol</b></td>
+				<td>Adds new empty input symbol.</td>				
+			</tr>															
+			<tr class="data_table_row">			
+				<td><b>AddOutputSymbol</b></td>
+				<td>Adds new empty output symbol.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><b>RemoveInputSymbol</b></td>
+				<td>Removes specified input symbol.</td>				
+			</tr>			
+			<tr class="data_table_row">			
+				<td><b>RemoveOutputSymbol</b></td>
+				<td>Removes specified output symbol.</td>				
+			</tr>			
+		</table>		
+	</div>	
+	<div class="body_subtitle">
+		<a name="_CDataFile_CDataFile"></a>	
+		<span class="method_name">CDataFile::CDataFile</span>
+	</div>		
+	<pre class="body_declaration">
+CDataFile();
+
+CDataFile(
+    CString& FileName
+);</pre>		
+	<div class="body_text">
+		When object is created using second constructor <b>LoadFile</b> method is called to load required data.
+	</div>
+	<div class="body_subtitle">
+		<a name="_CDataFile_CreateNewFile"></a>	
+		<span class="method_name">CDataFile::CreateNewFile</span>
+	</div>		
+	<pre class="body_declaration">
+virtual void CreateNewFile(
+    int InputLength, 
+    int OutputLength
+);</pre>		
+	<div class="body_text">
+		Releases all existing data and initializes empty <b>CDataFile</b> object.
+	</div>
+	<div class="body_subtitle">
+		<a name="_CDataFile_FreeLoadedData"></a>	
+		<span class="method_name">CDataFile::FreeLoadedData</span>
+	</div>		
+	<pre class="body_declaration">
+virtual void FreeLoadedData();</pre>		
+	<div class="body_text">
+		Releases all existing data. After executing object is set to uncreated state.
+	</div>	
+	<div class="body_subtitle">
+		<a name="_CDataFile_LoadFile"></a>	
+		<span class="method_name">CDataFile::LoadFile</span>
+	</div>		
+	<pre class="body_declaration">
+virtual bool LoadFile(
+    CString& FileName
+);</pre>		
+	<div class="body_text">
+		Loads data from a disk file. 
+		Function returns <b>true</b> when loading was successfull.
+	</div>	
+	<div class="body_note">
+		<b>Note</b> This function releases existing data before trying to process loading but after establishing connection to the file
+			which name is passed to the function as parameter. 			
+		In case of wrong data serialization all previously contained data will be lost.
+	</div>
+	<div class="body_subtitle">
+		<a name="_CDataFile_LoadFile"></a>	
+		<span class="method_name">CDataFile::LoadFile</span> Return Value
+	</div>
+	<div class="body_text">		
+		Function returns <b>false</b> when connection to the file cannot be established and in case of wrong data serialization.
+	</div>	
+	<div class="body_subtitle">
+		<a name="_CDataFile_SaveToFile"></a>	
+		<span class="method_name">CDataFile::SaveToFile</span>
+	</div>		
+	<pre class="body_declaration">
+virtual bool SaveToFile(
+    CString& FileName
+);</pre>		
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="CDataFile.htm">CDataFile Overview</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

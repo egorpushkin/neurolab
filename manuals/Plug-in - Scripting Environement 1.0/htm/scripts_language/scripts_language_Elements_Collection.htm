@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Elements Collection Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Elements Collection Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		The main idea of this package is to give an opportunity of enumerating network elements.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Enumerator Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><a href="#_ElementsCollection_createElementsEnumerator">createElementsEnumerator</a></td>
+				<td width="70%">Initializes elements enumerator.</td>
+			</tr>	
+			<tr class="data_table_row">			
+				<td><a href="#_ElementsCollection_getNextElement">getNextElement</a></td>
+				<td>Returns element at enumerator's position and moves it to the next one.</td>
+			</tr>
+		</table>			
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Collection Statistics
+				</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_ElementsCollection_getInputsCount">getInputsCount</a></td>
+				<td>Returns number of signals required to be passed to network input.</td>
+			</tr>	
+			<tr class="data_table_row">			
+				<td><a href="#_ElementsCollection_getOutputsCount">getOutputsCount</a></td>
+				<td>Returns number of signals that network passes to it's outputs.</td>
+			</tr>
+		</table>			
+	</div>
+	
+	<!-- ElementsCollection:createElementsEnumerator description -->
+	<div class="body_subtitle">
+		<a name="_ElementsCollection_createElementsEnumerator"></a>	
+		<span class="method_name">createElementsEnumerator</span>
+	</div>	
+	<div class="body_text">
+		This function sets enumerator position to the first network element.
+	</div>	
+	<pre class="body_declaration">
+Void createElementsEnumerator(
+    Integer enumerator_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">createElementsEnumerator</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>enumerator_index</i></br>
+		<div class="body_note">
+			[in] Specifies the number of enumerator that must be initialized.						
+			This parameter is extremely important.
+			You can specify any number from range <b>6..9</b> otherwise function call has no effect.
+			An opportunity of specifying enumerator number was added to the environment to make posible writing
+				multithreaded plug-ins and trainers.
+		</div>
+	</div>
+	
+	<!-- ElementsCollection:getNextElement description -->
+	<div class="body_subtitle">
+		<a name="_ElementsCollection_getNextElement"></a>	
+		<span class="method_name">getNextElement</span>
+	</div>	
+	<pre class="body_declaration">
+Object getNextElement(
+    Integer enumerator_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getNextElement</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>enumerator_index</i></br>
+		<div class="body_note">
+			[in] Specifies the number of enumerator that must be used.						
+			You must specify here the same number that was passed during 
+				<a href="#_ElementsCollection_createElementsEnumerator">createElementsEnumerator</a> call.
+		</div>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">getNextElement</span> Return Value
+	</div>	
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.		
+	</div>
+	
+	<!-- ElementsCollection:getInputsCount description -->
+	<div class="body_subtitle">
+		<a name="_ElementsCollection_getInputsCount"></a>	
+		<span class="method_name">getInputsCount</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getInputsCount();</pre>	
+
+	<!-- ElementsCollection:getOutputsCount description -->
+	<div class="body_subtitle">
+		<a name="_ElementsCollection_getOutputsCount"></a>	
+		<span class="method_name">getOutputsCount</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getOutputsCount();</pre>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Network_Processing.htm">Network Processing Package</a> |	
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+			
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>			
+					
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							

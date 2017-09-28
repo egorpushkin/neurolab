@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Network Processor Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Network Processor Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		The functiolnality of <b>INetworkProcessor</b> object has been implemented to power scripts achine with 
+			an opportunity of processing network with custom data and verify results of network processing. 
+		This opportunity is extremely important for scripts that realize network training algorithms.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Data Flow Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><a href="#_NetworkProcessor_setInputData">setInputData</a></td>
+				<td width="70%">Passes data from specified data factory object to network inputs.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_NetworkProcessor_setOutputData">setOutputData</a></td>
+				<td>Passes data from specified data factory object to network outputs.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_NetworkProcessor_getInputData">getInputData</a></td>
+				<td>Receives data from network inputs and collects it into the specified data factory.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td><a href="#_NetworkProcessor_getOutputData">getOutputData</a></td>
+				<td>Receives data from network outputs and collects it into the specified data factory.</td>
+			</tr>						
+		</table>	
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Processing Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="30%"><a href="#_NetworkProcessor_processNetwork">processNetwork</a></td>
+				<td width="70%">Performs network processing.</td>
+			</tr>
+		</table>	
+	</div>				
+	
+	<!-- NetworkProcessor:setInputData description -->
+	<div class="body_subtitle">
+		<a name="_NetworkProcessor_setInputData"></a>	
+		<span class="method_name">setInputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setInputData(
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setInputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] Data source object.						
+		</div>
+	</div>
+	
+	<!-- NetworkProcessor:setOutputData description -->
+	<div class="body_subtitle">
+		<a name="_NetworkProcessor_setOutputData"></a>	
+		<span class="method_name">setOutputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setOutputData(
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">setOutputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] Data source object.						
+		</div>
+	</div>	
+	
+	<!-- NetworkProcessor:getInputData description -->
+	<div class="body_subtitle">
+		<a name="_NetworkProcessor_getInputData"></a>	
+		<span class="method_name">getInputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void getInputData(
+    Object data_factory
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">getInputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[out] Data destination object.						
+		</div>
+	</div>
+	
+	<!-- NetworkProcessor:getOutputData description -->
+	<div class="body_subtitle">
+		<a name="_NetworkProcessor_getOutputData"></a>	
+		<span class="method_name">getOutputData</span>
+	</div>	
+	<pre class="body_declaration">
+Void getOutputData(
+    Object data_factory
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">getOutputData</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[out] Data destination object.						
+		</div>
+	</div>
+	
+	<!-- NetworkProcessor:processNetwork description -->
+	<div class="body_subtitle">
+		<a name="_NetworkProcessor_processNetwork"></a>	
+		<span class="method_name">processNetwork</span>
+	</div>	
+	<div class="body_text">
+		This function performs flow data from <b>Input</b> elements through <b>Network Processor</b> elements to 
+			<b>Output</b> elements.
+		The results of this operation can be collected using <a href="#_NetworkProcessor_getOutputData">getOutputData</a>
+			function.
+	</div>
+	<pre class="body_declaration">
+Void processNetwork();</pre>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Network_Processing.htm">Network Processing Package</a> |	
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>			
+	

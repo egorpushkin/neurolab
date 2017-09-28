@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Building Network</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Neuro Laboratory 1.0 - User Guide
+	</div>
+	<div class="page_title">		
+		Building Network
+	</div>
+	<div class="body_subtitle">
+		Introduction
+	</div>
+	<div class="body_text">
+		This sample ilustrates process of building network using <b>Neuro Laboratory Environment</b>.
+		It is reqired to build network of the following structure:					
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/Smpl_BN_NetworkLogic.gif" class="figure"/><br/>
+		Figure 1. Network Logic Structure.		
+	</div>		
+	<div class="body_text">
+		We are going to realize it using network model of the following structure (in <b>Neuro Laboratory</b> terminology):
+	</div>	
+	<div class="figure_block">
+		<img src="../ArchImages/Smpl_BN_NetworkElements.gif" class="figure"/><br/>
+		Figure 2. Network Elements Structure.		
+	</div>	
+	
+	<div class="body_subtitle">
+		Building Network			
+	</div>
+	<div class="body_text">
+		To build such a network you must follow these steps:
+		<ol type="1">
+			<li>
+				Add three <i>Input Factory</i> elements.
+				Configure them in the following way: <br/>
+				<b>Input Factory - IF 1</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>16</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>16</b>. <br/>
+				<b>Input Factory - IF 2</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>64</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>64</b>. <br/>
+				<b>Input Factory - IF 3</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>32</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>32</b>.												
+			</li>
+		</ol>	
+	</div>			
+	<div class="body_text">
+		<b>Note</b> To configure any layer element you must click right mouse button over it and select 
+			<i>Properties...</i> menu item.
+	</div>				
+	<div class="body_text">
+		<b>Note</b> It is requied to set identical values for <i>Inputs count</i> and <i>Layer dimension</i> settings of 
+			input and output layer elements (<i>Input Factory</i> and <i>Output Factory</i>).
+	</div>			
+	<div class="body_text">
+		<ol type="1">
+			<li value="2">
+				Add <i>RBF Layer</i> element and configure it in the following way: <br/>
+				<b>RBF Layer - RBFL 1</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>48</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>16</b>. <br/>
+				&nbsp;&nbsp;Activation function: <b>Exponent</b>. <br/>
+			</li>
+		</ol>	
+	</div>
+	<div class="body_text">
+		Activation function can be specified using <i>Element Properties</i> control panel.
+		Select element you wan to configure and press <i>Select</i> button on the panel.	
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Samples/Smpl_BN_ElPropPanel.gif" class="figure"/><br/>
+		Figure 3. <i>Elements Properties</i> Control Panel.		
+	</div>	
+	<div class="body_text">
+		<ol type="1">
+			<li value="3">
+				Add <i>Neurons Layer</i> element and configure it in the following way: <br/>
+				<b>Neurons Layer - NL 1</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>65</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>16</b>. <br/>
+				&nbsp;&nbsp;Activation function: <b>Sigmoid</b>. 
+			</li>
+			<li>
+				Add <i>Constant Input</i> element and configure it in the following way: <br/>
+				<b>Constant Input - C 1</b>: <br/>
+				&nbsp;&nbsp;Value: <b>-1</b>. 
+			</li>
+			<li>
+				Add <i>Winner Layer</i> element and configure it in the following way: <br/>
+				<b>Winner Layer - WL 1</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>32</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>32</b>.
+			</li>
+			<li>
+				Add <i>Neuron</i> element and set it's activation function to <i>Linear</i>.
+			</li>
+			<li>
+				Add <i>Output</i> element.
+			</li>
+			<li>
+				Add <i>Output Factory</i> element and configure it in the following way: <br/>
+				<b>Output Factory - OF 1</b>: <br/>
+				&nbsp;&nbsp;Inputs count: <b>30</b>. <br/>
+				&nbsp;&nbsp;Layer dimension: <b>30</b>.
+			</li>
+		</ol>	
+	</div>				
+	<div class="body_text">
+		After all elements has been added we have to establish connections between them in required way.	
+	</div>
+	<div class="body_text">
+		<ol type="1">
+			<li value="9">	
+				Establish connections between the following elements: <br/>
+				<b>IF 1 - RBFL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>16</b>. <br/>
+				<b>IF 2 - RBFL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>32</b>. <br/>
+				<b>IF 2 - NL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>32</b>. <br/>
+				<b>IF 3 - NL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>32</b>. <br/>
+				<b>C 1 - NL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>1</b>. <br/>
+				<b>RBFL 1 - WL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>16</b>. <br/>
+				<b>NL 1 - WL 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>16</b>. <br/>				
+				<b>WL 1 - N 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>2</b>. <br/>				
+				<b>WL 1 - OF 1</b>: <br/>
+				&nbsp;&nbsp;Connections count: <b>30</b>.			
+			</li>
+		</ol>	
+	</div>	
+	<div class="body_text">
+		You can configure connection settings using <i>Element Properties</i> control panel.
+		You must select element and then select connection that must be configured (from <i>Dendrites</i> or <i>Axons</i> window).
+	</div>
+		
+	<div class="body_text">
+		Atfer network has been built you can verify it using <i>Network Verification</i> control panel.
+		Prepared network must looks like this:					
+	</div>	
+	<div class="figure_block">
+		<img src="../ScreenShots/Samples/Smpl_BN_NetScreen.gif" class="figure"/><br/>
+		Figure 4. Prepared Network View.		
+	</div>	
+	<div class="body_text">
+		You can find prepared project file at <span class="file_name">Samples</span> folder. 
+		It is called <span class="file_name">NetworkProject.nlproj</span>.
+	</div>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="usage_Main.htm">Usage</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

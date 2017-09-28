@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Sample - Hopfield Training</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Sample - Hopfield Training
+	</div>
+	<div class="body_subtitle">
+		Introduction	
+	</div>
+	<div class="body_text">
+		This sample demonstrate functionality of <b>Layer Controls</b>.
+		<i>Hopfield Layer</i> element has internal methods for training.
+		It is only required to pass necessary data and observe the rules of training circle.
+		You can train layer to reproduce any count of symbols you want.
+		Of cause you must take into consideration possibilities of this technology: quality of reproducing will be much less 
+			in case of great number of symbols in learning sample.
+		Training circle contain the following steps:
+		<ul>
+			<li>
+				You must specify current symbol (that must be used for training) as layer input data.
+				You can do it using
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_setLayerInputData">setLayerInputData</a> 
+					function.
+			</li>
+			<li>
+				Then you must call
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_modifyLayerWeights">modifyLayerWeights</a> 
+					function to update layer weights.
+			</li>
+		</ul>
+		You must repeat these steps for all symbols from learning sample.		
+	</div>
+	<div class="body_note">
+		<b>Note</b> that <b>modifyLayerWeights</b> function only modifies layer weights. 
+		You must initialize it before you start training.
+		You can use 
+			<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_resetLayerWeights">resetLayerWeights</a> function
+			to initialize layer weights.
+		All weights must be set to <b>0.0</b> before training.
+	</div>	
+		
+	<div class="body_subtitle">
+		Sample Neuro Laboratory Project
+	</div>	
+	<div class="body_text">
+		Project file name: <span class="file_name">NetworkProject.nlproj</span>.
+		The following figure shows neural network prepared for this sample:		
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Sm_HopfTraining_ProjScr.gif" class="figure"/><br/>
+		Figure 1. Prepared Network View.		
+	</div>	
+	<div class="body_text">
+		<b>IF 1</b> element's dimension is <b>64</b>. <br/>
+		<b>NL 1</b> element's dimension is <b>64</b>, inputs count is <b>64</b>. <br/>		
+		<b>OF 1</b> element's dimension is <b>64</b>. <br/>						
+		Connections count between elements <b>IF 1</b> and <b>NL 1</b> is <b>64</b>. <br/>
+		Connections count between elements <b>NL 1</b> and <b>OF 1</b> is <b>64</b>. <br/>
+	</div>
+	<div class="body_text">
+		There is also project file that contains already trained layer.
+		Project file name: <span class="file_name">NetworkProjectTrained.nlproj</span>.
+	</div>
+	
+	<div class="body_subtitle">
+		Sample Data File
+	</div>	
+	<div class="body_text">
+		Data file name: <span class="file_name">Hopfield_i4x64_o0x64_symbols.nldfile</span>. <br/>
+		Data file сontent: <br/>
+		&nbsp;&nbsp;Input symbols count: <b>4</b>. <br/>
+		&nbsp;&nbsp;Input symbol length: <b>64</b>. <br/>
+		&nbsp;&nbsp;Output symbols count: <b>0</b>. <br/>
+		&nbsp;&nbsp;Output symbol length: <b>64</b>.		
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Sm_HopfTraining_DataS1.gif" class="figure"/>
+		<img src="../ScreenShots/Sm_HopfTraining_DataS2.gif" class="figure"/>
+		<img src="../ScreenShots/Sm_HopfTraining_DataS3.gif" class="figure"/>		
+		<img src="../ScreenShots/Sm_HopfTraining_DataS4.gif" class="figure"/><br/>				
+		Figure 2. Data Symbols.		
+	</div>	
+	<div class="body_text">
+		Use <b>Data Creator</b> tool to manipulate with data files.
+	</div>
+	
+	<div class="body_subtitle">
+		Solution Scripts
+	</div>
+	<div class="body_text">
+		Solution <span class="file_name">HopfieldTrainingScripts.nlssln</span> contains the following scripts:
+		<ul>
+			<li>
+				<span class="file_name">HopfieldTraining.nlsfile</span> - 
+				This script performs training <i>Hopfield Layer</i> element using attached data file.
+				The length of input symbols stored into the data file must equals to the dimension of <i>Hopfield Layer</i> 
+					element.				
+			</li>
+		</ul>	
+	</div>	
+	<div class="source_code_title">
+		<span class="left">
+			Solution script: <span class="file_name">HopfieldTraining.nlsfile</span>
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('sample_ht_source1')">
+				<img id="collapseimg_sample_ht_source1" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>		
+	<pre class="body_source_code" id="collapseobj_sample_ht_source1">
+-- This script performs training of the 'Hopfield Layer' element.
+
+log_provider = getLogProvider();
+clearLog(log_provider);
+
+addLogMessage(log_provider, "N", "Training started...", 
+    "Hopfield Training Script");
+
+-- Loading data file used for training
+data_file = getDataFile("Hopfield_i3x64_o0x64_symbols");
+if data_file == nil then
+    addLogMessage(log_provider, "E", 
+        "Error loading Data File.", 
+        "Hopfield Training Script");
+    return;
+end
+
+-- Seeking for HopfieldLayer element
+layer_hopfield = nil;
+createElementsEnumerator(6);
+while 1 do
+    element = getNextElement(6);
+    if element == nil then
+        break;
+    end
+
+    element_sys_name = getElementSysName(element);
+    if element_sys_name == "HopfieldLayer" then
+        layer_hopfield = element;
+        break;
+    end
+end
+
+if layer_hopfield == nil then
+    addLogMessage(log_provider, "E", 
+        "Hopfield Layer has not been found.", 
+        "Hopfield Training Script");
+    return;
+end
+
+-- Checking whether loaded data and found layer are compatible
+input_data_length = getInputSymbolLength(data_file);
+layer_dimension = getLayerDimension(layer_hopfield);
+
+if (input_data_length ~= layer_dimension) then
+    addLogMessage(log_provider, "E", 
+        "Found layer and loaded data are not comptible.", 
+        "Hopfield Training Script");
+    return;
+end
+
+-- Training found layer with the data from previously loaded data file
+addLogMessage(log_provider, "N", 
+    "Performing training...", "Hopfield Training Script");
+
+-- Reset layer weights before training
+resetLayerWeights(layer_hopfield, 0);
+
+symbols_count = getInputSymbolsCount(data_file);
+for i = 0, symbols_count-1 do
+    addLogMessage(log_provider, "N", 
+        "Training with symbol "..i, "Hopfield Training Script");
+    
+    data_symbol = getInputSymbol(data_file, i);
+    setLayerInputData(layer_hopfield, data_symbol);
+    modifyLayerWeights(layer_hopfield);
+end
+
+addLogMessage(log_provider, "N", "Training done.", 
+    "Hopfield Training Script");
+</pre>	
+	<div class="body_text">
+		This script types the following output in log list window:	
+	</div>	
+	<pre class="body_source_code">
+N	Training started...				Hopfield Training Script
+N	Performing training...				Hopfield Training Script
+N	Training with symbol 0				Hopfield Training Script
+N	Training with symbol 1				Hopfield Training Script
+N	Training with symbol 2				Hopfield Training Script
+N	Training with symbol 3				Hopfield Training Script
+N	Training done.					Hopfield Training Script
+</pre>		
+	<div class="body_text">
+		You can verify the results of training using <b>Process Network</b> plug-in.
+	</div>
+
+	<div class="body_subtitle">
+		See Also
+	</div>
+	<div class="body_text">
+		<a href="samples_Main.htm">Samples</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

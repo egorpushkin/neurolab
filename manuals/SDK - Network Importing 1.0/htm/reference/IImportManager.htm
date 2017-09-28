@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IImportManager Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IImportManager Interface
+	</div>
+	<div class="body_text">
+		<img src="../ArchImages/IImportManager.gif" class="figure">
+	</div>
+	<pre class="body_declaration">
+interface IImportManager : public IObject</pre>	
+	<div class="body_subtitle">
+		Remarks	
+	</div>
+	<div class="body_text">
+		Library <span class="file_name">NetworkImport.dll</span> implements main serialization and network processing mechanisms.
+		It contains object that implements <b>IImportManager</b>.
+		This control interface provides client application an opportunity to manage library internal state and manipulate with 
+			neural network object model.	
+	</div>	
+	<div class="body_text">
+		The object that inplements <b>IImportManager</b> also provides access to other 
+			<a href="reference_Network_Control_Interfaces.htm">network control interfaces</a>.
+		Any of that interfaces can be queried using <b>IImportManager::QueryInterface</b> call.
+	</div>
+	
+	<div class="body_subtitle">
+		Supported Interfaces
+	</div>
+	<div class="body_text">
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td width="33%">Interface Name</td>
+				<td width="33%">Interface Identificator</td>				
+				<td width="34%">Declared In</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td><a href="INetworkProcessor.htm">INetworkProcessor</a></td>
+				<td>IDD_INetworkProcessor</td>
+				<td><span class="file_name">CmnFactory.h</span></td>
+			</tr>
+			<tr class="data_table_row">
+				<td><a href="IElementsCollection.htm">IElementsCollection</a></td>
+				<td>IDD_IElementsCollection</td>
+				<td><span class="file_name">CmnFactory.h</span></td>
+			</tr>			
+		</table>		
+	</div>
+	
+	<div class="body_subtitle">
+		IImportManager members
+	</div>
+	<div class="body_text">
+		<table class="data_table" align="center">
+			<tr class="data_table_row">
+				<td width="45%">
+					<b>InitializeManager</b>
+				</td>
+				<td width="55%">
+					Initializes manager instance.
+				</td>
+			</tr>				
+			<tr class="data_table_row">				
+				<td>
+					<b>RelaseManager</b>
+				</td>
+				<td>
+					Releases manager instance.
+				</td>				
+			</tr>
+			<tr class="data_table_row">				
+				<td>
+					<a href="#_IImportManager_LoadNLProject">LoadNLProject</a>
+				</td>
+				<td>
+					Loads <b>Neuro Laboratory</b> project.
+				</td>				
+			</tr>
+		</table>	
+	</div>
+	
+	<div class="body_subtitle">
+		<a name="_IImportManager_LoadNLProject"></a>
+		<span class="method_name">IImportManager::LoadNLProject</span>		
+	</div>
+	<pre class="body_declaration">
+virtual bool LoadNLProject(
+    CString&amp; FileName
+) = 0;</pre>
+	<div class="body_subtitle">
+		<span class="method_name">IImportManager::LoadNLProject</span> Parameters
+	</div>
+	<div class="body_text">
+		<i>FileName</i></br>
+		<div class="body_note">
+			[in] Specifies file name to load.
+		</div>	
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">IImportManager::LoadNLProject</span> Return Value
+	</div>	
+	<div class="body_text">
+		<b>True</b> if successful; otherwise <b>false</b>.
+	</div>
+		
+	<div class="body_subtitle">
+		Source	
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Source code that declares <b>IImportManager</b> interface:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('iimportmanager_declaration')">
+				<img id="collapseimg_iimportmanager_declaration" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_iimportmanager_declaration">
+#pragma once
+
+// IImportManager declaration
+interface IImportManager : public IObject
+{
+    virtual bool		InitializeManager() = 0;
+    virtual void		RelaseManager() = 0;
+
+    virtual bool		LoadNLProject(CString& FileName) = 0;
+};</pre>		
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">	
+		<b>Header:</b> Declared in: <span class="file_name">CmnNetworkImport.h</span>, include <span class="file_name">NetworkImporting.h</span>										
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference_Main.htm">Reference</a> 		
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>	
+</body>
+</html>	

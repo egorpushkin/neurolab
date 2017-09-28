@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Data Processing SDK 1.0">
+		<param name="Local" value="htm\default.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="htm\Introduction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Object Model">
+			<param name="Local" value="htm\object_model\object_model_Main.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Reference">
+			<param name="Local" value="htm\reference\reference_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IObject">
+				<param name="Local" value="htm\reference\IObject.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IStorageController">
+				<param name="Local" value="htm\reference\IStorageController.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IXMLStorageController">
+				<param name="Local" value="htm\reference\IXMLStorageController.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IDataFactory">
+				<param name="Local" value="htm\reference\IDataFactory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IPGMFactory">
+				<param name="Local" value="htm\reference\IPGMFactory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IBMPFactory">
+				<param name="Local" value="htm\reference\IBMPFactory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IDataFile">
+				<param name="Local" value="htm\reference\IDataFile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CDataFactory">
+				<param name="Local" value="htm\reference\CDataFactory.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Class Members">
+					<param name="Local" value="htm\reference\CDataFactory_members.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CDataFile">
+				<param name="Local" value="htm\reference\CDataFile.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Class Members">
+					<param name="Local" value="htm\reference\CDataFile_members.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CPGMFactory">
+				<param name="Local" value="htm\reference\CPGMFactory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CBMPFactory">
+				<param name="Local" value="htm\reference\CBMPFactory.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Interface Identificators">
+				<param name="Local" value="htm\reference\reference_Interface_Identificators.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Appendix A - Images Data File Format">
+			<param name="Local" value="htm\appendix_A.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Appendix B - SDK Package Content">
+			<param name="Local" value="htm\appendix_B.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

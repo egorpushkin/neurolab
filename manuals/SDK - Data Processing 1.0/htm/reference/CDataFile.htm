@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>CDataFile Class</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		CDataFile Class
+	</div>
+	<div class="body_text">
+		<map name="CDataFile">
+			<area shape="rect" coords="5, 4, 145, 18" href="../reference/IObject.htm"/>
+			<area shape="rect" coords="18, 32, 158, 46" href="../reference/IStorageController.htm"/>			
+			<area shape="rect" coords="18, 53, 158, 67" href="../reference/IDataFile.htm"/>			
+		</map>	
+		<img src="../ArchImages/CDataFile.gif" usemap="#CDataFile" class="figure"/>
+	</div>
+	<pre class="body_declaration">
+class CDataFile :
+    public IDataFile,
+    public IStorageController</pre>
+	<div class="body_subtitle">
+		Remarks
+	</div>		
+	<div class="body_text">
+		The <b>CDataFile</b> class provides functionality of creating and managing two-streamed data file objects.		
+	</div>		
+	<div class="body_text">
+		You can create new empty object by calling <a href="CDataFile_members.htm#_CDataFile_CreateNewFile">CreateNewFile</a> function.
+	</div>
+	<div class="body_text">
+		This class implements interface <a href="IStorageController.htm">IStorageController</a> so you can get access to it's member 
+			function <b>Serialize</b>.
+		Otherwise you can process save/load operation on the object using native <b>IDataFile</b> operators: 
+			<a href="CDataFile_members.htm#_CDataFile_LoadFile">LoadFile</a> and 
+			<a href="CDataFile_members.htm#_CDataFile_SaveToFile">SaveToFile</a>.
+	</div>
+	<div class="body_note">
+		<b>Note</b> All <b>CDataFile</b> members are derived from <b>IDataFile</b> interface.
+	</div>
+	<div class="body_subtitle">
+		Supported Interfaces
+	</div>		
+	<div class="body_text">	
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td width="30%">Interface Name</td>
+				<td width="40%">Interface Identificator</td>				
+				<td width="30%">Declared In</td>				
+			</tr>	
+			<tr class="data_table_row">
+				<td>IDataFile</td>
+				<td>IDD_IDataFile</td>				
+				<td><span class="file_name">CmnDataFile.h</span></td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>IStorageController</td>
+				<td>IDD_IStorageController</td>				
+				<td><span class="file_name">CmnStorage.h</span></td>				
+			</tr>								
+		</table>
+	</div>			
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">	
+		<b>Header:</b> Declared in: <span class="file_name">CmnDataFile.h</span>, include <span class="file_name">DataProcessing.h</span>				
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="CDataFile_members.htm">Class Members</a> | 
+		<a href="IDataFile.htm">IDataFile</a> | 
+		<a href="IStorageController.htm">IStorageController</a> | 
+		<a href="IObject.htm">IObject</a> | 
+		<a href="CDataFactory.htm">CDataFactory</a> |
+		<a href="reference_Main.htm">Reference</a></br></br>		
+		<a href="../appendix_A.htm">Appendix A - Images Data File Format</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>		
+</body>
+</html>

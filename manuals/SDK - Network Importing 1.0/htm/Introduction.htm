@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Network Importing SDK - Introduction</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		Introduction
+	</div>
+	<div class="body_text">
+		One of the main <b>Neuro Laboratory</b> concepts is usage prepared materials for customer's purposes.
+		You have an opportunity to create application which will use <b>Neuro Laboratory</b> project files.
+		So you can build and train any neural network you want using the environment and then exoprt it for latest usage in your 
+			custom solution.
+		<b>Network Importing SDK</b> provides you all necessary documentation and source code that required for 
+			connecting SDK binary libraries and operating with network object model built in <b>Neuro Laboratory</b>.
+	</div>
+	<div class="body_text">
+		The department also includes basics of the <a href="object_model/object_model_Main.htm">object model</a> which was built 
+			for <b>Neuro Laboratory</b>.
+	</div>
+	<div class="body_text">
+		<a href="reference/reference_Main.htm">Reference</a> deparment contains the enumeration and complete description of classes 
+			and interfaces which are used for manipulating with network object model.
+	</div>
+	<div class="body_title">
+		Network Importing SDK Features
+	</div>	
+	<div class="body_text">
+		<ul>
+			<li>
+				Contains libraries that implements functionality of network serialization and processing mechanisms. 	
+			</li>
+			<li>
+				Contains source code for integrating binary libraries with your applications. 
+			</li>		
+			<li>
+				Contains complete documentaion for developers. 
+			</li>	
+		</ul>	
+	</div>
+	<div class="body_title">
+		Network Importing SDK Source
+	</div>
+	<div class="body_text">
+		This SDK release includes source code required for using binary libraries in your applications.
+		After normal installation you can find these materials in the following folder:		
+	</div>
+	<div class="body_note">
+		<span class="file_name">"$Solution_Dir"\SDK\Network Importing\Source</span>
+	</div>		
+	<div class="body_text">
+		This folder contains <b>Microsoft Visual Studio 7.1</b> project <span class="file_name">NetworkImportingCommon</span> and 
+			<a href="reference/CImportManagerComponent.htm">CImportManagerComponent</a> header and implementation files
+			(<span class="file_name">ImportManagerComponent.h</span> and <span class="file_name">ImportManagerComponent.cpp</span>).
+	</div>			
+	<div class="body_note">			
+		<b>Note</b> This code refers to <b>Data Processing SDK</b> source so be attentive if you are going to move this project to another location.
+		In this case you will have to update link in file <span class="file_name">NetworkImporting.h</span>.
+	</div>		
+	<div class="body_text">
+		You must use <b>Network Exporter Tool</b> to export <b>Neuro Laboratory</b> project files for latest usage 
+			in your custom appliactions.
+		During exporting project file this tool also exports all necessary source code 
+			(<b>Network Inporting</b> as well as <b>Data Processing</b>). 
+		See <a href="appendix_A.htm">Appendix A - Exported Solution Structure</a> to get more information about 
+			exported materials structure.
+		It is recommended to use source located at the folder that you will specify during exporting.
+	</div>		
+	<div class="body_text">		
+		Perform the following to add functionality of <b>Network Importing SDK</b> to your application:
+		<ol type="1">
+			<li>
+				Add <span class="file_name">NetworkImportingCommon</span> and 
+					<span class="file_name">DataProcessingCommon</span> projects to your solution.
+			</li>
+			<li>
+				Add	<span class="file_name">ImportManagerComponent.h</span> and 
+					<span class="file_name">ImportManagerComponent.cpp</span> to one of your projects.
+			</li>
+			<li>
+				Include <span class="file_name">ImportManagerComponent.h</span> and declare object of 
+					<b>CImportManagerComponent</b> class.
+			</li>
+			<li>
+				Execute <b>CImportManagerComponent::LoadComponent</b> method to initialize component.
+			</li>
+		</ol>
+	</div>
+	<div class="body_note">			
+		<b>Note</b> Do not forget to execute <b>CImportManagerComponent::UnloadComponent</b> to unload component and 
+			release all allocations.
+	</div>		
+	<div class="body_note">
+		<b>Note</b>	This source uses functionality of <b>Microsoft Foundation Class (MFC) Library</b>.
+		It must be included in MFC project (<i>MFC Application</i> or <i>MFC DLL</i>).
+	</div>	
+	<div class="body_title">
+		Version History		
+	</div>
+	<div class="body_text">
+		Current SDK Version - 1.0.<br/>
+		Includes complete documentation for developers.		
+	</div>		
+	<div class="body_title">
+		About Author
+	</div>	
+	<div class="body_text">
+		Project Architect, Lead Developer - Egor Pushkin 
+	</div>				
+
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

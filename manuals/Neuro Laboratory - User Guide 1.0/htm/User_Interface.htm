@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>User Interface Quick Tour</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Neuro Laboratory 1.0 - User Guide
+	</div>
+	<div class="page_title">		
+		User Interface Quick Tour
+	</div>
+	<div class="body_subtitle">
+		Introduction
+	</div>	
+	<div class="body_text">
+		<b>Neuro Laboratory Environment</b> is the main part of <b>Neuro Laboratory</b> 1.0 solution.
+	</div>
+	
+	<div class="body_subtitle">
+		Main Application Window
+	</div>	
+	<div class="body_text">
+		<b>Neuro Laboratory Environment</b> main window has the following sections:
+		<ul>		
+			<li>
+				<a href="#_UI_Builder">Builder Workspace</a> - Performs functionality for building neural network.
+			</li>				
+			<li>				
+				<i>Network Elements Toolbox</i>	- Contains a list of available network elements.
+			</li>
+			<li>
+				<i>Plug-ins Panel</i> - Contains a list of loaded plug-ins.
+			</li>
+			<li>
+				<a href="#_UI_Control">Control Panels Section</a>
+			</li>
+		</ul>
+			
+	</div>
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Main_Window.gif" class="figure"/><br/>
+		Figure 1. Main Neuro Laboratory Window.		
+	</div>	
+
+	<div class="body_subtitle">
+		<a name="_UI_Builder"></a>
+		<span class="method_name">Builder Workspace</span> Section
+	</div>		
+	<div class="body_text">
+		This section presents functionality for building and configuring neural network.
+		You must use <b>Network Elements Toolbox</b> section to add elements to project
+			(simply drag one of those elements from toolbox area to the <b>Builder Workspace</b> to perform it).			
+	</div>	
+	<div class="body_text">
+		After element has been added you can remove it or connect to other network elements from your project.	
+		You can access element's control menu by clicking on it using right mouse button.		
+	</div>
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Menu_SingleEl.gif" class="figure" align="absmiddle"/>
+		<img src="ScreenShots/NeuroLab_Menu_LayerEl.gif" class="figure"/><br/>
+		Figure 2. Elements' Control Menus.		
+	</div>
+	<div class="body_text">
+		Use <i>Add Dendrite</i>/<i>Add Layer Input</i> to specify data source element. 
+		Use <i>Add Axon</i>/<i>Add Layer Output</i> to specify data destination element. 		
+		You can configure connection settings using <i>Element Properties</i> control panel
+			(it is often required to specify connection length after establishing connection).
+		It is also available to specify element's activation function using this panel 
+			(by default it is set to <i>Single Change</i>).
+	</div>
+	<div class="body_note">
+		<b>Note</b> that you cannot add dendrite (input connection) to output element as well as 
+		axon (output connection) to input element.
+	</div>
+	<div class="body_text">
+		You can also configure layer element using <i>Properties...</i> menu item.
+	</div>
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Dlg_LayerProp.gif" class="figure"/><br/>
+		Figure 3. Layer Properties Dialog.		
+	</div>	
+	<div class="body_text">
+		Layer is been created with the following settings by default: <br/>
+		&nbsp;&nbsp;Inputs count: <b>64</b>. <br/>
+		&nbsp;&nbsp;Layer dimension: <b>64</b>. <br/>
+		All layer weights are initialized to <b>0.0</b> (<b>Layer Properties Dialog</b> does not present functionality for 
+			manipulating layer weights).
+	</div>	
+	
+	<div class="body_subtitle">
+		<span class="method_name">Main Menu</span> Section
+	</div>	
+	<div class="body_text">
+		Use menu <i>Tools</i> to get access to <b>Neuro Laboratory</b> tools.
+		<b>Data Creator Tool</b> and <b>Network Exporter Tool</b> can be executed this way.
+		You will have an opportunity to export currently opened network project (with made modifications) using 
+			<b>Network Exporter Tool</b> running it using corresponding item from this menu. 
+	</div>
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Menu_Tools.gif" class="figure"/><br/>
+		Figure 4. Menu <i>Tools</i>.		
+	</div>
+	<div class="body_note">
+		<b>Note</b> that any of these tools would be executed only if it was properly installed. 
+		Otherwise you would be notified about the problem.
+	</div>
+	
+	<div class="body_subtitle">
+		<a name="_UI_Control"></a>	
+		<span class="method_name">Control Panels</span> Section
+	</div>
+	<div class="body_text">
+		Neuro Laboratory has the following control panels:
+		<ul>
+			<li>
+				<i>Element Properties</i>
+			</li>
+			<li>
+				<i>Neuron Functions</i>
+			</li>			
+			<li>
+				<i>Training Network</i>
+			</li>			
+			<li>
+				<i>Network Verification</i>
+			</li>			
+			<li>
+				<i>Plugin Bar</i>
+			</li>			
+		</ul>
+			
+	</div>
+	
+	<div class="body_text">
+		<i>Neuron Functions</i> panel is used to display a list of all available activation functions. 
+		You can also configure function's arguments and see it's graph.
+	</div>
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Tab_Func.gif" class="figure"/><br/>
+		Figure 5. Panel <i>Neuron Functions</i>.		
+	</div>	
+	<div class="body_text">
+		<i>Training Network</i> panel is used to train built network using one of external <b>trainers</b>.
+		You must select trainer and load data to process it.
+	</div>	
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Tab_Train.gif" class="figure"/><br/>
+		Figure 6. Panel <i>Training Network</i>.		
+	</div>
+	<div class="body_text">
+		After data file is loaded and trainer is selected press <i>Start Training</i> button to show <b>Trainer Tool</b>.		
+		You can configure trainer at any time by pressing <i>Configure</i> button (located at <i>Neuron Functions</i> panel) or
+			<i>Configure Trainer</i> button (located at <b>Trainer Tool</b> dialog).
+	</div>	
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Dlg_TrainerTool.gif" class="figure"/><br/>
+		Figure 7. Trainer Tool Dialog.		
+	</div>	
+	<div class="body_text">
+		You can start training using <i>Start</i> button.
+	</div>
+	
+	<div class="body_text">
+		<i>Network Verification</i>	panel is used to perform network verification.
+		This operation includes the following tests:
+		<ul>
+			<li>
+				Check Elements Presence. <br/>
+				Possible notifications: <br/>
+				&nbsp;&nbsp;<span class="warning">Warning 0001</span> - Network does not contain any elements.										
+			</li>
+			<li>
+				Check Network Content. <br/>
+				Possible notifications: <br/>
+				&nbsp;&nbsp;<span class="error">Error 0012</span> - Network does not contain any input elements. <br/>
+				&nbsp;&nbsp;<span class="error">Error 0013</span> - Network does not contain any output elements.
+			</li>
+			<li>
+				Check For Single Elements. <br/>
+				Possible notifications: <br/>
+				&nbsp;&nbsp;<span class="error">Error 0001</span> - Element '{Element Name} {Element ID}' has no any connections.
+			</li>
+			<li>
+				Check For Wrong Processors. <br/>
+				Possible notifications: <br/>		
+				&nbsp;&nbsp;<span class="error">Error 0002</span> - ET_PROCESSOR element '{Element Name} {Element ID}' has no any input connections. <br/>					
+				&nbsp;&nbsp;<span class="error">Error 0003</span> - ET_PROCESSOR element '{Element Name} {Element ID}' has no any output connections.
+			</li>
+			<li>
+				Check Layer Elements. <br/>
+				Possible notifications: <br/>		
+				&nbsp;&nbsp;<span class="error">Error 0004</span> - ET_INPUT element '{Element Name} {Element ID}' is connected incorrectly. <br/>					
+				&nbsp;&nbsp;<span class="error">Error 0005</span> - ET_OUTPUT element '{Element Name} {Element ID}' is connected incorrectly. <br/>									
+				&nbsp;&nbsp;<span class="error">Error 0006</span> - ET_PROCESSOR element '{Element Name} {Element ID}' has wrong input connections. <br/>													
+				&nbsp;&nbsp;<span class="error">Error 0007</span> - ET_PROCESSOR element '{Element Name} {Element ID}' has wrong output connections. <br/>																	
+				&nbsp;&nbsp;<span class="error">Error 0008</span> - Element '{Element Name} {Element ID}' must have the same dimension and inputs count.
+			</li>		
+			<li>
+				Data Flow Test. <br/>
+				Possible notifications: <br/>
+				&nbsp;&nbsp;<span class="error">Error 0010</span> - Data flow test skipped. Network contains structure errors. <br/>
+				&nbsp;&nbsp;<span class="error">Error 0009</span> - Prepared network contains at least one circle. <br/>								
+				&nbsp;&nbsp;<span class="error">Error 0011</span> - Network circle found: <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp; (list of elements which make up a cicle would be displayed below).
+										
+			</li>			
+		</ul>
+		It is highly recommended to perform verification and correcting found errors before processing any operations over the network
+			such as data flow, executing trainers or plug-ins.		
+	</div>	
+	
+	<div class="figure_block">
+		<img src="ScreenShots/NeuroLab_Tab_NetVer.gif" class="figure"/><br/>
+		Figure 8. Panel <i>Network Verification</i>.		
+	</div>		
+
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

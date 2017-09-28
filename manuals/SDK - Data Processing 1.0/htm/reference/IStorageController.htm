@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IStorageController Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IStorageController Interface
+	</div>
+	<div class="body_text">
+		<map name="IStorageController">
+			<area shape="rect" coords="5, 4, 145, 18" href="../reference/IObject.htm"/>
+		</map>
+		<img src="../ArchImages/IStorageController.gif" usemap="#IStorageController" class="figure">
+	</div>	
+	<pre class="body_declaration">
+interface IStorageController : public IObject</pre>	
+	<div class="body_subtitle">
+		Remarks
+	</div>		
+	<div class="body_text">
+		The <b>IStorageController</b> interface provedes methods for creating and managing storage objects with hierarchy structure.
+	</div>
+	<div class="body_text">
+		Associated identifacator - <b>IDD_IStorageController</b>.
+	</div>		
+	<div class="body_subtitle">
+		IStorageController members
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_IStorageController_Serialize">Serialize</a></td>
+				<td width="65%">Loads or stores an object from/to an archive.</td>				
+			</tr>
+		</table>
+	</div>	
+	<div class="body_subtitle">
+		<a name="_IStorageController_Serialize"></a>	
+		<span class="method_name">IStorageController::Serialize</span>
+	</div>	
+	<pre class="body_declaration">
+virtual bool Serialize(
+    CArchive&amp; ar
+) = 0;</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">IStorageController::Serialize</span> Parameters
+	</div>
+	<div class="body_text">
+		<i>ar</i></br>
+		<div class="body_note">
+			[in/out] A <b>CArchive</b> object to serialize to or from. 
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">IStorageController::Serialize</span> Remarks
+	</div>
+	<div class="body_text">
+		You must override this function for all classes derived from <b>IStorageController</b> interface.
+	</div>		
+	<div class="body_text">	
+		Use <b>CArchive::IsLoading</b> or <b>CArchive::IsStoring</b> to determine whether the archive is loading or storing. 
+	</div>	
+	<div class="body_note">
+		<b>Note</b> <b>IStorageController</b> interface is a child of 
+			<a href="IObject.htm">IObject</a> so it inherits it's pure methods (<b>GetClassString</b> and <b>QueryInterface</b>) and
+			they must be overridden in class that implements <b>IStorageController</b>.		
+	</div>					
+	<div class="body_subtitle">	
+		<a name="_IObject_Using_Sample"></a>
+		Sample
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Declaring a simple class that implements <b>IStorageController</b>.
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('istoragecontroller_implementation')">
+				<img id="collapseimg_istoragecontroller_implementation" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>	
+	<pre class="body_source_code" id="collapseobj_istoragecontroller_implementation">
+class CSimpleStore :
+    public IStorageController
+{
+public:
+    // IStorageController implementations section
+    virtual bool Serialize(CArchive&amp; ar)
+    {
+        if (ar.IsLoading())
+        {
+            // add loading code here
+        } else
+        {
+            // add storing code here
+        }
+    }
+	
+    // IObject implementations section
+    virtual CString GetClassString()
+    {
+        return _T("CSimpleStore");
+    }
+	
+    virtual void QueryInterface(int iIDD, void** ppvObject)
+    {
+        *ppvObject = NULL;
+
+        switch(iIDD)
+        {
+        case IDD_IStorageController:
+            *ppvObject = (IStorageController*)this;
+            break;		 
+        }	
+    }
+};</pre>	
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">				
+		<b>Header:</b> Declared in: <span class="file_name">CmnStorage.h</span>, include <span class="file_name">DataProcessing.h</span>				
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="IObject.htm">IObject</a> |
+		<a href="reference_Main.htm">Reference</a> 
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

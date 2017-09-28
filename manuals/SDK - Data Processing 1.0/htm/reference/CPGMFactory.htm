@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>CPGMFactory Class</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		CPGMFactory Class
+	</div>
+	<div class="body_text">
+		<map name="CPGMFactory">
+			<area shape="rect" coords="5, 4, 145, 18" href="../reference/IObject.htm"/>
+			<area shape="rect" coords="18, 32, 158, 46" href="../reference/IStorageController.htm"/>			
+			<area shape="rect" coords="18, 53, 158, 67" href="../reference/IDataFactory.htm"/>			
+			<area shape="rect" coords="33, 81, 173, 95" href="../reference/CDataFactory.htm"/>						
+			<area shape="rect" coords="33, 102, 173, 116" href="../reference/IPGMFactory.htm"/>						
+		</map>		
+		<img src="../ArchImages/CPGMFactory.gif" usemap="#CPGMFactory" class="figure"/>
+	</div>
+	<pre class="body_declaration">
+class CPGMFactory : 
+    public CDataFactory,
+    public IPGMFactory</pre>
+	<div class="body_subtitle">
+		CPGMFactory members
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_CPGMFactory_LoadPGMFile">LoadPGMFile</a></td>
+				<td width="65%">Loads PGM image.</td>				
+			</tr>
+		</table>
+	</div>	
+	<div class="body_subtitle">
+		<a name="_CPGMFactory_LoadPGMFile"></a>	
+		<span class="method_name">CPGMFactory::LoadPGMFile</span>
+	</div>	
+	<pre class="body_declaration">
+virtual bool LoadPGMFile(
+    CString&amp; FileName
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">CPGMFactory::LoadPGMFile</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>FileName</i></br>
+		<div class="body_note">
+			[in] Specifies the file name to load.
+		</div>	
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">CPGMFactory::LoadPGMFile</span> Return Value
+	</div>	
+	<div class="body_text">
+		Return <b>true</b> in case of successful loading.
+	</div>	
+	
+	<div class="body_subtitle">
+		Supported Interfaces
+	</div>		
+	<div class="body_text">	
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td width="30%">Interface Name</td>
+				<td width="40%">Interface Identificator</td>				
+				<td width="30%">Declared In</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>IPGMFactory</td>
+				<td>IDD_IPGMFactory</td>				
+				<td><span class="file_name">CmnPGMFactory.h</span></td>				
+			</tr>				
+			<tr class="data_table_row">
+				<td>IDataFactory</td>
+				<td>IDD_IDataFactory</td>				
+				<td><span class="file_name">CmnDataFactory.h</span></td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>IStorageController</td>
+				<td>IDD_IStorageController</td>				
+				<td><span class="file_name">CmnStorage.h</span></td>				
+			</tr>								
+		</table>
+	</div>			
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">		
+		<b>Header:</b> Declared in: <span class="file_name">CmnPGMFactory.h</span>, include <span class="file_name">DataProcessing.h</span>							
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="IPGMFactory.htm">IPGMFactory</a> | 	
+		<a href="CDataFactory.htm">CDataFactory</a> | 
+		<a href="reference_Main.htm">Reference</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>		
+</body>
+</html>

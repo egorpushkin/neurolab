@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Network Importing SDK 1.0">
+		<param name="Local" value="htm\default.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Introduction">
+			<param name="Local" value="htm\Introduction.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Object Model">
+			<param name="Local" value="htm\object_model\object_model_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Layer Internal Data Model ">
+				<param name="Local" value="htm\object_model\object_model_Layer_Architect.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Neural Network Data Model ">
+				<param name="Local" value="htm\object_model\object_model_Network_Data_Model.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Reference">
+			<param name="Local" value="htm\reference\reference_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IComponent">
+				<param name="Local" value="htm\reference\IComponent.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="IImportManager ">
+				<param name="Local" value="htm\reference\IImportManager.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Control Interfaces">
+				<param name="Local" value="htm\reference\reference_Network_Control_Interfaces.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="INetworkProcessor ">
+					<param name="Local" value="htm\reference\INetworkProcessor.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="IElementsCollection">
+					<param name="Local" value="htm\reference\IElementsCollection.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Network Element Core">
+				<param name="Local" value="htm\reference\IElement.htm">
+				<param name="ImageNumber" value="1">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="IElement">
+					<param name="Local" value="htm\reference\IElement.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="IDataFlow">
+					<param name="Local" value="htm\reference\IDataFlow.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="IConnectionsFactory">
+					<param name="Local" value="htm\reference\IConnectionsFactory.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="IDataConnector">
+					<param name="Local" value="htm\reference\IDataConnector.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ILayerControl">
+					<param name="Local" value="htm\reference\ILayerControl.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="CConnection">
+				<param name="Local" value="htm\reference\CConnection.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="sFunction">
+				<param name="Local" value="htm\reference\sFunction.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Element Constants">
+				<param name="Local" value="htm\reference\reference_Element_Constants.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Samples">
+			<param name="Local" value="htm\samples\samples_Main.htm">
+			<param name="ImageNumber" value="1">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="NetworkImportTest Project">
+				<param name="Local" value="htm\samples\samples_ImportNetworkTest.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Appendix A - Exported Solution Structure">
+			<param name="Local" value="htm\appendix_A.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Appendix B - SDK Package Content">
+			<param name="Local" value="htm\appendix_B.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

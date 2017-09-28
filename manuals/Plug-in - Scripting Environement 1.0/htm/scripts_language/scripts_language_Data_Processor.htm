@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Data Processor Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Data Processor Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		<b>Data Processor</b> object was implemented by the enviromnent to give an opportunity of operating with 
+			data attached to the solution.
+		You can add to the solution as many data files you want.
+		<b>Data Processor API</b> allows you to enumerate these data for latest usage.		
+	</div>
+	<div class="body_note">
+		<b>Note</b> that you can add only files compatible with <b>CDataFile</b> data objects. 
+		See <b>Data Processing SDK</b> documentation for details.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>	
+	<div class="body_text">
+		This API provides all necessary functionality for enumerating attached data objects.
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataProcessor_getDataFilesCount">getDataFilesCount</a></td>
+				<td width="65%">Returns count of attached data objects.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_DataProcessor_getDataFile">getDataFile</a></td>
+				<td>Returns specified data object.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_DataProcessor_getDataFileName">getDataFileName</a></td>
+				<td>Returns file name for specified data object.</td>
+			</tr>					
+		</table>
+	</div>	
+	
+	<!-- DataProcessor:getDataFilesCount description -->
+	<div class="body_subtitle">
+		<a name="_DataProcessor_getDataFilesCount"></a>	
+		<span class="method_name">getDataFilesCount</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getDataFilesCount();</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getDataFilesCount</span> Return Value
+	</div>
+	<div class="body_text">
+		This function returns a number of valid attached data objects.
+		Data objects is valid if <b>CDataFile</b> serializes it successfully.
+	</div>
+	
+	<!-- DataProcessor:getDataFile description -->
+	<div class="body_subtitle">
+		<a name="_DataProcessor_getDataFile"></a>	
+		<span class="method_name">getDataFile</span>
+	</div>	
+	<pre class="body_declaration">
+Object getDataFile(
+    Integer data_object_index
+);
+Object getDataFile(
+    String data_object_file_name
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">getDataFile</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_object_index</i></br>
+		<div class="body_note">
+			[in] This parameter specifies index of the data object to be returned.						
+		</div>
+		<i>data_object_file_name</i></br>
+		<div class="body_note">
+			[in] This parameter specifies file name of the data object to be returned.
+			You must specify only name of a file without extension.			
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getDataFile</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>.
+	</div>	
+	
+	<!-- DataProcessor:getDataFileName description -->
+	<div class="body_subtitle">
+		<a name="_DataProcessor_getDataFileName"></a>	
+		<span class="method_name">getDataFileName</span>
+	</div>	
+	<pre class="body_declaration">
+String getDataFileName(
+    Integer data_object_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getDataFileName</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_object_index</i></br>
+		<div class="body_note">
+			[in] This parameter specifies index of the data object.						
+		</div>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">getDataFileName</span> Return Value
+	</div>
+	<div class="body_text">
+		String object that contains name of the data object with specified index if successful; otherwise <b>nil</b>.
+	</div>
+	
+	<!-- DataProcessor sample usage -->
+	<div class="body_subtitle">
+		Example Code
+	</div>
+	<div class="body_text">
+		For an example, see <a href="scripts_language_Data_File.htm">Data File Operations</a>.
+	</div>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Data_Processing.htm">Data Processing Package</a> |
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>			

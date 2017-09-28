@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Data Factory Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Data Factory Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		This package created to manage <b>Data Factory</b> objects. 
+		See <b>Data Processing SDK</b> documentation for the better understanding of data factory manipulations.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Creation/Destruction
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_createFactoryObject">createFactoryObject</a></td>
+				<td width="65%">Creates new empty data factory object.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_releaseFactoryObject">releaseFactoryObject</a></td>
+				<td width="65%">Destroys existing data factory.</td>
+			</tr>	
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_createFactory">createFactory</a></td>
+				<td width="65%">Initializes data factory object.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_releaseFactory">releaseFactory</a></td>
+				<td width="65%">Releases factory data.</td>
+			</tr>						
+		</table>
+	</div>
+	<div class="body_text">		
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Factory Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_setItemData">setItemData</a></td>
+				<td width="65%">Set new value for the specified data factory element.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_fillFactory">fillFactory</a></td>
+				<td width="65%">Fills data factory with the specified value.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_increaseValue">increaseValue</a></td>
+				<td width="65%">Increases value for the specified data factory element.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_getItemData">getItemData</a></td>
+				<td width="65%">Returns current value of specified data factory element.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFactory_getDataLength">getDataLength</a></td>
+				<td width="65%">Returns factory data length.</td>
+			</tr>			
+		</table>	
+	</div>
+	
+	<!-- DataFactory:createFactoryObject description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_createFactoryObject"></a>	
+		<span class="method_name">createFactoryObject</span>
+	</div>	
+	<div class="body_text">
+		This function creates new data factory object. 
+		You can call <a href="#_DataFactory_releaseFactoryObject">releaseFactoryObject</a> to release this object.
+		All factories which has not been released would be destroyed by environment after script termination.
+	</div>	
+	<pre class="body_declaration">
+Object createFactoryObject(
+ [  Integer data_length
+ [, Float fill_value = 0.0f ]]
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">createFactoryObject</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_length</i></br>
+		<div class="body_note">
+			[in] This argument specifies the length of new data factory object.
+			If this argument absents environment will create empty data factory object.
+		</div>
+		<i>fill_value</i></br>
+		<div class="body_note">
+			[in] This argument specifies the value to fill factory with.
+		</div>		
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">createFactoryObject</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>. 
+	</div>		
+	
+	<!-- DataFactory:releaseFactoryObject description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_releaseFactoryObject"></a>	
+		<span class="method_name">releaseFactoryObject</span>
+	</div>	
+	<pre class="body_declaration">
+Boolean releaseFactoryObject(
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">releaseFactoryObject</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] You must specify data factory object that you want to destroy.
+			You can use this function for destroying only factory objects which were created using 
+ 				<a href="#_DataFactory_releaseFactoryObject">releaseFactoryObject</a> function.
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">releaseFactoryObject</span> Return Value
+	</div>
+	<div class="body_text">
+		<b>True</b> if successful; otherwise <b>false</b>. 
+	</div>			
+	
+	<!-- DataFactory:createFactory description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_createFactory"></a>	
+		<span class="method_name">createFactory</span>
+	</div>	
+	<div class="body_text">
+		This function allocates data buffer for the specified factory object.
+	</div>
+	<pre class="body_declaration">
+Void createFactory(
+    Object data_factory,
+    Integer data_length
+ [, Float fill_value = 0.0f ]
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">createFactory</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] You must specify the factory object to operate with.
+		</div>		
+		<i>data_length</i></br>
+		<div class="body_note">
+			[in] This argument specifies the length of new data factory object.
+		</div>
+		<i>fill_value</i></br>
+		<div class="body_note">
+			[in] This argument specifies the value to fill factory with.
+		</div>		
+	</div>	
+	
+	<!-- DataFactory:releaseFactory description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_releaseFactory"></a>	
+		<span class="method_name">releaseFactory</span>
+	</div>	
+	<div class="body_text">
+		This function release data buffer for the specified factory object.
+	</div>
+	<pre class="body_declaration">
+Void releaseFactory(
+    Object data_factory
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">releaseFactory</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>data_factory</i></br>
+		<div class="body_note">
+			[in] You must specify the factory object to operate with.
+		</div>		
+	</div>	
+	
+	<!-- DataFactory:setItemData description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_setItemData"></a>	
+		<span class="method_name">setItemData</span>
+	</div>	
+	<pre class="body_declaration">
+Void setItemData(
+    Object data_factory,
+    Integer data_index,
+    Float data_value
+);</pre>
+
+	<!-- DataFactory:fillFactory description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_fillFactory"></a>	
+		<span class="method_name">fillFactory</span>
+	</div>	
+	<pre class="body_declaration">
+Void fillFactory(
+    Object data_factory,
+    Float data_value
+);</pre>
+
+	<!-- DataFactory:increaseValue description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_increaseValue"></a>	
+		<span class="method_name">increaseValue</span>
+	</div>	
+	<pre class="body_declaration">
+Void increaseValue(
+    Object data_factory,
+    Integer data_index,
+    Float data_value
+);</pre>
+
+	<!-- DataFactory:getItemData description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_getItemData"></a>	
+		<span class="method_name">getItemData</span>
+	</div>	
+	<pre class="body_declaration">
+Float getItemData(
+    Object data_factory,
+    Integer data_index,
+);</pre>
+
+	<!-- DataFactory:getDataLength description -->
+	<div class="body_subtitle">
+		<a name="_DataFactory_getDataLength"></a>	
+		<span class="method_name">getDataLength</span>
+	</div>	
+	<pre class="body_declaration">
+Integer getDataLength(
+    Object data_factory
+);</pre>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Data_Processing.htm">Data Processing Package</a> |
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>			
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>		
