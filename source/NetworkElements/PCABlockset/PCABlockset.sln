@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCABlockset", "PCABlockset.vcproj", "{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\Common\Common.vcproj", "{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Debug.ActiveCfg = Debug|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Debug.Build.0 = Debug|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Release.ActiveCfg = Release|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Release.Build.0 = Release|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Debug.ActiveCfg = Debug|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Debug.Build.0 = Debug|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Release.ActiveCfg = Release|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

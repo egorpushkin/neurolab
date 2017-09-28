@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackPropagation", "..\Trainers\BackPropagation\BackPropagation.vcproj", "{3B680DB4-AB50-42FE-B0C9-699504F98C0C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KohonenTraining", "..\Trainers\KohonenTraining\KohonenTraining.vcproj", "{69C8C2F7-A77A-4F62-AA55-5EF4E28361DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RBFTraining", "..\Trainers\RBFTraining\RBFTraining.vcproj", "{954DE45B-F3D7-490C-9733-FEC628304D70}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCATrainer", "..\Trainers\PCATrainer\PCATrainer.vcproj", "{92746FF2-7584-48D1-B9E9-24F724890D65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC} = {164621C4-26A6-4A61-BFAF-A58FA8D48FAC}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackPropagationFann", "..\Trainers\BackPropagationFann\BackPropagationFann.vcproj", "{356C09CD-A4EE-4810-9489-330E96B7682F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewMat11", "..\Trainers\PCATrainer\MathTools\NewMat11\NewMat11.vcproj", "{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B680DB4-AB50-42FE-B0C9-699504F98C0C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B680DB4-AB50-42FE-B0C9-699504F98C0C}.Release|Win32.ActiveCfg = Release|Win32
+		{3B680DB4-AB50-42FE-B0C9-699504F98C0C}.Release|Win32.Build.0 = Release|Win32
+		{69C8C2F7-A77A-4F62-AA55-5EF4E28361DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{69C8C2F7-A77A-4F62-AA55-5EF4E28361DD}.Release|Win32.ActiveCfg = Release|Win32
+		{69C8C2F7-A77A-4F62-AA55-5EF4E28361DD}.Release|Win32.Build.0 = Release|Win32
+		{954DE45B-F3D7-490C-9733-FEC628304D70}.Debug|Win32.ActiveCfg = Debug|Win32
+		{954DE45B-F3D7-490C-9733-FEC628304D70}.Release|Win32.ActiveCfg = Release|Win32
+		{954DE45B-F3D7-490C-9733-FEC628304D70}.Release|Win32.Build.0 = Release|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Release|Win32.ActiveCfg = Release|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Release|Win32.Build.0 = Release|Win32
+		{356C09CD-A4EE-4810-9489-330E96B7682F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{356C09CD-A4EE-4810-9489-330E96B7682F}.Debug|Win32.Build.0 = Debug|Win32
+		{356C09CD-A4EE-4810-9489-330E96B7682F}.Release|Win32.ActiveCfg = Release|Win32
+		{356C09CD-A4EE-4810-9489-330E96B7682F}.Release|Win32.Build.0 = Release|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Debug|Win32.Build.0 = Debug|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Release|Win32.ActiveCfg = Release|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

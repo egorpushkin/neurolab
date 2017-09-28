@@ -1,0 +1,6 @@
+; BackPropagation.def : Declares the module parameters for the DLL.
+
+LIBRARY      "BackPropagation"
+
+EXPORTS
+    ; Explicit exports can go here

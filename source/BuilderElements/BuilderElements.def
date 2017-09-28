@@ -1,0 +1,6 @@
+; BuilderElements.def : Declares the module parameters for the DLL.
+
+LIBRARY      "BuilderElements"
+
+EXPORTS
+    ; Explicit exports can go here

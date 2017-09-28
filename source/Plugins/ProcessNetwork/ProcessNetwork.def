@@ -1,0 +1,6 @@
+; ProcessNetwork.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ProcessNetwork"
+
+EXPORTS
+    ; Explicit exports can go here

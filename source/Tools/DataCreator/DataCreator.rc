@@ -1,0 +1,587 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\DataCreator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DataCreator.ico"
+IDI_UPARROW             ICON                    "res\\up_arrow.ico"
+IDI_DOWNARROW           ICON                    "res\\down_arrow.ico"
+IDI_CTRL_PROP           ICON                    "res\\ctrl_prop.ico"
+IDI_CTRL_EDITOR         ICON                    "res\\ctrl_editor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATA_FILES DIALOGEX 0, 0, 450, 256
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Input symbols",IDC_STATIC,8,68,176,180
+    PUSHBUTTON      "New",IDC_NEW,382,79,50,14
+    PUSHBUTTON      "Load",IDC_LOAD,382,97,50,14
+    PUSHBUTTON      "Save",IDC_SAVE,382,116,50,14
+    GROUPBOX        "Output symbols",IDC_STATIC,190,68,176,180
+    LTEXT           "Symbol number:",IDC_STATIC,28,80,52,8
+    LTEXT           "0",IDC_INPUT_NUMBER,84,80,19,8
+    PUSHBUTTON      "",IDC_UP_LIST_INPUTS,158,97,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_DOWN_LIST_INPUTS,158,116,16,14,BS_ICON
+    LTEXT           "Total symbols:",IDC_STATIC,40,204,47,8
+    LTEXT           "0",IDC_TOTAL_INPUTS,96,204,21,8
+    PUSHBUTTON      "Add",IDC_ADD_INPUT_SYMBOL,25,226,25,14
+    PUSHBUTTON      "Remove",IDC_REMOVE_INPUT_SYMBOL,56,226,41,14
+    PUSHBUTTON      "Marker",IDC_SET_INPUT_MARKER,103,226,35,14
+    LTEXT           "Current marker:",IDC_STATIC,40,214,52,8
+    LTEXT           "0",IDC_INPUT_MARKER,96,214,21,8
+    LTEXT           "Symbol number:",IDC_STATIC,210,80,52,8
+    LTEXT           "0",IDC_OUTPUT_NUMBER,266,80,19,8
+    PUSHBUTTON      "",IDC_UP_LIST_OUTPUTS,340,97,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_DOWN_LIST_OUTPUTS,340,116,16,14,BS_ICON
+    LTEXT           "Total symbols:",IDC_STATIC,222,204,47,8
+    LTEXT           "0",IDC_TOTAL_OUTPUTS,278,204,21,8
+    PUSHBUTTON      "Add",IDC_ADD_OUTPUT_SYMBOL,207,226,25,14
+    PUSHBUTTON      "Remove",IDC_REMOVE_OUTPUT_SYMBOL,238,226,41,14
+    PUSHBUTTON      "Marker",IDC_SET_OUTPUT_MARKER,285,226,35,14
+    LTEXT           "Current marker:",IDC_STATIC,222,214,52,8
+    LTEXT           "0",IDC_OUTPUT_MARKER,278,214,21,8
+    GROUPBOX        "Common information",IDC_STATIC,8,3,304,62
+    LTEXT           "Input symbol length:",IDC_STATIC,28,27,67,8
+    LTEXT           "Output symbol length:",IDC_STATIC,28,37,72,8
+    LTEXT           "0",IDC_INPUT_LENGTH,115,27,23,8
+    LTEXT           "0",IDC_OUTPUT_LENGTH,115,37,23,8
+    LTEXT           "File name:",IDC_STATIC,28,15,34,8
+    EDITTEXT        IDC_FILE_NAME,67,15,238,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "False",IDC_MODIFIED_STATE,70,50,18,8
+    LTEXT           "Modified:",IDC_STATIC,28,50,30,8
+    PUSHBUTTON      "",IDC_INPUT_CTRL_PROP,158,182,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_OUTPUT_CTRL_PROP,340,182,16,14,BS_ICON
+    PUSHBUTTON      "Save As",IDC_SAVE_AS,382,135,50,14
+    PUSHBUTTON      "",IDC_INPUT_CTRL_EDITOR,158,163,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_OUTPUT_CTRL_EDITOR,340,163,16,14,BS_ICON
+END
+
+IDD_NEW_FILE_DLG DIALOGEX 0, 0, 226, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Creaing New Data File"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,58,68,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,68,50,14
+    LTEXT           "Enter input data length:",IDC_STATIC,60,6,78,8
+    EDITTEXT        IDC_INPUT_LENGTH,48,18,126,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTPUT_LENGTH,48,48,126,14,ES_AUTOHSCROLL
+    LTEXT           "Enter output data length:",IDC_STATIC,60,36,83,8
+END
+
+IDD_DATA_COLLECTIONS DIALOGEX 0, 0, 450, 256
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COLLECTION_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,7,12,134,237
+    LTEXT           "Collection solution:",IDC_STATIC,17,2,111,8
+    CONTROL         "",IDC_COLLECTION_PROPERTIES,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,149,
+                    12,294,237
+END
+
+IDD_NEW_COLLECTION_DLG DIALOGEX 0, 0, 222, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Creating new collection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,55,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,111,41,50,14
+    LTEXT           "Enter collection name:",IDC_STATIC,57,7,72,8
+    EDITTEXT        IDC_COLLECTION_NAME,43,19,134,14,ES_AUTOHSCROLL
+END
+
+IDD_NEW_GROUP_DLG DIALOGEX 0, 0, 222, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Creating new group"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,55,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,111,41,50,14
+    LTEXT           "Enter group name:",IDC_STATIC,57,7,61,8
+    EDITTEXT        IDC_GROUP_NAME,43,19,134,14,ES_AUTOHSCROLL
+END
+
+IDD_DC_TO_DF_DLG DIALOGEX 0, 0, 450, 256
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Converting project",IDC_STATIC,53,3,342,194
+    LTEXT           "Data collection name:",IDC_STATIC,79,38,70,8
+    LTEXT           "<not loaded>",IDC_DATA_COLLECTION_NAME,160,38,63,8
+    PUSHBUTTON      "Details...",IDC_DATA_COLLECTION_DETAILS,237,34,50,14,
+                    WS_DISABLED
+    LTEXT           "Data file outputs count:",IDC_STATIC,79,55,77,8
+    LTEXT           "<not loaded>",IDC_DATA_FILE_OUTPUTS,160,55,63,8
+    PUSHBUTTON      "Details...",IDC_DATA_FILE_DETAILS,237,52,50,14,
+                    WS_DISABLED
+    CONTROL         "",IDC_PROJECT_CONTENT,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | 
+                    WS_BORDER | WS_TABSTOP,68,83,246,107
+    LTEXT           "Project content:",IDC_STATIC,80,71,53,8
+    PUSHBUTTON      "Add",IDC_ADD_ENTRY,328,88,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_EDIT_ENTRY,328,106,50,14,WS_DISABLED
+    PUSHBUTTON      "Remove",IDC_REMOVE_ENTRY,328,124,50,14,WS_DISABLED
+    GROUPBOX        "Project operations",IDC_STATIC,53,200,342,51
+    PUSHBUTTON      "Load Project",IDC_LOAD_PROJECT,75,230,64,14
+    PUSHBUTTON      "Save Project",IDC_SAVE_PROJECT,144,212,64,14
+    PUSHBUTTON      "Export Project",IDC_EXPORT_PROJECT,307,212,64,14,
+                    WS_DISABLED
+    PUSHBUTTON      "New Project",IDC_NEW_PROJECT,75,212,64,14
+    PUSHBUTTON      "Close Project",IDC_Close_PROJECT2,144,230,64,14
+    LTEXT           "Project name:",IDC_STATIC,79,18,46,8
+    EDITTEXT        IDC_PROJ_NAME,130,15,137,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_NEW_CONVERTER_DLG DIALOGEX 0, 0, 294, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create new converting project"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,93,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,150,188,50,14
+    GROUPBOX        "Data Collection",IDC_STATIC,7,36,280,72
+    LTEXT           "Collection name:",IDC_STATIC,25,70,54,8
+    PUSHBUTTON      "Load",IDC_DATA_COLLECTION_LOAD,131,87,50,14
+    PUSHBUTTON      "Details",IDC_DETAILS_DATA_COLLECTION,188,87,50,14,
+                    WS_DISABLED
+    GROUPBOX        "Data File",IDC_STATIC,7,110,280,72
+    LTEXT           "Project name:",IDC_STATIC,25,7,46,8
+    EDITTEXT        IDC_PROJECT_NAME,16,18,157,14,ES_AUTOHSCROLL
+    LTEXT           "File name:",IDC_STATIC,25,51,34,8
+    EDITTEXT        IDC_DATA_COLLECTION_FILE_NAME,87,48,178,14,
+                    ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_DATA_COLLECTION_NAME,87,67,178,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Outputs count:",IDC_STATIC,25,144,50,8
+    PUSHBUTTON      "Load",IDC_DATA_FILE_LOAD,131,160,50,14
+    PUSHBUTTON      "Details",IDC_DETEILS_DATA_FILE,187,160,50,14,
+                    WS_DISABLED
+    LTEXT           "File name:",IDC_STATIC,25,125,34,8
+    EDITTEXT        IDC_DATA_FILE_FILE_NAME,87,122,178,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_DATA_FILE_OUTPUTS_COUNT,87,141,178,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_NEW_CONVERTER_ITEM_DLG DIALOGEX 0, 0, 232, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add new cenverter item"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,120,73,50,14
+    LTEXT           "Collection group name:",IDC_STATIC,23,7,74,8
+    EDITTEXT        IDC_COLL_GROUP_NAME,7,19,162,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Select",IDC_SELECT_GROUP_NAME,175,19,50,14
+    LTEXT           "Symbol index:",IDC_STATIC,23,39,46,8
+    EDITTEXT        IDC_SYMBOL_INDEX,7,51,162,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Select",IDC_SELECT_SYMBOL_INDEX,175,51,50,14
+END
+
+IDD_SELECT_DATA_SYMBOL_DLG DIALOGEX 0, 0, 213, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select data symbol"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,52,183,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,111,183,50,14
+    LTEXT           "Total output symbols count:",IDC_STATIC,22,7,90,8
+    LTEXT           "0",IDC_SYMBOLS_COUNT,120,7,24,8
+    LTEXT           "Symbol dimension:",IDC_STATIC,22,18,60,8
+    LTEXT           "0",IDC_SYMBOL_DIMENSION,120,18,24,8
+    LTEXT           "Current symbol:",IDC_STATIC,22,33,52,8
+    LTEXT           "Symbol index:",IDC_STATIC,22,168,46,8
+    LTEXT           "0",IDC_SYMBOL_INDEX,76,168,24,8
+    PUSHBUTTON      "",IDC_UP_SYMBOL,188,59,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_DOWN_SYMBOL,188,78,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_SYMBOL_PROPERTIES,188,110,16,14,BS_ICON
+END
+
+IDD_SELECT_COLLECTION_GROUP_DLG DIALOGEX 0, 0, 271, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select Collection Group"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,83,196,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,139,196,50,14
+    LTEXT           "Collection groups:",IDC_STATIC,39,7,58,8
+    CONTROL         "",IDC_COLLECTION_GROUPS_TREE,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,18,125,172
+    GROUPBOX        "",IDC_STATIC,140,14,124,176
+    LTEXT           "Common information:",IDC_STATIC,164,7,69,8
+    LTEXT           "Total data items:",IDC_STATIC,150,48,55,8
+    LTEXT           "Total subgroups:",IDC_STATIC,150,59,55,8
+    LTEXT           "0",IDC_DATA_ITEMS,218,48,24,8
+    LTEXT           "0",IDC_SUBGROUPS,218,59,24,8
+    LTEXT           "Group name:",IDC_STATIC,150,25,42,8
+    LTEXT           "",IDC_GROUP_NAME,161,36,94,8
+END
+
+IDD_EXPORTING_COLLECTION_DLG DIALOGEX 0, 0, 288, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Exporting Collection to Data File"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,207,217,50,14
+    LTEXT           "Select destination data file name:",IDC_STATIC,28,20,
+                    108,8
+    EDITTEXT        IDC_DESTINATION_FILE_NAME,14,33,241,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_BROWSE,255,33,16,14
+    PUSHBUTTON      "Convert",IDC_CONVERT,205,81,50,14
+    LTEXT           "Convertion log:",IDC_STATIC,24,100,50,8
+    LISTBOX         IDC_LIST1,7,112,274,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Enter data file input symbol dimension:",IDC_STATIC,28,
+                    54,124,8
+    GROUPBOX        "Additional data file information",IDC_STATIC,7,7,274,67
+    EDITTEXT        IDC_DATA_FILE_INPUT_DIMENSION,158,52,40,14,
+                    ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_NEW_FILE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_DATA_COLLECTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 443
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_NEW_COLLECTION_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_NEW_GROUP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_NEW_CONVERTER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_NEW_CONVERTER_ITEM_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_SELECT_DATA_SYMBOL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_SELECT_COLLECTION_GROUP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_EXPORTING_COLLECTION_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DATA_COLLECTIONS DLGINIT
+BEGIN
+    IDC_COLLECTION_PROPERTIES, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x2d94, 0x0000, 0x27ca, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x000a, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 302, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About DataCreator Tool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,126,147,50,16,WS_GROUP
+    PUSHBUTTON      "Product Information",IDC_INFOHEADERCONTROL,0,0,301,55
+    LTEXT           "Product name:",IDC_STATIC,42,66,48,8
+    LTEXT           "DataCreator Tool",IDC_STATIC,114,66,56,8
+    LTEXT           "Version:",IDC_STATIC,42,78,27,8
+    LTEXT           "Stable Release 1.0",IDC_STATIC,114,78,61,8
+    LTEXT           "Developed by:",IDC_STATIC,42,90,48,8
+    LTEXT           "Scientific Software - Neuro Research Group",IDC_STATIC,
+                    114,90,140,8
+    LTEXT           "Project Architect, Lead Developer:",IDC_STATIC,42,102,
+                    112,8
+    LTEXT           "Egor Pushkin",IDC_STATIC,50,114,42,8
+    LTEXT           "All rights reserved! Copyright © Scientific Software 2005",
+                    IDC_STATIC,68,134,183,8
+END
+
+IDD_DATACREATOR_DIALOG DIALOGEX 0, 0, 462, 318
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Data Creator Tool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,400,297,50,16
+    CONTROL         "",IDC_MAIN_TAB,"SysTabControl32",0x0,4,19,455,273
+    CONTROL         "Data Creator Main Toolbar",IDC_PANEL_BAR,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,3,3,456,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Data Files Creator Tool"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Data Files Creator Tool"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DataCreator.exe"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "DataCreator.exe"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "res\\DataCreator.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_NODROP              CURSOR                  "nodrop.cur"
+IDC_POINTER_COPY        CURSOR                  "arrowcop.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About DataCreator..."
+    IDS_SDKDOK              "Data Processing SDK Documentation"
+    IDS_USERGUIDE           "&Data Creator - User Guide"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\DataCreator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

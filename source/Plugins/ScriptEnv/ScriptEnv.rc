@@ -1,0 +1,428 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\ScriptEnv.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCRIPT_ENV_MAIN_DLG DIALOGEX 0, 0, 593, 393
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Scripting Environment"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SOLUTION_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,2,24,169,235
+END
+
+IDD_NEW_SOLUTION_DLG DIALOGEX 0, 0, 244, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create New Solution"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,70,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,70,50,14
+    LTEXT           "Enter solution name:",IDC_STATIC,23,7,67,8
+    EDITTEXT        IDC_SOLUTION_NAME,7,19,185,14,ES_AUTOHSCROLL
+    LTEXT           "Script File Name:",IDC_STATIC,23,38,54,8
+    EDITTEXT        IDC_SCRIPT_FILE_NAME,7,50,214,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_BROWSE,221,50,16,14
+END
+
+IDD_NEW_SCRIPT_DLG DIALOGEX 0, 0, 244, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create New Script"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,39,50,14
+    LTEXT           "Script File Name:",IDC_STATIC,23,7,54,8
+    EDITTEXT        IDC_SCRIPT_FILE_NAME,7,19,214,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_BROWSE,221,19,16,14
+END
+
+IDD_PROCESS_SCRIPT_DLG DIALOGEX 0, 0, 434, 339
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Processing Script"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,376,318,50,14
+    LTEXT           "Events log:",IDC_STATIC,30,49,37,8
+    CONTROL         "",IDC_EVENTS_LOG,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,44,61,343,185
+    GROUPBOX        "Environment Details",IDC_STATIC,7,7,420,31
+    LTEXT           "Script file name:",IDC_STATIC,30,19,52,8
+    EDITTEXT        IDC_SCRIPT_FILE_NAME,96,17,316,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Executing Section",IDC_STATIC,7,39,420,266
+    PUSHBUTTON      "Start",IDC_START_SCRIPT,277,282,35,14
+    LTEXT           "Percentage:",IDC_STATIC,30,250,40,8
+    CONTROL         "",IDC_EXECUTION_PROGRESS,"msctls_progress32",WS_BORDER,
+                    44,262,344,14
+    LTEXT           "0 %",IDC_STATIC,27,265,14,8
+    LTEXT           "100 %",IDC_STATIC,390,265,22,8
+    LTEXT           "0",IDC_CURRENT_PERCENTAGE,76,250,12,8,0,WS_EX_RIGHT
+    LTEXT           "% done.",IDC_STATIC,92,250,29,8
+    PUSHBUTTON      "Stop",IDC_STOP_SCRIPT,319,282,35,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,311,434,1
+    LTEXT           "Script priority:",IDC_STATIC,30,283,46,8
+    COMBOBOX        IDC_SCRIPT_PRIORITY,82,282,124,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDC_SAVE_LOG,361,282,16,14,BS_ICON
+END
+
+IDD_ABOUT_DLG DIALOGEX 0, 0, 334, 100
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,276,81,50,14
+    CONTROL         3007,IDC_STATIC,"Static",SS_BITMAP,0,0,337,92
+    LTEXT           "Plug-in version:",IDC_STATIC,19,78,50,8
+    LTEXT           "1.1 Release",IDC_STATIC,90,78,39,8
+    LTEXT           "Lead developer:",IDC_STATIC,19,87,53,8
+    LTEXT           "Egor Pushkin",IDC_STATIC,90,87,42,8
+END
+
+IDD_SCR_DATAPROC_DISPLAY_FACTORY DIALOGEX 0, 0, 235, 219
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Data Factory: "
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,177,198,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,191,235,1
+    PUSHBUTTON      "",IDC_CONTROL_PROPERTIES,210,15,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_DATA_FACTORY_SAVE_AS,210,36,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_DF_TL_ALWAYS_ON_TOP,7,198,16,14,BS_ICON
+END
+
+IDD_CHARTING_MAIN DIALOGEX 0, 0, 458, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Data Chart:"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_ONTOP,439,146,16,14,BS_ICON
+    CONTROL         "",IDC_CHARTS_CTRL_HOLDER,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,2,2,434,158
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SCRIPT_ENV_MAIN_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 552
+    END
+
+    IDD_NEW_SOLUTION_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_NEW_SCRIPT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_PROCESS_SCRIPT_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 332
+    END
+
+    IDD_ABOUT_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 333
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_SCR_DATAPROC_DISPLAY_FACTORY, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_CHARTING_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 455
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SOLUTION_OPERATIONS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "New"
+        BEGIN
+            MENUITEM "New Solution...\tCtrl+N",     ID_NEW_SOLUTION
+            MENUITEM "New Script...",               ID_NEW_SCRIPT
+        END
+        POPUP "Add"
+        BEGIN
+            MENUITEM "Add Existing Script...",      ID_ADD_EXISTING_SCRIPT
+            MENUITEM "Add Existing Data File...",   ID_ADD_EXISTING_DATA_FILE
+
+            MENUITEM "Add Existing Bitmap...",      ID_ADD_EXISTING_BITMAP
+            MENUITEM "Add Existing Network Project...", 
+                                                    ID_ADD_EXISTING_NETWORK_PROJECT
+
+        END
+        POPUP "Remove"
+        BEGIN
+            MENUITEM "Current Item...\tCtrl+R",     ID_REMOVE_CURRENT_ITEM
+        END
+        MENUITEM SEPARATOR
+        POPUP "Solution"
+        BEGIN
+            MENUITEM "Open Solution...\tCtrl+O",    ID_OPEN_SOLUTION
+            MENUITEM "Save Solution\tCtrl+S",       ID_SAVE_SOLUTION
+            MENUITEM "Close Solution\tAlt+X",       ID_CLOSE_SOLUTION
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Execute Script\tCtrl+F5",     ID_EXECUTE_SCRIPT
+        MENUITEM SEPARATOR
+        MENUITEM "Close Environment",           ID_CLOSE_ENVIRONMENT
+    END
+END
+
+IDR_HELP MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Developer Guide",             ID_DEVELOPER_GUIDE
+        MENUITEM SEPARATOR
+        MENUITEM "Lua 5.0.2 Manual",            ID_LUA_MANUAL
+        MENUITEM SEPARATOR
+        MENUITEM "About Scripting Environment...", 
+                                                ID_ABOUT_SCRIPTING_ENVIRONMENT
+
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ENVIRONMENT_LOGO    BITMAP                  "res\\Logo_Ready.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DATA_FILES          ICON                    "res\\Solution\\35 osX Hard disk.ico"
+IDI_SOLUTION_EMPTY      ICON                    "res\\Solution\\00 osX Folder closed.ico"
+IDI_SOLUTION_OPENED     ICON                    "res\\Solution\\01 osX Folder open.ico"
+IDI_SOLUTION_SCRIPTS    ICON                    "res\\Solution\\07 osX Program files.ico"
+IDI_SCRIPT_ITEM         ICON                    "res\\Solution\\15 osX System file.ico"
+IDI_DATA_ITEM           ICON                    "res\\Solution\\32 osX Removable disk.ico"
+IDI_BITMAP_FILES        ICON                    "res\\Solution\\Bitmaps_Folder.ico"
+IDI_BITMAP_ITEM         ICON                    "res\\Solution\\Bitmap_Item.ico"
+IDI_PROJECT_FILES       ICON                    "res\\Solution\\Projects_Folder.ico"
+IDI_PROJECT_ITEM        ICON                    "res\\Solution\\Project_Item.ico"
+IDI_CTRL_PROP           ICON                    "res\\DataImageCtrl\\ctrl_prop.ico"
+IDI_CTRL_DF_SAVE_AS     ICON                    "res\\DataImageCtrl\\ctrl_df_save_as.ico"
+IDI_AONTOP_TRUE         ICON                    "res\\DataImageCtrl\\ctrl_aontop_true.ico"
+IDI_AONTOP_FALSE        ICON                    "res\\DataImageCtrl\\ctrl_aontop_false.ico"
+IDI_LOG                 ICON                    "res\\Dialogs\\Log.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CONFIGURATION
+//
+
+IDR_EDITOR_CONFIG       CONFIGURATION           "Configs\\standart_lua_syntax.xml"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "Comments", "Scripting Environment for Neuro Laboratory 1.0"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Scripting Environment for Neuro Laboratory 1.0"
+            VALUE "FileVersion", "1.1.0.1"
+            VALUE "InternalName", "ScriptEnv.dll"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "ScriptEnv.dll"
+            VALUE "ProductName", "Scripting Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+50001 ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_NEW_SOLUTION,        VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_REMOVE_CURRENT_ITEM, VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_OPEN_SOLUTION,       VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SAVE_SOLUTION,       VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_CLOSE_SOLUTION,      VIRTKEY, ALT, NOINVERT
+    VK_F5,          ID_EXECUTE_SCRIPT,      VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\ScriptEnv.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

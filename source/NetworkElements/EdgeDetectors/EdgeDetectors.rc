@@ -1,0 +1,229 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\EdgeDetectors.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "Comments", "Neuro Laboratory Edge Detectots Library"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Neuro Laboratory Edge Detectots Library"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "EdgeDetectors.dll"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "EdgeDetectors.dll"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_ELEMENTS_POPUPS MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Add Detector Input",          ID_ADD_DENDRITE
+        MENUITEM "Add Detector Output",         ID_ADD_AXON
+        MENUITEM SEPARATOR
+        MENUITEM "Image Properties...",         ID_DATA_IMAGE_PROPERTIES
+        MENUITEM "Canny Detector Parameters...", 
+                                                ID_CANNY_DETECTOR_PARAMETERS
+        MENUITEM SEPARATOR
+        MENUITEM "Remove",                      ID_REMOVE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATA_IMAGE_PROPERTIED_DLG DIALOGEX 0, 0, 268, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Image Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,151,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,209,153,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,145,267,1
+    CONTROL         8000,IDC_STATIC,"Static",SS_BITMAP | WS_BORDER,122,36,87,
+                    80
+    LTEXT           "Image width:",IDC_STATIC,96,18,43,8
+    LTEXT           "Image height:",IDC_STATIC,23,70,46,8
+    EDITTEXT        IDC_WIDTH,144,15,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHT,73,67,40,14,ES_AUTOHSCROLL
+    LTEXT           "Data length:",IDC_STATIC,96,123,41,8
+    LTEXT           "0",IDC_DATA_LENGTH,144,123,36,8
+END
+
+IDD_CANNY_DETECTOR_PARAMETERS_DLG DIALOGEX 0, 0, 245, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Canny Detector Parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,210,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,210,50,14
+    GROUPBOX        "Gaussian Sigma",IDC_STATIC,7,7,231,48
+    LTEXT           "Sigma for X dimension:",IDC_STATIC,21,21,73,8
+    LTEXT           "Sigma for X dimension:",IDC_STATIC,21,35,73,8
+    EDITTEXT        IDC_SIGMA_X,100,18,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIGMA_Y,100,34,72,14,ES_AUTOHSCROLL
+    GROUPBOX        "Thresholding Parameters",IDC_STATIC,7,56,231,65
+    LTEXT           "Canny fraction:",IDC_STATIC,21,71,51,8
+    EDITTEXT        IDC_CANNY_FRACTION,100,68,72,14,ES_AUTOHSCROLL
+    LTEXT           "Canny low threshold:",IDC_STATIC,21,87,69,8
+    EDITTEXT        IDC_LOW_THRESHOLD,100,84,72,14,ES_AUTOHSCROLL
+    LTEXT           "Canny high threshold:",IDC_STATIC,21,103,72,8
+    EDITTEXT        IDC_HIGH_THRESHOLD,100,100,72,14,ES_AUTOHSCROLL
+    GROUPBOX        "Polygonal Approximation",IDC_STATIC,7,123,231,74
+    LTEXT           "Minimum length of segment in polygonal approximation:",
+                    IDC_STATIC,21,136,178,8
+    LTEXT           "Maximum deviation in polygonal approximation:",
+                    IDC_STATIC,21,164,152,8
+    EDITTEXT        IDC_MIN_SEGMENT_LENGTH,100,148,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAX_DEVIATION,99,176,72,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,203,245,1
+    PUSHBUTTON      "Defaults",IDC_RESTORE_DEFAULTS,8,210,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_IMAGE_SAMPLE        BITMAP                  "res\\UITools\\Image_Sample.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DATA_IMAGE_PROPERTIED_DLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_CANNY_DETECTOR_PARAMETERS_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\EdgeDetectors.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

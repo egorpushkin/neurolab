@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\NetworkElements\Common\Common.vcproj", "{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EdgeDetectors", "..\NetworkElements\EdgeDetectors\EdgeDetectors.vcproj", "{41A82813-3827-4432-869C-EC3125BBBFEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCABlockset", "..\NetworkElements\PCABlockset\PCABlockset.vcproj", "{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptsNet", "..\NetworkElements\ScriptsNet\ScriptsNet.vcproj", "{C5A3D9CB-5EC1-4214-BEC2-E5B378940CCC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SignalProcessors", "..\NetworkElements\SignalProcessors\SignalProcessors.vcproj", "{F59F7C61-C62A-4CF5-9FC0-CAE7E8E95C7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Debug|Win32.Build.0 = Debug|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Release|Win32.ActiveCfg = Release|Win32
+		{CC58F7BC-1C9B-41F3-BBFF-E8A77CE99882}.Release|Win32.Build.0 = Release|Win32
+		{41A82813-3827-4432-869C-EC3125BBBFEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{41A82813-3827-4432-869C-EC3125BBBFEB}.Debug|Win32.Build.0 = Debug|Win32
+		{41A82813-3827-4432-869C-EC3125BBBFEB}.Release|Win32.ActiveCfg = Release|Win32
+		{41A82813-3827-4432-869C-EC3125BBBFEB}.Release|Win32.Build.0 = Release|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Debug|Win32.Build.0 = Debug|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Release|Win32.ActiveCfg = Release|Win32
+		{C1ECF5D8-0DA9-4C78-87B4-220E6FF99430}.Release|Win32.Build.0 = Release|Win32
+		{C5A3D9CB-5EC1-4214-BEC2-E5B378940CCC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5A3D9CB-5EC1-4214-BEC2-E5B378940CCC}.Debug|Win32.Build.0 = Debug|Win32
+		{C5A3D9CB-5EC1-4214-BEC2-E5B378940CCC}.Release|Win32.ActiveCfg = Release|Win32
+		{C5A3D9CB-5EC1-4214-BEC2-E5B378940CCC}.Release|Win32.Build.0 = Release|Win32
+		{F59F7C61-C62A-4CF5-9FC0-CAE7E8E95C7A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F59F7C61-C62A-4CF5-9FC0-CAE7E8E95C7A}.Debug|Win32.Build.0 = Debug|Win32
+		{F59F7C61-C62A-4CF5-9FC0-CAE7E8E95C7A}.Release|Win32.ActiveCfg = Release|Win32
+		{F59F7C61-C62A-4CF5-9FC0-CAE7E8E95C7A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,281 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\LicenseMng.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\LicenseMng.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADVENCED_OPERATIONS_DLG DIALOGEX 0, 0, 296, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Advanced Operations"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,233,173,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,165,296,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,44,295,1
+    GROUPBOX        "Key Container  Manipulations",IDC_STATIC,33,56,229,95
+    LTEXT           "Enter key container name:",IDC_STATIC,59,67,86,8
+    EDITTEXT        IDC_KEY_CONTAINER_NAME,49,79,198,14,ES_AUTOHSCROLL
+    LTEXT           "Select operation:",IDC_STATIC,59,97,56,8
+    COMBOBOX        IDC_OPERATION_TYPE,49,109,143,42,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Perform",IDC_PERFORM_OPERATION,123,129,50,14
+    CONTROL         131,IDC_STATIC,"Static",SS_BITMAP,0,0,296,44
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ADVENCED_OPERATIONS_DLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 187
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MAIN                BITMAP                  "res\\Main.bmp"
+IDB_ADVANCED            BITMAP                  "res\\Advanced.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 301, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About License Manager"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Product Information",IDC_INFOHEADERCONTROL,0,0,301,55
+    DEFPUSHBUTTON   "OK",IDOK,126,147,50,16,WS_GROUP
+    LTEXT           "Product name:",IDC_STATIC,42,66,48,8
+    LTEXT           "License Manager",IDC_STATIC,114,66,54,8
+    LTEXT           "Version:",IDC_STATIC,42,78,27,8
+    LTEXT           "1.0",IDC_STATIC,114,78,12,8
+    LTEXT           "Developed by:",IDC_STATIC,42,90,48,8
+    LTEXT           "Scientific Software - Neuro Research Group",IDC_STATIC,
+                    114,90,140,8
+    LTEXT           "Project Architect, Lead Developer:",IDC_STATIC,42,102,
+                    112,8
+    LTEXT           "Egor Pushkin",IDC_STATIC,50,114,42,8
+    LTEXT           "All rights reserved! Copyright © Scientific Software 2005",
+                    IDC_STATIC,68,134,183,8
+END
+
+IDD_LICENSEMNG_DIALOG DIALOGEX 0, 0, 347, 212
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "License Manager"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,287,191,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,183,347,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,50,347,1
+    LTEXT           "Select product from Neuro Laboratory 1.0 products family:",
+                    IDC_STATIC,50,68,188,8
+    PUSHBUTTON      "Advanced...",IDC_ADVANCED_OPERATIONS,225,191,56,14
+    COMBOBOX        IDC_PRODUCTS_COMBO,61,81,210,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Export Key...",IDC_EXPORT_PUBLIC_KEY,191,100,59,14
+    LTEXT           "Exported key is a public key that required for the registration of your application copy. You must attach it to the request of receiving private key (that required to complete registration) at your personal department at http://www.scientific-soft.com/.",
+                    IDC_STATIC,50,132,239,35
+    CONTROL         130,IDC_STATIC,"Static",SS_BITMAP,0,0,347,50
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "License Manager"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "License Manager"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "LicenseMng.exe"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "LicenseMng.exe"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_LICENSEMNG_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 205
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+IDR_MANIFEST            RT_MANIFEST             "res\\LicenseMng.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About LicenseMng..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\LicenseMng.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataCreator", "..\Tools\DataCreator\DataCreator.vcproj", "{BBB7323C-0A24-4FDB-929C-4764F0AEBED7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LicenseMng", "..\Tools\LicenseMng\LicenseMng.vcproj", "{C0E65C63-90CF-4448-87EA-14B9F355B732}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkExporter", "..\Tools\NetworkExporting\NetworkExporter\NetworkExporter.vcproj", "{DF43A371-8F31-4E0F-B796-7C08AB0CD22C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImport", "..\Tools\NetworkExporting\NetworkImport\NetworkImport.vcproj", "{4F46D46B-6498-434F-BE11-5E86E74E1440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBB7323C-0A24-4FDB-929C-4764F0AEBED7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BBB7323C-0A24-4FDB-929C-4764F0AEBED7}.Debug|Win32.Build.0 = Debug|Win32
+		{BBB7323C-0A24-4FDB-929C-4764F0AEBED7}.Release|Win32.ActiveCfg = Release|Win32
+		{C0E65C63-90CF-4448-87EA-14B9F355B732}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C0E65C63-90CF-4448-87EA-14B9F355B732}.Debug|Win32.Build.0 = Debug|Win32
+		{C0E65C63-90CF-4448-87EA-14B9F355B732}.Release|Win32.ActiveCfg = Release|Win32
+		{DF43A371-8F31-4E0F-B796-7C08AB0CD22C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF43A371-8F31-4E0F-B796-7C08AB0CD22C}.Debug|Win32.Build.0 = Debug|Win32
+		{DF43A371-8F31-4E0F-B796-7C08AB0CD22C}.Release|Win32.ActiveCfg = Release|Win32
+		{DF43A371-8F31-4E0F-B796-7C08AB0CD22C}.Release|Win32.Build.0 = Release|Win32
+		{4F46D46B-6498-434F-BE11-5E86E74E1440}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F46D46B-6498-434F-BE11-5E86E74E1440}.Debug|Win32.Build.0 = Debug|Win32
+		{4F46D46B-6498-434F-BE11-5E86E74E1440}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

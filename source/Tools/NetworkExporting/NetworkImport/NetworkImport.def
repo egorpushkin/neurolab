@@ -1,0 +1,6 @@
+; NetworkImport.def : Declares the module parameters for the DLL.
+
+LIBRARY      "NetworkImport"
+
+EXPORTS
+    ; Explicit exports can go here

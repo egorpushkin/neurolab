@@ -1,0 +1,266 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\ControlsLib.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATA_IMAGE_CTRL_PROP_DLG DIALOGEX 0, 0, 258, 212
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Data Image Control Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,191,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,191,50,14
+    LTEXT           "Data length:",IDC_STATIC,21,7,41,8
+    LTEXT           "0",IDC_DATA_LENGTH,67,7,28,8
+    LTEXT           "X Dimension:",IDC_STATIC,21,17,42,8
+    EDITTEXT        IDC_XDIMENSION,7,28,78,14,ES_AUTOHSCROLL
+    LTEXT           "Y Dimension:",IDC_STATIC,105,17,42,8
+    EDITTEXT        IDC_YDIMENSION,91,28,78,14,ES_AUTOHSCROLL
+    GROUPBOX        "Colors range",IDC_STATIC,7,86,244,99
+    LTEXT           "Min data value:",IDC_STATIC,21,97,50,8
+    EDITTEXT        IDC_MIN_DATA_VALUE,14,108,78,14,ES_AUTOHSCROLL
+    LTEXT           "Max data value:",IDC_STATIC,105,97,53,8
+    EDITTEXT        IDC_MAX_DATA_VALUE,98,108,78,14,ES_AUTOHSCROLL
+    CONTROL         "Use mask for red component",IDC_USE_MASK_RED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,130,107,10
+    EDITTEXT        IDC_RED_COMPONENT_VALUE,203,128,40,14,ES_AUTOHSCROLL
+    LTEXT           "Component value:",IDC_STATIC,139,131,60,8
+    CONTROL         "Use mask for green component",IDC_USE_MASK_GREEN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,147,115,10
+    EDITTEXT        IDC_GREEN_COMPONENT_VALUE,203,145,40,14,ES_AUTOHSCROLL
+    LTEXT           "Component value:",IDC_STATIC,139,148,60,8
+    CONTROL         "Use mask for blue component",IDC_USE_MASK_BLUE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,165,110,10
+    EDITTEXT        IDC_BLUE_COMPONENT_VALUE,203,163,40,14,ES_AUTOHSCROLL
+    LTEXT           "Component value:",IDC_STATIC,139,166,60,8
+    CONTROL         "Show grid",IDC_SHOW_GRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,57,47,10
+    CONTROL         "Show color information",IDC_SHOW_INFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,69,89,10
+    GROUPBOX        "Display settings",IDC_STATIC,7,45,244,39
+END
+
+IDD_DATA_IMAGE_CTRL_MARKER_DLG DIALOGEX 0, 0, 186, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Data Image Control Marker"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,70,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,70,50,14
+    LTEXT           "Enter marker value:",IDC_STATIC,19,7,64,8
+    EDITTEXT        IDC_MARKER,7,19,172,14,ES_AUTOHSCROLL
+    LTEXT           "Enter marker diameter:",IDC_STATIC,19,35,75,8
+    EDITTEXT        IDC_MARKER_DIAMETER,7,48,172,14,ES_AUTOHSCROLL
+END
+
+IDD_DATA_IMAGE_CTRL_EDITOR_DLG DIALOGEX 0, 0, 248, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Advanced Image Editor"
+MENU IDR_DATA_IMAGE_CTRL_EDITOR_MAIN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,180,118,50,14
+    GROUPBOX        "Image settings",IDC_STATIC,7,3,234,27
+    LTEXT           "Data length:",IDC_STATIC,20,15,41,8
+    LTEXT           "0",IDC_DATA_LENGTH,67,15,23,8
+    GROUPBOX        "Operations",IDC_STATIC,7,32,234,81
+    LTEXT           "Fill value:",IDC_STATIC,20,46,31,8
+    EDITTEXT        IDC_FILL_VALUE,69,43,66,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Fill",IDC_PROCESS_FILL,139,43,31,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DATA_IMAGE_CTRL_PROP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_DATA_IMAGE_CTRL_MARKER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DATA_IMAGE_CTRL_EDITOR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_DATA_IMAGE_CTRL_EDITOR_MAIN MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open...",                     ID_DICEM_FILE_OPEN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_BCGBARRES_HAND      CURSOR                  "AdvancedEditControl\\res\\hand-pro.cur"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "Comments", "Common Controls Library"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Common Controls Library"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ControlsLib.dll"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "ControlsLib.dll"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\ControlsLib.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
