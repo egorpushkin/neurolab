@@ -15,3 +15,6 @@
 *.suo
 *.tlog
 *.user
+
+# Tex
+*.bak
