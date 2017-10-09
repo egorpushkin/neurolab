@@ -61,7 +61,9 @@ The project was being actively developed during **2004-2007** time frame.
 The heart of the product is visual neural network editor where 
 network models of desired topology can be constructed from scratch, trained and validated.   
 
-![Neuro Laboratory Environment](art/screenshots/app/neurolab-env-popup.png)
+<div align="center">
+  <img src="art/screenshots/app/neurolab-env-popup.png" alt="Neuro Laboratory Environment"/>
+</div>
 
 The entire IDE functionality is implemented in the form of extensions of three major types:
 
@@ -74,17 +76,23 @@ IDE itself provides ANN representation, implements data processing engine and ne
 
 For instance, this simple single layer network
 
-![Model Screenshot](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ScreenShots/Sm_DataModel_DataScr.gif)
+<div align="center">
+  <img src="manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ScreenShots/Sm_DataModel_DataScr.gif" alt="Model Screenshot"/>
+</div>
 
 has the following internal representation
 
-![Object Model](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/Sm_DataModel_DataObj.gif)
+<div align="center">
+  <img src="manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/Sm_DataModel_DataObj.gif" alt="Object Model"/>
+</div>
 
 #### Network Elements
 
 The collection of _network elements_ provides building blocks for constructing network models.
 
-![Network Elements](art/screenshots/app/neurolab-elements.png)
+<div align="center">
+  <img src="art/screenshots/app/neurolab-elements.png" alt="Network Elements"/>
+</div>
 
 The following groups of elements are available out of the box: 
 
@@ -101,14 +109,18 @@ Each element transforms data it takes as an input and propagates it to element's
 _Layers_ is a group of network elements that are organized and act as layers of neurons. 
 These elements have activation function associated with it and store weights as a part of its state.     
 
-![Network Layer](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/LC_DM_LogicView.gif)
+<div align="center">
+  <img src="manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/LC_DM_LogicView.gif" alt="Network Layer"/>
+</div>
 
 #### Network Trainers
 
 _Network Trainers_ represent another category of **Neuro Laboratory** extensions.
 Each trainer implements a specific method of adjusting network model properties (most commonly neuron weights).
 
-![Trainers](art/screenshots/app/neurolab-trainers.png)
+<div align="center">
+  <img src="art/screenshots/app/neurolab-trainers.png" alt="Trainers"/>
+</div>
 
 **Neuro Laboratory** comes with these algorithms implemented:  
 
@@ -122,7 +134,9 @@ Each trainer implements a specific method of adjusting network model properties 
 
 _Plugins_ is a generic mechanism for extending functionality of **Neuro Laboratory**.     
 
-![Plugins](art/screenshots/app/neurolab-plugins.png)
+<div align="center">
+  <img src="art/screenshots/app/neurolab-plugins.png" alt="Plugins"/>
+</div>
 
 Example plugins included in default installation: 
 
@@ -136,23 +150,31 @@ _Scripting Environment_ integrates **Lua** interpreter and provides bindings to 
 (network model, network elements, network trainers). 
 This provides developers and researches with easy access to network internals.   
 
-![Scripting Environment](art/screenshots/app/scripting-env-code.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/app/scripting-env-code.png" alt="Scripting Environment"/>
+</div>
 
 The tool can be used for experimenting with custom training algorithms, automating classification quality verification, etc.  
 
-![Scripting Environment](art/screenshots/app/scripting-env-progress.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/app/scripting-env-progress.png" alt="Scripting Environment"/>
+</div>
 
 It also comes with a number of visualization primitives allowing to represent experiment results and 
 intermediate debug data appropriately. 
 
-![Scripting Environment](art/screenshots/app/scripting-env-results.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/app/scripting-env-results.png" alt="Scripting Environment"/>
+</div>
 
 ### Network Importing SDK 
 
 One of the key components of the solution is the SDK enabling application developers with easy access to 
 previously designed and trained models.  
 
-![SDK Structure](art/screenshots/sdk/sdk-structure.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/sdk/sdk-structure.png" alt="SDK Structure"/>
+</div>
 
 The SDK comes with dynamic libraries built for Windows and Linux systems. 
 
@@ -161,33 +183,45 @@ The SDK comes with dynamic libraries built for Windows and Linux systems.
 _Areas Builder_ is a sample project included in the SDK package to demonstrate loading network model and 
 processing data with it. 
 
-![High Level](sdk/docs/Areas%20Builder/arch_high_level.gif)
+<div align="center">
+  <img src="sdk/docs/Areas%20Builder/arch_high_level.gif" alt="High Level"/>
+</div>
 
 The app is linked against SDK and contributes with its own project serialization model that combines 
 trained network along with sample data it can be tested against (in this case multispectral satellite image).
 
-![Linkage Model](sdk/docs/Areas%20Builder/arch_linkage.gif)
+<div align="center">
+  <img src="sdk/docs/Areas%20Builder/arch_linkage.gif" alt="Linkage Model"/>
+</div>
 
 _Areas Builder_ illustrates the use of ANN as a classifier.
 Network models packages with the tool are trained to detect specific features within satellite images. 
 The tool comes with a set models trained for detecting features within an image.  
 
-![Building Areas](sdk/docs/Areas%20Builder/building_map.gif)
+<div align="center">
+  <img src="sdk/docs/Areas%20Builder/building_map.gif" alt="Building Areas"/>
+</div>
 
 The tool splits input image into chunks and passes each of those through trained model 
 building a number of maps each corresponding to a feature the model is trained to recognise. 
 
-![Classification Results](art/screenshots/sdk/areas-building.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/sdk/areas-building.png" alt="Classification Results"/>
+</div>
 
 Here are the results of an experiment with original 3-layered image on the left and 4 feature maps on the right. 
 
-![Classification Results](art/screenshots/sdk/areas-results.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/sdk/areas-results.png" alt="Classification Results"/>
+</div>
 
 ### scientific-soft.com
 
 The web site was launched as a platform for distributing commercial package and accompanying documentation.  
 
-![Solution Page](art/screenshots/www/solution.png)
+<div align="center">
+  <img width="80%" src="art/screenshots/www/solution.png" alt="Solution Page"/>
+</div>
 
 ## Research 
 
