@@ -27,20 +27,22 @@ process of defining architecture of a software system and tracking its evolution
 to production-grade solution.  
 
 I do believe that the work on this project - a suite of tens of components with nearly hundred thousand lines of code -
-helped me to understand that and to some extend if not shaped than at least defined initial vector of my career. 
+helped me to understand that and to some extend defined initial vector of my career. 
 
 **October, 2017**
 
 ## Disclaimer
 
-The project is no longer developed and maintained. 
+The project is no longer developed and maintained.  
 Its source code is provided "as is", without warranty of any kind.  
 
 **December, 2007**
 
 ## Overview 
 
-**Neuro Laboratory** is a suite of software components aiming to simplify all phases of a neural network lifecycle.      
+**Neuro Laboratory** is a suite of software components aiming to simplify all phases of a neural network lifecycle.  
+It comes with an IDE for designing and training neural network models and 
+SDK allowing trained models to be loaded for the purpose of processing data.  
 
 ## Major Milestones
 
@@ -56,25 +58,59 @@ The project was being actively developed during **2004-2007** time frame.
 
 ### Neuro Laboratory Environment 
 
-The heart of the product is visual neural network editor.
+The heart of the product is visual neural network editor where 
+network models of desired topology can be constructed from scratch, trained and validated.   
 
 ![Neuro Laboratory Environment](art/screenshots/app/neurolab-env-popup.png)
 
+The entire IDE functionality is implemented in the form of extensions of three major types:
+
+- _Network Elements_
+- _Network Trainers_
+- _Plugins_
+
+IDE defines public interfaces of all those modules allowing those to be added without affecting system core. 
+IDE itself provides ANN representation, implements data processing engine and network persistence. 
+
+For instance, this simple single layer network
+
+![Model Screenshot](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ScreenShots/Sm_DataModel_DataScr.gif)
+
+has the following internal representation
+
+![Object Model](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/Sm_DataModel_DataObj.gif)
+
 #### Network Elements
 
-![Network Layer](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/LC_DM_LogicView.gif)
+The collection of _network elements_ provides building blocks for constructing network models.
+
+![Network Elements](art/screenshots/app/neurolab-elements.png)
+
+The following groups of elements are available out of the box: 
 
 - Data Flow Elements (Input, Constant Input, Input Factory, Output, Output Factory);
 - Data Processors (Neuron);
 - Layers (Hopfield Layer, Neurons Layer, RBF Layer, Winner Layer);
-- Edge Detectors (Canny Detector)
-- PCA Block Set (PCA Transform)
-- Scripting Extension (Scripting Element)
-- Signal Processors (FFT Processor)
+- Edge Detectors (Canny Detector);
+- PCA Block Set (PCA Transform);
+- Scripting Extension (Scripting Element);
+- Signal Processors (FFT Processor).
 
-![Network Elements](art/screenshots/app/neurolab-elements.png)
+Each element transforms data it takes as an input and propagates it to element's outputs. 
 
-#### Trainers
+_Layers_ is a group of network elements that are organized and act as layers of neurons. 
+These elements have activation function associated with it and store weights as a part of its state.     
+
+![Network Layer](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/LC_DM_LogicView.gif)
+
+#### Network Trainers
+
+_Network Trainers_ represent another category of **Neuro Laboratory** extensions.
+Each trainer implements a specific method of adjusting network model properties (most commonly neuron weights).
+
+![Trainers](art/screenshots/app/neurolab-trainers.png)
+
+**Neuro Laboratory** comes with these algorithms implemented:  
 
 - Back Propagation
 - Back Propagation (powered by [FANN library](LIBS.md))
@@ -82,41 +118,68 @@ The heart of the product is visual neural network editor.
 - PCA Trainer
 - RDF Trainer
 
-![Trainers](art/screenshots/app/neurolab-trainers.png)
-
 #### Plugins
 
-- Layers Exporter
-- Process Network
-- Scripting Environment
+_Plugins_ is a generic mechanism for extending functionality of **Neuro Laboratory**.     
 
 ![Plugins](art/screenshots/app/neurolab-plugins.png)
 
+Example plugins included in default installation: 
+
+- Layers Exporter - allows exporting layer weights;
+- Process Network - executes network processing, allows specifying input data and displays the output; 
+- Scripting Environment - **Lua**-based scripting platform. 
+
 ##### Scripting Environment
 
-![Model Screenshot](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ScreenShots/Sm_DataModel_DataScr.gif)
-
-![Object Model](manuals/Plug-in%20-%20Scripting%20Environement%201.0/htm/ArchImages/Sm_DataModel_DataObj.gif)
+_Scripting Environment_ integrates **Lua** interpreter and provides bindings to all internal system interfaces 
+(network model, network elements, network trainers). 
+This provides developers and researches with easy access to network internals.   
 
 ![Scripting Environment](art/screenshots/app/scripting-env-code.png)
 
+The tool can be used for experimenting with custom training algorithms, automating classification quality verification, etc.  
+
 ![Scripting Environment](art/screenshots/app/scripting-env-progress.png)
+
+It also comes with a number of visualization primitives allowing to represent experiment results and 
+intermediate debug data appropriately. 
 
 ![Scripting Environment](art/screenshots/app/scripting-env-results.png)
 
 ### Network Importing SDK 
 
-![SDK Structure](sdk/docs/Architecture/Rendered/Project%20Entries%20Detailed.png)
+One of the key components of the solution is the SDK enabling application developers with easy access to 
+previously designed and trained models.  
 
-#### Areas Builder Sample Project 
+![SDK Structure](art/screenshots/sdk/sdk-structure.png)
+
+The SDK comes with dynamic libraries built for Windows and Linux systems. 
+
+#### Areas Builder 
+
+_Areas Builder_ is a sample project included in the SDK package to demonstrate loading network model and 
+processing data with it. 
 
 ![High Level](sdk/docs/Areas%20Builder/arch_high_level.gif)
 
+The app is linked against SDK and contributes with its own project serialization model that combines 
+trained network along with sample data it can be tested against (in this case multispectral satellite image).
+
 ![Linkage Model](sdk/docs/Areas%20Builder/arch_linkage.gif)
+
+_Areas Builder_ illustrates the use of ANN as a classifier.
+Network models packages with the tool are trained to detect specific features within satellite images. 
+The tool comes with a set models trained for detecting features within an image.  
 
 ![Building Areas](sdk/docs/Areas%20Builder/building_map.gif)
 
+The tool splits input image into chunks and passes each of those through trained model 
+building a number of maps each corresponding to a feature the model is trained to recognise. 
+
 ![Classification Results](art/screenshots/sdk/areas-building.png)
+
+Here are the results of an experiment with original 3-layered image on the left and 4 feature maps on the right. 
 
 ![Classification Results](art/screenshots/sdk/areas-results.png)
 
