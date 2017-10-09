@@ -1,0 +1,25 @@
+\begin{verbatim}
+<CmnElement
+    name="[ElementSysName]"
+    title="[Title]"
+    id="[ElementId]" />
+<CmnBuilderElement
+    positionx="[PosX = 0]"
+    positiony="[PosY = 0]" />
+<CmnDataFlow
+    func="[TransferFunction]"
+    elementdatafile="[ProjectName]_[ElementSysName]_[ElementId]_ED.dat" />
+<CmnDataConnector>
+    <ConnectionsFactory name="InputsFactory">
+        [Описание соединений]
+    </ConnectionsFactory>
+    <ConnectionsFactory name="OutputsFactory">
+        [Описание соединений]
+    </ConnectionsFactory>
+</CmnDataConnector>
+<CmnLayer
+    inputscount="[LayerInputsCount]"
+    dimension="[LayerDimension]"
+    weightsfile="[ProjectName]_[ElementSysName]_[ElementId]_LW.dat"
+    deltasfile="[ProjectName]_[ElementSysName]_[ElementId]_LD.dat" />
+\end{verbatim}

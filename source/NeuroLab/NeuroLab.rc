@@ -1,0 +1,770 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\NeuroLab.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_BUILDERPOPUP MENU 
+BEGIN
+    POPUP "Builder Info Panel"
+    BEGIN
+        MENUITEM "Select All",                  ID_BUILDER_SELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "Properties...",               ID_BUILDER_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NEURONPROPERTIESDLG DIALOGEX 0, 0, 524, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Dendrites:",IDC_STATIC,17,11,34,8
+    LTEXT           "Axons:",IDC_STATIC,212,11,24,8
+    CONTROL         "",IDC_AXONSTREE,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,200,21,117,66
+    PUSHBUTTON      "Remove",IDC_REMOVEDENDRITE,156,73,38,14
+    LTEXT           "Neuron: ",IDC_ELTITLE,17,2,57,8
+    LTEXT           "Static",IDC_NURONID,80,2,19,8
+    LTEXT           "Weight:",IDC_STATIC,162,19,26,8
+    EDITTEXT        IDC_DENDRITEWEIGHT,156,29,38,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DENDRTREE,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,7,21,117,66
+    PUSHBUTTON      "Remove",IDC_REMOVEAXON,349,73,38,14
+    LTEXT           "Element function:",IDC_STATIC,393,11,57,8
+    EDITTEXT        IDC_FUNCTIONNAME,387,21,105,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Select",IDC_SELECTFUNCTION,454,39,31,14
+    PUSHBUTTON      "Down",IDC_DOWN_MOVE_DENDRITE,132,58,16,14,BS_ICON
+    PUSHBUTTON      "Down",IDC_UP_MOVE_DENDRITE,132,39,16,14,BS_ICON
+    PUSHBUTTON      "Down",IDC_DOWN_MOVE_AXON,325,56,16,14,BS_ICON
+    PUSHBUTTON      "Down",IDC_UP_MOVE_AXON,325,37,16,14,BS_ICON
+    LTEXT           "Count:",IDC_STATIC,162,44,23,8
+    EDITTEXT        IDC_DENDRITE_COUNT,155,54,38,14,ES_AUTOHSCROLL
+    LTEXT           "Count:",IDC_STATIC,356,44,23,8
+    EDITTEXT        IDC_AXON_COUNT,349,54,38,14,ES_AUTOHSCROLL
+END
+
+IDD_NEURONFUNCTIONSDLG DIALOGEX 0, 0, 420, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Functions list:",IDC_ELTITLE,17,2,57,8
+    CONTROL         "",IDC_FUNCTIONSTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,7,12,128,75
+    LTEXT           "Function preview:",IDC_STATIC,202,2,58,8
+    PUSHBUTTON      "Configure",IDC_FUNCCONFIGURE,141,15,45,14
+    CONTROL         "",IDC_FUNC_SCALE,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,326,15,11,72,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_CONFIGUREFUNCDLG DIALOGEX 0, 0, 211, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Configure Function:"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,52,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,109,170,50,14
+    LTEXT           "Function parameters:",IDC_STATIC,15,28,70,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,40,197,125
+    LTEXT           "Function expression:",IDC_STATIC,15,7,68,8
+    EDITTEXT        IDC_FUNCTIONEXPRESSION,7,17,197,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+END
+
+IDD_SELECTFUNCTIONDLG DIALOGEX 0, 0, 158, 188
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select function"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,168,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,82,168,50,14
+    LTEXT           "Functions list:",IDC_STATIC,19,7,45,8
+    CONTROL         "",IDC_FNTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,7,18,144,115
+    LTEXT           "Function expression:",IDC_STATIC,19,136,68,8
+    EDITTEXT        IDC_FUNCEXPRESSION,7,148,144,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_NEURONQUICKINFODLG DIALOGEX 0, 0, 246, 150
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Inputs count:",IDC_STATIC,18,59,44,8
+    LTEXT           "Outputs count:",IDC_STATIC,18,67,50,8
+    LTEXT           "Element function:",IDC_STATIC,7,125,57,8
+    LTEXT           "Static",IDC_FUNCTIONNAME,68,125,164,8
+    LTEXT           "0",IDC_DENDRCOUNT,73,59,21,8
+    LTEXT           "0",IDC_AXONSCOUNT,73,67,23,8
+    LTEXT           "Static",IDC_FUNCTIONEXPRESSION,68,134,164,8
+    LTEXT           "Element type:",IDC_STATIC,8,3,46,8
+    LTEXT           "Element name:",IDC_STATIC,7,12,48,8
+    LTEXT           "System name:",IDC_STATIC,7,21,46,8
+    LTEXT           "Element ID:",IDC_STATIC,7,30,38,8
+    LTEXT           "Connection Information:",IDC_STATIC,7,50,79,8
+    LTEXT           "Data Flow Information:",IDC_STATIC,7,87,75,8
+    LTEXT           "Requires data:",IDC_STATIC,18,96,48,8
+    LTEXT           "Data length:",IDC_STATIC,17,104,41,8
+    LTEXT           "Expression:",IDC_STATIC,7,134,38,8
+    LTEXT           "false",IDC_REQUIRES_DATA,73,96,17,8
+    LTEXT           "0",IDC_DATA_LENGTH,73,104,23,8
+    LTEXT           "0",IDC_ELEMENT_ID,73,30,21,8
+    LTEXT           "Static",IDC_ELEMENT_TYPE,73,3,160,8
+    LTEXT           "Static",IDC_ELEMENT_NAME,73,12,160,8
+    LTEXT           "Static",IDC_SYSTEM_NAME,73,21,160,8
+    LTEXT           "Function View:",IDC_STATIC,133,30,48,8
+    CONTROL         "",IDC_FUNC_VIEW_SCALE,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,230,44,9,72
+END
+
+IDD_LOAD_STAT_DLG DIALOGEX 0, 0, 333, 111
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_LOAD_STATE_STRING,75,100,252,8
+    LTEXT           "Neuro Laboratory: Loading components.",IDC_STATIC,42,92,
+                    130,8
+    CONTROL         152,IDC_STATIC,"Static",SS_BITMAP,0,0,333,92
+END
+
+IDD_NO_PLUGIN_BAR_TO_SHOW_DLG DIALOGEX 0, 0, 439, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "There is no plug-in bar to display at the moment.",
+                    IDC_STATIC,127,40,156,8
+END
+
+IDD_BUILDER_PROPERTIES DIALOGEX 0, 0, 239, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Neuro Builder properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,125,196,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,182,196,50,14
+    GROUPBOX        "Grid options:",IDC_STATIC,7,7,225,56
+    CONTROL         "Show grid",IDC_SHOW_GRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,18,47,10
+    CONTROL         "Attach to grid",IDC_ATTACH_TO_GRID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,35,47,60,10
+    LTEXT           "Grid range:",IDC_GRID_RANGE_TITLE,35,32,37,8
+    EDITTEXT        IDC_GRID_RANGE,76,29,147,14,ES_AUTOHSCROLL
+END
+
+IDD_TRAINING_NETWORK_DLG DIALOGEX 0, 0, 553, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Select method:",IDC_STATIC,17,2,49,8
+    CONTROL         "",IDC_TRAINING_METHODS_TREE,"SysTreeView32",
+                    TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | 
+                    TVS_SHOWSELALWAYS | TVS_NOSCROLL | WS_BORDER | 
+                    WS_TABSTOP,7,12,128,75
+    PUSHBUTTON      "Configure",IDC_CONFIGURE_METHOD,142,34,60,14
+    PUSHBUTTON      "Start Training",IDC_START_TRAINING,142,16,60,14
+    GROUPBOX        "Data for training",IDC_STATIC,209,8,169,79
+    LTEXT           "State:",IDC_STATIC,219,19,21,8
+    PUSHBUTTON      "Load",IDC_LOAD_DATA,327,17,42,14
+    LTEXT           "Input symbols:",IDC_STATIC,219,42,48,8
+    LTEXT           "0",IDC_INPUTS_COUNT,298,42,17,8
+    LTEXT           "Input symbol length:",IDC_STATIC,219,51,67,8
+    LTEXT           "0",IDC_INPUT_SYMBOL_LENGTH,298,51,17,8
+    PUSHBUTTON      "Details",IDC_DATA_DETAILS,319,66,50,14,WS_DISABLED
+    LTEXT           " ",IDC_DATA_STATUS,245,19,49,8
+    LTEXT           "Output symbols:",IDC_STATIC,219,61,54,8
+    LTEXT           "0",IDC_OUTPUTS_COUNT,298,61,17,8
+    LTEXT           "Output symbol length:",IDC_STATIC,219,71,72,8
+    LTEXT           "0",IDC_OUTPUT_SYMBOL_LENGTH,298,71,17,8
+END
+
+IDD_NETWORK_VERIFICATION_DLG DIALOGEX 0, 0, 474, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Verification log:",IDC_STATIC,17,2,50,8
+    CONTROL         "",IDC_VERIFICATION_RESULTS,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,12,373,75
+    PUSHBUTTON      "Verify",IDC_VERIFY,388,15,50,14
+    LTEXT           "Found errors:",IDC_STATIC,389,65,45,8
+    LTEXT           "0",IDC_ERRORS_COUNT,447,65,20,8
+    LTEXT           "Found warnings:",IDC_STATIC,389,75,54,8
+    LTEXT           "0",IDC_WARNINGS_COUNT,447,75,20,8
+END
+
+IDD_TRAINER_TOOL_DLG DIALOGEX 0, 0, 337, 281
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Trainer Tool"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,145,260,50,14
+    GROUPBOX        "Trainer Information",IDC_STATIC,7,7,323,35
+    PUSHBUTTON      "Configure Trainer",IDC_CONFIGURE_TRAINER,250,19,71,14
+    GROUPBOX        "Process Training",IDC_STATIC,7,44,323,210
+    LTEXT           "Events log:",IDC_STATIC,23,55,37,8
+    CONTROL         "",IDC_TRAINING_EVENTS_LOG,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,14,67,308,128
+    PUSHBUTTON      "Start",IDC_PROCESS_TRAINING,178,233,30,14
+    PUSHBUTTON      "Pause",IDC_PAUSE_TRAINING,214,233,39,14
+    PUSHBUTTON      "Stop",IDC_STOP_TRAINING,259,233,30,14
+    LTEXT           "Training process:",IDC_STATIC,23,198,56,8
+    CONTROL         "",IDC_TRAINING_PROGRESS,"msctls_progress32",WS_BORDER,
+                    14,210,309,10
+    LTEXT           "Trainer name:",IDC_STATIC,23,17,46,8
+    LTEXT           "",IDC_TRAINER_NAME,84,17,162,8
+    LTEXT           "0 %",IDC_STATIC,18,222,18,8
+    LTEXT           "100 %",IDC_STATIC,297,222,22,8
+    LTEXT           "Trainer version:",IDC_STATIC,23,27,52,8
+    LTEXT           "",IDC_TRAINER_VERSION,84,27,162,8
+    RTEXT           "0",IDC_CURRENT_PERCENT,239,198,20,8
+    LTEXT           "% done",IDC_STATIC,264,198,26,8
+END
+
+IDD_TRAINING_PROPERTIES_DLG DIALOGEX 0, 0, 241, 111
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Training properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,107,91,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,163,91,50,14
+    CONTROL         "Use network map for training",IDC_USE_NETWORK_MAP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,18,109,10
+    GROUPBOX        "Data processing",IDC_STATIC,7,7,227,79
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_NEURONPROPERTIESDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 517
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_NEURONFUNCTIONSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 413
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_CONFIGUREFUNCDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_SELECTFUNCTIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 151
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_NEURONQUICKINFODLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_NO_PLUGIN_BAR_TO_SHOW_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 432
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_BUILDER_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_TRAINING_NETWORK_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 546
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_NETWORK_VERIFICATION_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 467
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_TRAINER_TOOL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        VERTGUIDE, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 274
+    END
+
+    IDD_TRAINING_PROPERTIES_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UPARROW             ICON                    "res\\up_arrow.ico"
+IDI_DOWNARROW           ICON                    "res\\down_arrow.ico"
+IDI_SAVE                ICON                    "res\\save.ico"
+IDI_TB_MAIN_NEWFILE     ICON                    "res\\Toolbars\\Main\\NewFile.ico"
+IDI_TB_MAIN_OPENFILE    ICON                    "res\\Toolbars\\Main\\OpenFile.ico"
+IDI_TB_MAIN_SAVEFILE    ICON                    "res\\Toolbars\\Main\\SaveFile.ico"
+IDI_TB_MAIN_ABOUT       ICON                    "res\\Toolbars\\Main\\About.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_APP_LOGO            BITMAP                  "res\\AppLogo.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_CUST_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_CUST_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_CUST_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_CUST_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Data Files Creator Tool",     ID_TOOLS_DATACREATOR
+        MENUITEM "Network Exporter Tool",       ID_TOOLS_NETWORKEXPORRTER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "User Guide",                  ID_USER_GUIDE
+        MENUITEM SEPARATOR
+        MENUITEM "&About NeuroLab...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 302, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Neuro Laboratory Environment"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,126,149,50,14,WS_GROUP
+    PUSHBUTTON      "Product Information",IDC_INFOHEADERCONTROL,0,0,301,55
+    LTEXT           "Product name:",IDC_STATIC,42,66,48,8
+    LTEXT           "Neuro Laboratory Environment",IDC_STATIC,114,66,100,8
+    LTEXT           "Version:",IDC_STATIC,42,78,27,8
+    LTEXT           "Stable Release 1.1",IDC_STATIC,114,78,61,8
+    LTEXT           "Developed by:",IDC_STATIC,42,90,48,8
+    LTEXT           "Scientific Software - Neuro Research Group",IDC_STATIC,
+                    114,90,140,8
+    LTEXT           "Project Architect, Lead Developer:",IDC_STATIC,42,102,
+                    112,8
+    LTEXT           "Egor Pushkin",IDC_STATIC,50,114,42,8
+    LTEXT           "All rights reserved! Copyright © Scientific Software 2007",
+                    IDC_STATIC,68,134,183,8
+END
+
+IDD_NEUROLAB_FORM DIALOGEX 0, 0, 349, 270
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ELEMENTSTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,203,20,146,122
+    CONTROL         "",IDC_PROPTAB,"SysTabControl32",0x0,0,159,132,111
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\NeuroLab.ico"
+IDR_NeuroLabTYPE        ICON                    "res\\NeuroLabDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_CUST_FILE_NEW
+    BUTTON      ID_CUST_FILE_OPEN
+    BUTTON      ID_CUST_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_CUST_FILE_NEW,       VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_CUST_FILE_OPEN,      VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_CUST_FILE_SAVE,      VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,1
+ PRODUCTVERSION 1,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Neuro Laboratory Environment Main Executable"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Neuro Laboratory Environment Main Executable"
+            VALUE "FileVersion", "1.1.0.1"
+            VALUE "InternalName", "NeuroLab.exe"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "NeuroLab.exe"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "res\\NeuroLab.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_NODROP              CURSOR                  "res\\nodrop.cur"
+IDC_POINTER_COPY        CURSOR                  "res\\arrowcop.cur"
+IDC_POINTER_LINK        CURSOR                  "res\\arrow.cur"
+IDC_POINTER_LINK_ACCEPTED CURSOR                  "res\\pointer_.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "NeuroLab\n\nNeuroLab\n\n\nNeuroLab.Document\nNeuroLab.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "NeuroLab"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\NeuroLab.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

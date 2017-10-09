@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Sample - Data Model</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Sample - Data Model
+	</div>
+	<div class="body_subtitle">
+		Introduction	
+	</div>
+	<div class="body_text">
+		This sample helps to understand the main idea about <b>Neuro Laboratory</b> environment architecture and 
+			<b>Scripting Environment</b> development.
+		Sample solution contains Neuro Laboratory project and Scripting Environment project.				
+	</div>
+		
+	<div class="body_subtitle">
+		Sample Neuro Laboratory Project
+	</div>	
+	<div class="body_text">
+		Project file name: <span class="file_name">NetworkProject.nlproj</span>.
+		The following figure shows neural network prepared for this sample:		
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Sm_DataModel_DataScr.gif" class="figure"/><br/>
+		Figure 1. Prepared Network View.		
+	</div>	
+	<div class="body_text">
+		<b>IF 1</b> element's dimension is <b>4</b>. <br/>
+		<b>NL 1</b> element's dimension is <b>3</b>, inputs count is <b>3</b>. <br/>		
+		<b>OF 1</b> element's dimension is <b>3</b>. <br/>						
+		Connections count between elements <b>IF 1</b> and <b>NL 1</b> is <b>3</b>. <br/>
+		Connections count between elements <b>NL 1</b> and <b>OF 1</b> is <b>2</b>. <br/>
+	</div>
+	
+	<div class="body_subtitle">
+		Network Architect
+	</div>	
+	<div class="body_text">
+		Prepared network has the following logic structure.
+		As you see the result of connecting <i>Input Facroty</i> element to <i>Neurons Layer</i> element is that layer's neurons
+			(neurons of <b>NL 1</b> element) are fully connected with corresponding cells of <b>IF 1</b> element.
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/Sm_DataModel_Elements.gif" class="figure"/><br/>
+		Figure 2. Built Network Internal Logic Structure.		
+	</div>	
+	<div class="body_text">
+		It should be also mentioned that order of connections in connection factory (DC_INPUTS_FACTORY or DC_OUTPUTS_FACTORY) 
+			plays a paramount role during signals distribution.
+		Signals from first cells of <b>IF 1</b> element are passed to <b>NL 1</b> element and the fouth signal is passed to
+			<b>N 1</b> element because connection object that establishes connection to <b>NL 1</b> element precedes the one 
+			that establishes connection to <b>N 1</b> element.	
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/Sm_DataModel_DataObj.gif" class="figure"/><br/>
+		Figure 3. Network Objective Structure.		
+	</div>		
+	
+	<div class="body_subtitle">
+		Solution Scripts
+	</div>	
+	<div class="body_text">
+		Solution <span class="file_name">DataModelScripts.nlssln</span> contains the following scripts:
+		<ul>
+			<li>
+				<span class="file_name">ResetNetworkWeights.nlsfile</span> - 
+				This script performs weights initialization for <i>Neuron</i> and <i>Neurons Layer</i> elements.
+				The main idea of this script is enumerating all elements using 
+					<a href="../scripts_language/scripts_language_Elements_Collection.htm">Elements Collection</a> API.
+				When <i>Neuron</i> elements is found script enumerates all it's input connections and initializes weights for
+					every connection.
+				When <i>Neurons Layer</i> element is found script calls 
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_resetLayerWeights">resetLayerWeights</a> function
+					to initialize weights of this element. 				
+			</li>
+		</ul>	
+	</div>	
+	<div class="source_code_title">
+		<span class="left">
+			Solution script: <span class="file_name">ResetNetworkWeights.nlsfile</span>
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('sample_dm_source1')">
+				<img id="collapseimg_sample_dm_source1" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_sample_dm_source1">
+-- This script performs weights initialization for network elements of 
+--  'Neuron' and 'Neurons Layer' types.
+
+log_provider = getLogProvider();
+clearLog(log_provider);
+
+-- Algorithm parameters
+weight_value = 0.0; -- Value to be set to all network weights
+
+-- Enumerating network elements
+addLogMessage(log_provider, "N", "Enumerating network elements...", 
+    "Reset Weights Script");
+createElementsEnumerator(6);
+while 1 do
+    element = getNextElement(6);
+    if element == nil then
+        break;
+    end
+
+    element_sys_name = getElementSysName(element)
+    element_id = getElementID(element);
+
+    -- We must reset weights for 'Neuron' and 'Neurons Layer' elements.
+    if element_sys_name == 'Neuron' or element_sys_name == 'NeuronsLayer' then   
+        addLogMessage(log_provider, "N", 
+            "Processing sys:'"..element_sys_name.."' id:"..element_id.." element...",
+            "Reset Weights Script");
+
+        has_error = true;
+
+        -- Verify whether found element is of 'Neuron' type.
+        if element_sys_name == 'Neuron' then
+            inputs_factory = getConnectionsFactory(element, DC_INPUTS_FACTORY);
+            if inputs_factory ~= nil then
+                -- Enumerating element's input connections.
+                createConnectionsEnumerator(inputs_factory, 6);
+                while 1 do
+                    connection = getNextConnection(inputs_factory, 6);
+                    if connection == nil then
+                        break;
+                    end                
+                    -- Receiving weights factory for connection object and 
+                    -- executing 'fillFactory' method to update it's content
+                    weights_factory = getWeightsFactory(connection);
+                    if weights_factory ~= nil then 
+                        fillFactory(weights_factory, weight_value);
+                        has_error = false;
+                    else
+                        has_error = true;
+                    end
+                end
+            else 
+                has_error = true;
+            end
+
+        -- Verify whether found element is of 'NeuronsLayer' type.
+        elseif element_sys_name == 'NeuronsLayer' then
+            if isLayer(element) then
+                -- It is not required to enumerate all input connections of the
+                --  element because of it is layer control and stores it's weights
+                --  directly into it's object.
+                resetLayerWeights(element, weight_value);
+
+                has_error = false;
+            end
+        end
+
+        -- Displaying message about successfulness of processing operation
+        if not has_error then
+            addLogMessage(log_provider, "N", "Element done.",
+                "Reset Weights Script");
+        else
+            addLogMessage(log_provider, "E", 
+                "Error occupied during processing element.",
+                "Reset Weights Script");
+        end
+    end
+end
+</pre>	
+	<div class="body_text">
+		This script types the following output in log list window:	
+	</div>	
+	<pre class="body_source_code">
+N	Enumerating network elements...			Reset Weights Script
+N	Processing sys:'Neuron' id:1 element...		Reset Weights Script
+N	Element done.					Reset Weights Script
+N	Processing sys:'NeuronsLayer' id:1 element...		Reset Weights Script	
+N	Element done.					Reset Weights Script
+</pre>
+
+	<div class="body_subtitle">
+		See Also
+	</div>
+	<div class="body_text">
+		<a href="samples_Main.htm">Samples</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

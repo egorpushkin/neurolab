@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Appendix A - Images Data File Format</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		Appendix A - Images Data File Format
+	</div>
+	<div class="body_text">
+		This files are used in <b>Neuro Laboratory</b> for containing data for training and processing neural networks
+			(<span class="file_name">*.nldfile</span>).
+		File data is a number of one after another written images (input than output).
+	</div>	
+	<div class="body_title">
+		Format Description
+	</div>
+	<div class="body_text">
+		Data file conatins the following fields:
+	</div>		
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td width="13%">Field Type</td>
+				<td width="19%">Field Name</td>				
+				<td width="13%">Number of Entries</td>				
+				<td width="17%">Field Size</td>
+				<td width="38%">Description</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td colspan="5" align="center">Compulsory fields (file header)</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td>CString</td>
+				<td>File Index</td>				
+				<td>1</td>				
+				<td>null-terminated string</td>
+				<td>Contains string that identifacates a file as <b>Data Images File</b> - &quot;#NL_DATA_FILE&quot;.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>CString</td>
+				<td>File Version</td>				
+				<td>1</td>				
+				<td>null-terminated string</td>
+				<td>Contains file version - &quot;1.0.0.0a&quot;.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>int</td>
+				<td>InputSymbolsCount</td>				
+				<td>1</td>				
+				<td>sizeof(int)</td>
+				<td>Contains a number of input symbols in a file.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>int</td>
+				<td>InputSymbolLength</td>				
+				<td>1</td>				
+				<td>sizeof(int)</td>
+				<td>Contains a length of input symbol.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>int</td>
+				<td>OutputSymbolsCount</td>				
+				<td>1</td>				
+				<td>sizeof(int)</td>
+				<td>Contains a number of output symbols in a file.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>int</td>
+				<td>OutputSymbolLength</td>				
+				<td>1</td>				
+				<td>sizeof(int)</td>
+				<td>Contains a length of output symbol.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td colspan="5" align="center">Optional fields (file body)</td>
+			</tr>			
+			<tr class="data_table_row">
+				<td>CDataFactory</td>
+				<td>InputSymbol i</td>				
+				<td>InputSymbols Count</td>				
+				<td>sizeof(bool) [+ sizeof(int) + </br>sizeof(float) * InputSymbolLength]</td>
+				<td>Contains information about input symbol.</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td>CDataFactory</td>
+				<td>OutputSymbol i</td>				
+				<td>OutputSymbols Count</td>				
+				<td>sizeof(bool) [+ sizeof(int) + </br>sizeof(float) * OutputSymbolLength]</td>
+				<td>Contains information about output symbol.</td>				
+			</tr>									
+		</table>
+	</div>
+	<div class="body_note">			
+		<b>Note</b> Application always writes/reads strings in ANSI charset.
+	</div>	
+	<div class="body_subtitle">	
+		Usage
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Sample source for loading such a file:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('using_data_files')">
+				<img id="collapseimg_using_data_files" src="Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>	
+	<pre class="body_source_code" id="collapseobj_using_data_files">// csFileName contains a file name of existing data file
+CDataFile mFile;
+
+bool bSuccess = mFile.LoadFile(csFileName);
+// LoadFile method returns <b>true</b> in case of successful loading</pre>	
+	<div class="body_text"></div>
+	<div class="body_note">
+		<b>Note</b> In case of wrong file contents or reading error (when <b>LoadFile</b> method returns <b>false</b>) all previosly stored
+			in the CDataFile object data would be lost. 
+		It happens because CDataFile object releases it's data before starting reading data file.
+	</div>
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference/reference_Main.htm">Reference</a> | 
+		<a href="Introduction.htm">SDK Introduction</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>		
+</body>
+</html>

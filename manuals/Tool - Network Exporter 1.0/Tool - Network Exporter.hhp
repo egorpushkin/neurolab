@@ -1,0 +1,21 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=chm\Network Exporter - User Guide.chm
+Contents file=Table of Contents.hhc
+Default topic=htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Network Exporter Tool 1.0 - User Guide
+
+
+[FILES]
+htm\User_Interface.htm
+htm\default.htm
+htm\Introduction.htm
+htm\Images\split_line.gif
+htm\license.htm
+htm\registration.htm
+
+[INFOTYPES]
+

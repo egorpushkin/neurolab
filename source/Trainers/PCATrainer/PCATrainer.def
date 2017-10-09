@@ -1,0 +1,6 @@
+; PCATrainer.def : Declares the module parameters for the DLL.
+
+LIBRARY      "PCATrainer"
+
+EXPORTS
+    ; Explicit exports can go here

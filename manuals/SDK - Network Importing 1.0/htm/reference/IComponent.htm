@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IComponent Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IComponent Interface
+	</div>
+	<div class="body_text">
+		<img src="../ArchImages/IComponent.gif" class="figure">
+	</div>
+	<pre class="body_declaration">
+interface IComponent : public IObject</pre>	
+	<div class="body_subtitle">
+		Remarks	
+	</div>
+	<div class="body_text">
+		<b>Neuro Laboratory</b> components model is based on <b>IComponent</b> and <b>IManagerControl</b> interfaces.
+		This interface has been included in this SDK package because it was decided to derive 
+			<a href="CImportManagerComponent.htm">CImportManagerComponent</a> from this interface.	
+	</div>
+	<div class="body_text">
+		This interface is often implemented on client's side and contains (in it's implementation) code for loading 
+			any external library or connecting external object.	
+	</div>
+	<div class="body_subtitle">
+		Source	
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Source code that declares <b>IComponent</b> interface:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('icomponent_declaration')">
+				<img id="collapseimg_icomponent_declaration" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_icomponent_declaration">
+#pragma once
+
+typedef CString	(*PGET_COMPONENT_NAME_ROUTINE)(void);
+typedef CString	(*PGET_COMPONENT_VERSION_ROUTINE)(void);
+
+// IComponent declaration
+interface IComponent : public IObject
+{
+public:
+    virtual bool		LoadComponent() = 0;
+    virtual bool		UnloadComponent() = 0;
+    virtual bool		VerifyWhetherExists() = 0;
+
+    virtual CString	GetComponentName() = 0;
+    virtual CString	GetComponentVersion() = 0;
+};</pre>	
+	
+	
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">	
+		<b>Header:</b> Declared in: <span class="file_name">CmnComponent.h</span>, include <span class="file_name">NetworkImporting.h</span>										
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference_Main.htm">Reference</a> 		
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>	
+</body>
+</html>	

@@ -1,0 +1,68 @@
+[ActiveConfig]
+Components_Lib/Components_Lib.vpj=,Debug
+DataProcessing_Lib/DataProcessing_Lib.vpj=,Debug
+NetworkImporting_Lib/NetworkImporting_Lib.vpj=,Debug
+BuilderElements/BuilderElements.vpj=,Debug
+NetworkImport/NetworkImport.vpj=,Debug
+TestAreas/TestAreas.vpj=,Debug
+TestProcessing/TestProcessing.vpj=,Debug
+[Global]
+CurrentProject=BuilderElements/BuilderElements.vpj
+[ProjectDates]
+BuilderElements/BuilderElements.vpj=20061012201520000
+Common/Common.vpj=
+Components/Components.vpj=
+Components_Lib/Components_Lib.vpj=20061012201521000
+DataProcessing/DataProcessing.vpj=
+DataProcessing_Lib/DataProcessing_Lib.vpj=20061012201521000
+NetworkImport/NetworkImport.vpj=20061012201522000
+NetworkImporting/NetworkImporting.vpj=
+NetworkImporting_Lib/NetworkImporting_Lib.vpj=20061012201522000
+TestAreas/TestAreas.vpj=20061012202005000
+TestProcessing/TestProcessing.vpj=20061012201954000
+[TreeExpansion2]
+- BuilderElements/BuilderElements.vpj
+  + Source Files
+    + Environment
+    + Functions
+    + ElementsStructure
+      + Tools
+    + ElementsImpl
+      + DataFlow
+      + Layers
+      + Neurons
+  + Header Files
+    + Common
+      + Elements
+      + Interfaces
+  - Other Files
++ Components_Lib/Components_Lib.vpj
++ DataProcessing_Lib/DataProcessing_Lib.vpj
++ NetworkImport/NetworkImport.vpj
++ NetworkImporting_Lib/NetworkImporting_Lib.vpj
++ TestAreas/TestAreas.vpj
+  + Source Files
+  + Other Files
+- TestProcessing/TestProcessing.vpj
+  + Source Files
+  - Other Files
+scroll:0
+[State]
+SCREEN: 1024 768 0 0 1024 702 0 0 N 0 0 0 0 776 577
+CWD: BuilderElements/
+BUFFER: BN="BuilderElements/makefile"
+BI: MA=1 74 1  TABS=1 9  WWS=1 IWT=1 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=Makefile	HM=0 MF=608 TL=0 MLL=0 ASE=0 LNL=6 LCF=0 CAPS=0 E=0 ESBU2=-1
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=6 HT=0 HN=0 HF=0 HC=4
+WINDOW: 25 25 523 390 0 0 M  WF=0 WT=2 "Default Fixed Font,10,0,1"
+BUFFER: BN="BuilderElements/makefile"
+VIEW: LN=.514 CL=44 LE=0 CX=44 CY=21 WI=154 BI=6 HT=0 HN=0 HF=0 HC=4
+FILEHIST: 9
+../../Src/TestAreas/TestAreas.cpp
+../../Src/SDKLibs/DataProcessing/Source/PGMBitmap.cpp
+../../Src/SDKLibs/DataProcessing/Source/PGMFactory.cpp
+../../Src/SDKLibs/NetworkImporting/Source/Elements/CmnLayer.cpp
+Components_Lib/makefile
+../../Include/Common/Common/ICommon.h
+TestAreas/makefile
+TestProcessing/makefile
+BuilderElements/makefile

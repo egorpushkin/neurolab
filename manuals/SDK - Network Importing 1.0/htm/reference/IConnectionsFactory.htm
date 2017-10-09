@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IConnectionsFactory Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IConnectionsFactory Interface
+	</div>
+	<div class="body_text">
+		<img src="../ArchImages/IConnectionsFactory.gif" class="figure">
+	</div>
+	<pre class="body_declaration">
+interface IConnectionsFactory : public IObject</pre>	
+	<div class="body_subtitle">
+		Remarks	
+	</div>
+	<div class="body_text">
+		This interface provides mechanism for managing element's connections.
+		Every network element contains two factory objects which implements this interface.		
+	</div>
+	
+	<div class="body_subtitle">
+		IConnectionsFactory members
+	</div>
+	<div class="body_text">
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td colspan="2">	
+					Public Methods
+				</td>
+			</tr>
+			<tr class="data_table_row">				
+				<td width="45%">
+					<a name="_IConnectionsFactory_GetConnectionsCount"></a>
+					<b>GetConnectionsCount</b>
+				</td>
+				<td width="55%">
+					Returns connections count.
+				</td>				
+			</tr>
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IConnectionsFactory_CreateEnumerator"></a>				
+					<b>CreateEnumerator</b>
+				</td>
+				<td>
+					Initialises connections enumeration machine.
+				</td>				
+			</tr>
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IConnectionsFactory_GetNextConnection"></a>				
+					<b>GetNextConnection</b>
+				</td>
+				<td>
+					Returns current connection and moves pointer to the next one element.
+					Finally returns <b>NULL</b>.
+				</td>				
+			</tr>						
+		</table>
+	</div>
+	<div class="body_text">					
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td colspan="2">	
+					Internal Methods
+				</td>
+			</tr>
+			<tr class="data_table_row">
+				<td width="45%">
+					<a name="_IConnectionsFactory_RemoveConnections"></a>				
+					<b>RemoveConnections</b>
+				</td>
+				<td width="55%">
+					Removes all foctory connections.
+				</td>
+			</tr>				
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IConnectionsFactory_AddConnection"></a>				
+					<b>AddConnection</b>
+				</td>
+				<td>
+					Add new connection.
+				</td>				
+			</tr>						
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IConnectionsFactory_RemoveConnection"></a>				
+					<b>RemoveConnection</b>
+				</td>
+				<td>
+					Removes specified connection.
+				</td>				
+			</tr>
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IConnectionsFactory_MoveConnection"></a>				
+					<b>MoveConnection</b>
+				</td>
+				<td>
+					Moves connection in connections list.
+				</td>				
+			</tr>			
+		</table>	
+	</div>
+	<div class="body_note">	
+		<b>Note</b> As you can see all methods of this interface are <b>public</b> (in <b>C++</b> terminology).
+		<b>IConnectionsFactory</b> methods form the second group (<b>Internal Methods</b>) presentes functionality for internal 
+			mechanisms.
+		It is not recommended to execute any of these methods.
+	</div>
+		
+	<div class="body_subtitle">
+		Source	
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Source code that declares <b>IConnectionsFactory</b> interface:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('IConnectionsFactory_declaration')">
+				<img id="collapseimg_IConnectionsFactory_declaration" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_IConnectionsFactory_declaration">
+// IConnectionsFactory declaration
+interface IConnectionsFactory : public IObject
+{
+    virtual void		RemoveConnections() = 0;
+
+    virtual void		AddConnection(CConnection* pConnection) = 0;
+    virtual void		RemoveConnection(CConnection* pConnection) = 0;
+
+    virtual bool		MoveConnection(CConnection* pConnection, bool bIsMoveUp = false) = 0;
+
+    virtual int		GetConnectionsCount() = 0;
+    INTERFACE_ENUMERATOR_DECLARATION(CConnection*, CreateEnumerator, GetNextConnection)	
+};</pre>		
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">	
+		<b>Header:</b> Declared in: <span class="file_name">CmnElement.h</span>, include <span class="file_name">NetworkImporting.h</span>										
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference_Main.htm">Reference</a> 		
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>	
+</body>
+</html>	

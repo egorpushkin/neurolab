@@ -1,0 +1,23 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=chm\Data Creator - User Guide.chm
+Contents file=Table of Contents.hhc
+Default topic=htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Data Creator Tool 1.0 - User Guide
+
+
+[FILES]
+htm\Introduction.htm
+htm\default.htm
+htm\Images\split_line.gif
+htm\getting_started\getting_started_Main_Window.htm
+htm\getting_started\getting_started_Main.htm
+htm\getting_started\operations\operations_Main.htm
+htm\registration.htm
+htm\license.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,6 @@
+; LayersExporter.def : Declares the module parameters for the DLL.
+
+LIBRARY      "LayersExporter"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,23 @@
+.header_title{	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.header_subtitle{	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	
+	color: #1C4B72;
+}
+
+.intro_page_content{
+	padding-top: 100px;
+	
+	text-align: center;
+}
+
+.empty_block{
+	height: 50px;
+}

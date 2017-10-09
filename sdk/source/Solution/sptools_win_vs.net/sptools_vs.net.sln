@@ -1,0 +1,90 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StorageProcessor", "..\..\Src\Projects\IndependentNNPTools\StorageProcessor\StorageProcessor.vcproj", "{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjectConverter", "..\..\Src\Projects\IndependentNNPTools\ProjectConverter\ProjectConverter.vcproj", "{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstructTool", "..\..\Src\Projects\IndependentNNPTools\ConstructTool\ConstructTool.vcproj", "{60C8CA02-136B-41EF-9E66-F84223EDD183}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E} = {7D3113CA-2A7E-4B83-8583-9DE335EFC62E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrainTool", "..\..\Src\Projects\IndependentNNPTools\TrainTool\TrainTool.vcproj", "{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E} = {7D3113CA-2A7E-4B83-8583-9DE335EFC62E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessTool", "..\..\Src\Projects\IndependentNNPTools\ProcessTool\ProcessTool.vcproj", "{A69101AF-10B9-43BA-9C32-F11E1B13FC48}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E} = {7D3113CA-2A7E-4B83-8583-9DE335EFC62E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleHelpersKit", "..\..\Src\Projects\IndependentNNPTools\ConsoleHelpersKit\ConsoleHelpersKit.vcproj", "{CD63352C-E263-4820-802B-A429A83A4348}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AreasBuilder", "..\..\Src\Projects\IndependentNNPTools\AreasBuilder\AreasBuilder.vcproj", "{F8531DCE-9AB7-4202-8D32-C76453419175}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AreasExtractor", "..\..\Src\Projects\IndependentNNPTools\AreasExtractor\AreasExtractor.vcproj", "{222DBD76-35CC-457D-BBD7-238D1E26AB9F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataGenerator", "..\..\Src\Projects\IndependentNNPTools\DataGenerator\DataGenerator.vcproj", "{D14C4C84-385B-4C67-89DA-A98E6EFF83B1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TiffConverter", "..\..\Src\Projects\IndependentNNPTools\TiffConverter\TiffConverter.vcproj", "{A69101AF-10B9-43BA-9C32-F11E1B13FC48}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Debug.ActiveCfg = Debug|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Release.ActiveCfg = Release|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Release.Build.0 = Release|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Debug.ActiveCfg = Debug|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Release.ActiveCfg = Release|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Release.Build.0 = Release|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Debug.ActiveCfg = Debug|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Release.ActiveCfg = Release|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Release.Build.0 = Release|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Debug.ActiveCfg = Debug|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Release.ActiveCfg = Release|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Release.Build.0 = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Debug.ActiveCfg = Debug|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.ActiveCfg = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.Build.0 = Release|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Debug.ActiveCfg = Debug|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Release.ActiveCfg = Release|Win32
+		{F8531DCE-9AB7-4202-8D32-C76453419175}.Debug.ActiveCfg = Debug|Win32
+		{F8531DCE-9AB7-4202-8D32-C76453419175}.Debug.Build.0 = Debug|Win32
+		{F8531DCE-9AB7-4202-8D32-C76453419175}.Release.ActiveCfg = Release|Win32
+		{F8531DCE-9AB7-4202-8D32-C76453419175}.Release.Build.0 = Release|Win32
+		{222DBD76-35CC-457D-BBD7-238D1E26AB9F}.Debug.ActiveCfg = Debug|Win32
+		{222DBD76-35CC-457D-BBD7-238D1E26AB9F}.Release.ActiveCfg = Release|Win32
+		{D14C4C84-385B-4C67-89DA-A98E6EFF83B1}.Debug.ActiveCfg = Debug|Win32
+		{D14C4C84-385B-4C67-89DA-A98E6EFF83B1}.Debug.Build.0 = Debug|Win32
+		{D14C4C84-385B-4C67-89DA-A98E6EFF83B1}.Release.ActiveCfg = Release|Win32
+		{D14C4C84-385B-4C67-89DA-A98E6EFF83B1}.Release.Build.0 = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Debug.ActiveCfg = Debug|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Debug.Build.0 = Debug|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.ActiveCfg = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

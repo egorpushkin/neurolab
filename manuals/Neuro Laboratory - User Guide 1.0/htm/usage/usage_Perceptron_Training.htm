@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Perceptron Training Using Back Propagation Method</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Neuro Laboratory 1.0 - User Guide
+	</div>
+	<div class="page_title">		
+		Perceptron Training Using 'Back Propagation' Method
+	</div>
+	<div class="body_subtitle">
+		Quick Introduction In The Feed-Forward Neural Network Model And Back Propagation Training Method
+	</div>
+	<div class="body_text">
+		Referring to figures 1 and 2, the network functions as follows: Each neuron receives a signal from the neurons in the 
+			previous layer, and each of those signals is multiplied by a separate weight value. 
+		The weighted inputs are summed, and passed through a limiting function which scales the output to a fixed range of values. 
+		The output of the limiter is then broadcast to all of the neurons in the next layer. 
+		So, to use the network to solve a problem, we apply the input values to the inputs of the first layer, allow the signals to 
+			propagate through the network, and read the output values.	
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/Simple_NN_View.gif" class="figure"/><br/>
+		Figure 1. Generalized Network View.		
+	</div>
+	<div class="body_text">
+		<b>Figure 1.</b> A Generalized Network. Stimulation is applied to the inputs, and signals propagate through neurons' layer(s) 
+			to the output layer. Each link between neurons has a unique weighting value.
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/Simple_Neuron_View.gif" class="figure"/><br/>
+		Figure 2. The Structure of a Neuron.		
+	</div>
+	<div class="body_text">
+		<b>Figure 2.</b> The Structure of a Neuron. Inputs from one or more previous neurons are individually weighted, then summed. 
+			The result is non-linearly scaled between 0 and +1 (in case of using sigmoid limiter function), 
+				and the output value is passed on to the neurons in the next layer.
+	</div>
+	<div class="body_text">
+		Since the real uniqueness or 'intelligence' of the network exists in the values of the weights between neurons, 
+			we need a method of adjusting the weights to solve a particular problem. 
+		For this type of network, the most common learning algorithm is called Back Propagation (BP). 
+		A BP network <i>learns by example</i>, that is, we must provide a learning set that consists of some input examples and 
+			the known-correct output for each case. 
+		So, we use these input-output examples to show the network what type of behavior is expected, 
+			and the BP algorithm allows the network to adapt.
+	</div>
+	<div class="body_text">
+		The BP learning process works in small iterative steps: one of the example cases is applied to the network, 
+			and the network produces some output based on the current state of it's synaptic weights 
+			(initially, the output will be random). 
+		This output is compared to the known-good output, and a mean-squared error signal is calculated. 
+		The error value is then propagated backwards through the network, and small changes are made to the weights in each layer. 
+		The weight changes are calculated to reduce the error signal for the case in question. 
+		The whole process is repeated for each of the example cases, then back to the first case again, and so on. 
+		The cycle is repeated until the overall error value drops below some pre-determined threshold. 
+		At this point we say that the network has learned the problem "well enough" - the network will never exactly learn the 
+			ideal function, but rather it will asymptotically approach the ideal function. 		
+	</div>	
+	<div class="body_subtitle">
+		Processing Training
+	</div>
+	<div class="body_text">
+		<b>Neuro Laboratory</b>	provides all necessary functionality to build, train and process perceptron neural networks.
+		Prepared network can be trained using build in
+			<a href="#_Perceptron_Training_Back_Propagation_Trainer">Back Propagation</a> trainer.			
+		The results of previous operation can be tested using
+			<a href="#_Perceptron_Training_Process_Network_Plugin">Process Network</a> plug-in.
+	</div>
+	<div class="body_text">			
+		You must process the following steps to train perceptron network:
+		<ol type="1" start="1">
+			<li>Building network of required structure.</li>
+			<li>Preparing data for training.</li>			
+			<li>Training network</li>						
+		</ol>		
+	</div>
+	<div class="body_subtitle">
+		<a name="_Perceptron_Training_Back_Propagation_Trainer"></a>
+		<span class="method_name">Back Propagation</span> Trainer Description
+	</div>	
+	<div class="body_text">
+		This tool implements <b>Back Propagation</b> algorithm for training neural network.
+		Before using this tool you must build network and prepare data for training.
+		Note that loaded data must correspond to built network (the length of input symbols must equals to the amount of network inputs, 
+			the same must hold true with output symbols). 
+		However, you have and opportunity to configure trainer even if network is not built and data is not loaded yet.
+		Configuration process is very important so be very attentive doing this.
+	</div>
+	<div class="body_subtitle">
+		<a name="_Perceptron_Training_Back_Propagation_Trainer"></a>
+		<span class="method_name">Back Propagation</span> Trainer Configuration
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Trainer_BP_Configure.gif" class="figure"/><br/>
+		Configuration Dialog of Back Propagation Trainer.
+	</div>		
+	<div class="body_subtitle">
+		<span class="method_name">Weights Initialization</span> Section
+	</div>
+	<div class="body_text">
+		You have an opportunity to choose whether to initialize network weights before starting training or no.
+		In case of first training it is highly recommended to give neurons' weights small random values from -1 to 1.
+		Disabling this feature (weights initialization) can be useful in such cases:
+		<ul>
+			<li>You can stop training network if you want at any time. So when you going to continue training you'll have to 
+				disable weights initialization to process training from the point you have stopped it.</li>
+			<li>If you have already trained network to classify some images with some maximum network error value and now you want to 
+				decrease it, you can start training one more time. You must set new maximum error value and disable weights 
+				initialization in this case.</li>		
+		</ol>				
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Training Speed</span> Section
+	</div>	
+	<div class="body_text">
+		Training speed is very important parameter of the <b>Back Propagation</b> method. 
+		Manipulating it you can decrease a number of loops that is necessary for successful training.
+		You have also an opportunity to select a rule of changing this parameter.	
+	</div>
+	<div class="body_text">
+		In this section you can set speed values for <i>hidden</i> and <i>output</i> neurons. 
+		<i>Output</i> neuron is network element that has direct connection to an output element.
+		<i>Hidden</i> neuron doesn't have any connections to output elemnts, so it propagates it's output data to the neurons of the 
+			next layer.
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Algorithm Termination Conditions</span> Section
+	</div>			
+	<div class="body_text">
+		In this section you must specify maximum network error and a number of loops for training (this parameter required if specified 
+			error cannot be arrived at). This number of loops also used to show percentage of done work during processing training.
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">Specific Options</span> Section
+	</div>
+	<div class="body_text">	
+		<b>Back Propagation</b> training is processed from network output elements to input elemnts. 
+		So when training some neuron other elements that receive data form it already has been trained. But we have to use their weights 
+			for current calculations. 
+		You can specify whether to use new values or saved old weights in mantioned situation.
+	</div>			
+	<div class="body_subtitle">
+		<a name="_Perceptron_Training_Process_Network_Plugin"></a>
+		<span class="method_name">Process Network</span> Plug-in Description
+	</div>
+	<div class="body_text">
+		You can edit input data image using <b>Input Data</b> control. When image is ready press <b>Process</b> button.
+		After this plug-in passes prepared data symbol to the network inputs and invokes system function that processes network.
+		Than it receives data from network outputs and presents it in the <b>Output Data</b> contol.
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Plugin_Process_Network.gif" class="figure"/><br/>
+		Sample Screen of Process Network Plug-in.
+	</div>
+	<div class="body_subtitle">
+		Building network
+	</div>
+	<div class="body_text">
+		To build a classifier based on perceptron you have to use network of the following structure:
+		<ul>
+			<li>Input layer. The dimension of this layer must equals to the length of input symbols which this classifier must 
+				separate.</li>				
+			<li>2 or more neurons layers.</li>			
+			<li>Output layer. The dimension of this layer must equals to number of classes.</li>			
+		</ul>	
+		Input and output layers don't process any calculations (even sum operation). 
+		Input layer passes data to the first layer of neurons. 
+		Output layer receives data from the last neurons layer and used to form network output.
+	</div>
+	<div class="body_text">		
+		You can build such a network using <b>Neuro Laboratory</b> toolbox that contains all necessary elements: 
+			<i>Input Factory</i>, <i>Output Factory</i> and <i>Neurons Layer</i>.
+		After building network and establishing connections set layers dimensions to guarantee correct data flow through the network.			
+	</div>
+	<div class="body_text">	
+		Well built perceptron must looks as follows:
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/Network_Perceptron_Simple.gif" class="figure"/><br/>
+		Prepared network.
+	</div>
+	<div class="body_text">	
+		Data view of this network:
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/View_Perceptron_Simple.gif" class="figure"/><br/>
+		Perceptron data view.
+	</div>	
+	<div class="body_text">	
+		To speed up network training you can also add constant input to every neuron. 
+		The weight to this input will be trained just as others but the value gived to this input will be invariable (for exapmle +1).
+		Use <i>Constant input</i> element to process this. 
+		Do not forget to increase a number of layer inputs for <i>Neurons Layer</i> elements in case of adding this constant one.
+	</div>	
+	<div class="figure_block">
+		<img src="../ScreenShots/Network_Perceptron_With_Constant.gif" class="figure"/><br/>
+		Prepared network with constant input for every neuron.
+	</div>
+	<div class="body_text">	
+		Data view of this network:
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/View_Perceptron_With_Constant.gif" class="figure"/><br/>
+		Perceptron data view.
+	</div>	
+	<div class="body_text">
+		After required network is built we are ready to start preparing data for training it.	
+	</div>
+	<div class="body_subtitle">
+		Preparing data for training
+	</div>
+	<div class="body_text">
+		To train network using Back Propagation trainer you must create data file that contains input and output standard symbols.
+		You can do it using <b>Data Files Creator Tool</b> or create it yourself using <b>Data Processing SDK</b>.
+	</div>
+	<div class="body_subtitle">
+		Training network
+	</div>
+	<div class="body_text">
+		After data has been prepared use build in <b>Trainer Tool</b> to train network. 
+		Be very attentive configuring method before you start training because wrong configuration can not only increase time 
+			required for training but even give unsatisfactory training results 
+			(network will not process necessary operations correctly).
+	</div>
+	<div class="body_text">
+		You also should look through <b>Events log</b> after algorithm termination.
+		If a number of loops required to train network equals to maximum number of loops 
+			(which was set when configuring algorithm) most likely training was not successful and maximum network error 
+			as before more than the one set in method parameters.
+		In this case you should change some training arguments (such as trainng speed, weights initialization method, ect.) 
+			and repeat training one more time.
+	</div>	
+	<div class="body_subtitle">
+		Processing network
+	</div>
+	<div class="body_text">
+		Use <a href="#_Perceptron_Training_Process_Network_Plugin">Process Network</a> plug-in to verify whether training 
+			was successful.
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="usage_Main.htm">Usage</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Data File Operations</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Data File Operations
+	</div>	
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		This package provides API for manipulating <b>>Data File</b> objects.
+		It implements functionality of <b>IDataFile</b> interface.
+	</div>	
+	<div class="body_subtitle">
+		Package API
+	</div>	
+	<div class="body_text">
+		This API provides all necessary functionality for manipulating data file objects.
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Detailed Information
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><b>getInputSymbolsCount</b></td>
+				<td width="65%">Returns a number of input data symbols.</td>
+			</tr>		
+			<tr class="data_table_row">			
+				<td width="35%"><b>getOutputSymbolsCount</b></td>
+				<td width="65%">Returns a number of output data symbols.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><b>getInputSymbolLength</b></td>
+				<td width="65%">Returns length of input symbol.</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td width="35%"><b>getOutputSymbolLength</b></td>
+				<td width="65%">Returns length of output symbol.</td>
+			</tr>									
+		</table>
+	</div>		
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Receiving Data Objects
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFile_getInputSymbol">getInputSymbol</a></td>
+				<td width="65%">Returns input data object.</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_DataFile_getOutputSymbol">getOutputSymbol</a></td>
+				<td width="65%">Returns output data object.</td>
+			</tr>				
+		</table>	
+	</div>
+	<div class="body_note">
+		<b>Note</b> that all function from <b>Detailed Information</b> section must receive <b>Data File</b> object 
+			as argument and return <b>Integer</b> value in any case, except when wrong data file object has been passed.
+		This object can be received using <a href="scripts_language_Data_Processor.htm">Data Processor</a> API.
+	</div>
+	
+	<!-- DataProcessor:getInputSymbol description -->
+	<div class="body_subtitle">
+		<a name="_DataFile_getInputSymbol"></a>	
+		<span class="method_name">getInputSymbol</span>
+	</div>	
+	<pre class="body_declaration">
+Object getInputSymbol(
+    Integer symbol_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getInputSymbol</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>symbol_index</i></br>
+		<div class="body_note">
+			[in] This parameter specifies index of the data symbol in the data file's input collection.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getInputSymbol</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise <b>nil</b>. 
+	</div>	
+	
+	<!-- DataProcessor:getOutputSymbol description -->
+	<div class="body_subtitle">
+		<a name="_DataFile_getOutputSymbol"></a>	
+		<span class="method_name">getOutputSymbol</span>
+	</div>	
+	<pre class="body_declaration">
+Object getOutputSymbol(
+    Integer symbol_index
+);</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getOutputSymbol</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>symbol_index</i></br>
+		<div class="body_note">
+			[in] This parameter specifies index of the data symbol in the data file's output collection.						
+		</div>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">getOutputSymbol</span> Return Value
+	</div>
+	<div class="body_text">
+		Userdata object if successful; otherwise nil. 
+	</div>
+	
+	<!-- DataFile sample usage -->
+	<div class="body_subtitle">
+		Example Code
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Sample of <b>Data File</b> usage:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('datafile_usage_source')">
+				<img id="collapseimg_datafile_usage_source" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_datafile_usage_source">
+log_provider = getLogProvider();
+clearLog(log_provider);
+
+addLogMessage(log_provider, "N", "Enumerating attached data objects...", 
+    "Data Processor Demo");
+
+-- Receiving data files count
+data_files_count = getDataFilesCount();
+addLogMessage(log_provider, "N", "Total data files count: "..data_files_count..".",
+    "Data Processor Demo");
+
+addLogMessage(log_provider, "N", "Enumerating attached data objects:",
+    "Data Processor Demo");
+
+-- Enumerating data objects
+for i=0, data_files_count-1 do
+    data_file_name = getDataFileName(i); 
+    addLogMessage(log_provider, "N", "Data file name: "..data_file_name..".",
+        "Data Processor Demo");
+
+    -- Receiving data object with specified index i
+    data_file = getDataFile(i);
+    if data_file == nil then
+        addLogMessage(log_provider, "E", "Wrong data object at position "..i..".",
+            "Data Processor Demo");      
+        break;
+    end    
+
+    -- Receiving data file object detailed information
+    inputs = getInputSymbolsCount(data_file);
+    outputs = getOutputSymbolsCount(data_file);
+
+    ilength = getInputSymbolLength(data_file);
+    olength = getOutputSymbolLength(data_file);
+
+    -- Preparing messages to be added to operation log
+    inputs_message = "Tolat inputs: "..inputs..". Symbol length: "..ilength..".";
+    outputs_message = "Tolat outputs: "..outputs..". Symbol length: "..olength..".";
+
+    addLogMessage(log_provider, "N", inputs_message, "Data Processor Demo");
+    addLogMessage(log_provider, "N", outputs_message, "Data Processor Demo");
+end
+
+addLogMessage(log_provider, "N", "End of list.", "Data Processor Demo");
+</pre>	
+	<div class="body_text">
+		The following data files where attached to the solution when the script had been executed:
+		<ul>
+			<li>
+				<span class="file_name">Data_i3x256_o3x3_symbols.nldfile</span>
+			</li>
+			<li>
+				<span class="file_name">Hopfield_i3x64_o0x64_symbols.nldfile</span>
+			</li>			
+		</ul>
+		This script types the following output in log list window:	
+	</div>	
+	<pre class="body_source_code">
+N	Total data files count: 2				Data Processor Demo
+N	Enumerating attached data objects:			Data Processor Demo
+N	Data file name: Data_i3x256_o3x3_symbols.		Data Processor Demo
+N	Tolat inputs: 3. Symbol length: 256.			Data Processor Demo
+N	Tolat outputs: 3. Symbol length: 3.			Data Processor Demo
+N	Data file name: Hopfield_i3x64_o0x64_symbols.		Data Processor Demo
+N	Tolat inputs: 3. Symbol length: 64.			Data Processor Demo
+N	Tolat outputs: 0. Symbol length: 64.			Data Processor Demo
+N	End of list.					Data Processor Demo
+</pre>
+		
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Data_Processing.htm">Data Processing Package</a> |
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>			
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

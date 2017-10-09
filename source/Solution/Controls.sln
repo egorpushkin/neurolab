@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple2dCharting", "..\controls\Simple2dCharting\Simple2dCharting.vcproj", "{EAA03C7D-E847-4422-928E-C9FF36569021}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawingControl", "..\controls\DrawingControl\DrawingControl.vcproj", "{360E86DA-A2F6-470D-AB3E-D868C023C06E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release|Win32.ActiveCfg = Release|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release|Win32.Build.0 = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug|Win32.Build.0 = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release|Win32.ActiveCfg = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

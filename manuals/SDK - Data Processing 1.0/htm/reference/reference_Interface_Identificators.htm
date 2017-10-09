@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Interface Identificators</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		Interface Identificators
+	</div>
+	<div class="body_text">				
+		Identificators are used to query interface implemented by some object's class or supported by one of object's members
+			(this object must implement <b>IObject</b> interface).
+		Use <b>IObject</b> <a href="IObject.htm#_IObject_QueryInterface">QueryInterface</a> method to get access to necessary interface.
+	</div>			
+	<div class="body_note">							
+		<b>Note</b> Be sure that the object support interface you want to query (otherwise <b>QueryInterface</b> returns <b>NULL</b>). 
+	</div>
+	<div class="body_text">
+		It is not recommended to use identificators' numeric values cause it can be changed during development process and 
+			can differs from version to version.
+	</div>
+	<div class="body_subtitle">
+		Source
+	</div>	
+	<div class="source_code_title">
+		<span class="left">
+			This code defines all used identificators:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('interface_identificators')">
+				<img id="collapseimg_interface_identificators" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>		
+	<pre class="body_source_code" id="collapseobj_interface_identificators">#pragma once
+
+#define IDD_IPluginsPanelControl			0x000001
+#define IDD_IManagerControl				0x000002
+#define IDD_IPluginsContainer			0x000003
+#define IDD_IDataFactory				0x000004
+#define IDD_IStorageController			0x000005
+#define IDD_IDataFile				0x000006
+#define IDD_ILogProvider				0x000007
+#define IDD_IPGMFactory				0x000008
+#define IDD_IXMLStorageController			0x000009
+#define IDD_IDataCollection				0x00000a
+#define IDD_IBMPFactory				0x00000b
+
+#define IDD_IComponent				0x000100
+#define IDD_Component_IPluginsManager		0x000101
+#define IDD_Component_IBuilderElements		0x000102
+#define IDD_Component_INetworkTrainers		0x000103
+
+#define IDD_IPluginControl				0x000201
+#define IDD_IPluginBarControl			0x000202
+#define IDD_IPluginPropertiesControl			0x000203
+
+#define IDD_IAppController				0x000300
+
+#define IDD_IElementsContainer			0x000401
+#define IDD_IGroupsContainer			0x000402
+#define IDD_IFunctionsFactory			0x000403
+
+#define IDD_IElement				0x000501
+#define IDD_IBuilderElement				0x000502
+#define IDD_IDataFlow				0x000503
+#define IDD_IDataConnector				0x000504
+#define IDD_ILayerControl				0x000505
+#define IDD_IConnectionsFactory			0x000506
+
+#define IDD_IOutputDevice				0x000601
+#define IDD_IDeviceDriver				0x000602
+#define IDD_IBuilderControl				0x000603
+#define IDD_IDeviceFont				0x000604
+
+#define IDD_IElementsCollection			0x000701
+#define IDD_INetworkProcessor			0x000702
+#define IDD_INetworkVerifier			0x000703
+
+#define IDD_ITrainersContainer			0x000801
+#define IDD_ITrainer				0x000802
+
+#define IDD_IImportManager				0x000901</pre>
+	<div class="body_subtitle">					
+		Sample		
+	</div>
+	<div class="body_text">					
+		<a href="IObject.htm#_IObject_Using_Sample">Sample code for querying interface</a>		
+	</div>
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">				
+		<b>Header:</b> Declared in: <span class="file_name">interface_idds.h</span>, include <span class="file_name">DataProcessing.h</span>													
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="IObject.htm">IObject</a> |
+		<a href="reference_Main.htm">Reference</a>		
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>	
+
+</body>
+</html>

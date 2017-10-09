@@ -1,0 +1,6 @@
+; LuaLib.def : Declares the module parameters for the DLL.
+
+LIBRARY      "LuaLib"
+
+EXPORTS
+    ; Explicit exports can go here

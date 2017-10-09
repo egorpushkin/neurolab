@@ -1,0 +1,42 @@
+[Global]
+CurrentProject=ProcessTool\ProcessTool.vpj
+[ActiveConfig]
+StorageProcessor\StorageProcessor.vpj=,Release
+ProjectConverter.vpj=,Release
+ProjectConverter\ProjectConverter.vpj=,Release
+ConstructTool\ConstructTool.vpj=,Release
+TrainTool\TrainTool.vpj=,Release
+ProcessTool\ProcessTool.vpj=,Release
+[ProjectDates]
+StorageProcessor\StorageProcessor.vpj=20061012161434015
+ProjectConverter.vpj=20061012161354046
+ProjectConverter\ProjectConverter.vpj=20061012161936015
+ConstructTool\ConstructTool.vpj=20061012165101343
+TrainTool\TrainTool.vpj=20061012165442171
+ProcessTool\ProcessTool.vpj=20061012165714000
+[TreeExpansion2]
++ ConstructTool\ConstructTool.vpj
++ ProcessTool\ProcessTool.vpj
+  + Source Files
+  + Other Files
++ ProjectConverter\ProjectConverter.vpj
++ StorageProcessor\StorageProcessor.vpj
++ TrainTool\TrainTool.vpj
+scroll:0
+[State]
+SCREEN: 1280 1024 88 116 960 697 0 0 M 0 0 0 0 974 604
+CWD: ProcessTool
+FILEHIST: 9
+..\..\Src\Projects\IndependentNNPTools\StorageProcessor\ExternalSerializers\XMLSerializationTools\LoadElement.cpp
+..\..\Src\Projects\IndependentNNPTools\ConsoleHelpersKit\ConsoleHelpersKit.h
+..\..\Src\Projects\IndependentNNPTools\ProjectConverter\ProjectConverter.cpp
+StorageProcessor\makefile
+..\..\Src\Projects\IndependentNNPTools\ConsoleHelpersKit\Exceptions.h
+ConstructTool\makefile
+..\..\Src\Projects\IndependentNNPTools\ConstructTool\ConstructTool.cpp
+..\..\Src\Projects\IndependentNNPTools\TrainTool\TrainTool.cpp
+..\..\Src\Projects\IndependentNNPTools\ProcessTool\ProcessTool.cpp
+DEBUG: 0 0 0 0 3 0
+printf
+strcpy
+std::*

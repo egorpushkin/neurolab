@@ -1,0 +1,26 @@
+
+# StorageProcessor tools building
+
+cd StorageProcessor
+make CFG=Release $1
+cd ..
+
+cd ConstructTool
+make CFG=Release $1
+cd ..
+
+cd TrainTool
+make CFG=Release $1
+cd ..
+
+cd ProjectConverter
+make CFG=Release $1
+cd ..
+
+cd ProcessTool
+make CFG=Release $1
+cd ..
+
+cd AreasBuilder
+make CFG=Release $1
+cd ..

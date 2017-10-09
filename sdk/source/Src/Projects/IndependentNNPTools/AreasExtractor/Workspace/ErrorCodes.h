@@ -1,0 +1,17 @@
+#ifndef ERRORCODES_H__WORKSPACE__INCLUDED_
+#define ERRORCODES_H__WORKSPACE__INCLUDED_
+
+
+#define WS_E_IMPORTMNG				((result)0x80010001L) 
+#define WS_E_IMPORTMNG_LOAD			((result)0x80010002L) 
+#define WS_E_IMPORTMNG_INIT			((result)0x80010003L) 
+
+#define XML_E_NOROOT				((result)0x80020001L) 
+#define XML_E_WRONGFORMAT			((result)0x80020002L) 
+
+#define PROJECT_E_WRONGNETWORK		((result)0x80030001L) 
+#define PROJECT_E_WRONGBAND			((result)0x80030002L) 
+#define PROJECT_E_WRONPARAMETER		((result)0x80030003L) 
+
+
+#endif // !ERRORCODES_H__COMMON__INCLUDED_

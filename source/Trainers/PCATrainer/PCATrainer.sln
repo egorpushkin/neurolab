@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PCATrainer", "PCATrainer.vcproj", "{92746FF2-7584-48D1-B9E9-24F724890D65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC} = {164621C4-26A6-4A61-BFAF-A58FA8D48FAC}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewMat11", "MathTools\NewMat11\NewMat11.vcproj", "{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Debug.ActiveCfg = Debug|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Debug.Build.0 = Debug|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Release.ActiveCfg = Release|Win32
+		{92746FF2-7584-48D1-B9E9-24F724890D65}.Release.Build.0 = Release|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Debug.ActiveCfg = Debug|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Debug.Build.0 = Debug|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Release.ActiveCfg = Release|Win32
+		{164621C4-26A6-4A61-BFAF-A58FA8D48FAC}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

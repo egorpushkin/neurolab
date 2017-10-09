@@ -1,0 +1,38 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Chm\Data Processing SDK Documentation.chm
+Contents file=Table of Contents.hhc
+Default topic=htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Data Processing SDK Documentation
+
+
+[FILES]
+htm\Introduction.htm
+htm\appendix_A.htm
+htm\default.htm
+htm\Images\collapse_button_collapsed.gif
+htm\Images\split_line.gif
+htm\style.css
+htm\object_model\object_model_Main.htm
+htm\reference\reference_Main.htm
+htm\reference\CBMPFactory.htm
+htm\reference\CDataFactory.htm
+htm\reference\CDataFactory_members.htm
+htm\reference\CDataFile.htm
+htm\reference\CDataFile_members.htm
+htm\reference\CPGMFactory.htm
+htm\reference\IBMPFactory.htm
+htm\reference\IDataFactory.htm
+htm\reference\IDataFile.htm
+htm\reference\IObject.htm
+htm\reference\IPGMFactory.htm
+htm\reference\IStorageController.htm
+htm\reference\IXMLStorageController.htm
+htm\reference\reference_Interface_Identificators.htm
+htm\appendix_B.htm
+
+[INFOTYPES]
+

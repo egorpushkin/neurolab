@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IDataConnector Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IDataConnector Interface
+	</div>
+	<div class="body_text">
+		<img src="../ArchImages/IDataConnector.gif" class="figure">
+	</div>
+	<pre class="body_declaration">
+interface IDataConnector : public IObject</pre>	
+	<div class="body_subtitle">
+		Remarks	
+	</div>
+	<div class="body_text">
+		The <b>IDataConnector</b> interface performs functionality for operating with element's input and output connections.
+	</div>
+	
+	<div class="body_subtitle">
+		Supported Interfaces
+	</div>
+	<div class="body_text">
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td width="33%">Interface Name</td>
+				<td width="33%">Interface Identificator</td>				
+				<td width="34%">Declared In</td>				
+			</tr>
+			<tr class="data_table_row">
+				<td><a href="IElement.htm">IElement</a></td>
+				<td>IDD_IElement</td>
+				<td><span class="file_name">CmnElement.h</span></td>
+			</tr>			
+			<tr class="data_table_row">
+				<td><a href="IDataFlow.htm">IDataFlow</a></td>
+				<td>IDD_IDataFlow</td>
+				<td><span class="file_name">CmnElement.h</span></td>
+			</tr>
+			<tr class="data_table_row">
+				<td><a href="ILayerControl.htm">ILayerControl</a></td>
+				<td>IDD_ILayerControl</td>
+				<td><span class="file_name">CmnElement.h</span></td>
+			</tr>								
+		</table>		
+	</div>
+	<div class="body_note">
+		<b>Note</b> The <b>ILayerControl</b> interface supported by the following elements only:
+			<i>Input Factory</i>,
+			<i>Output Factory</i>,			
+			<i>Hopfield Layer</i>,						
+			<i>Neurons Layer</i>,						
+			<i>RBF Layer</i>,						
+			<i>Winner Layer</i>
+	</div>
+	
+	<div class="body_subtitle">
+		IDataConnector members
+	</div>
+	<div class="body_text">
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td colspan="2">	
+					Public Methods
+				</td>
+			</tr>
+			<tr class="data_table_row">				
+				<td width="45%">
+					<a name="_IDataConnector_GetConnectionsFactory"></a>
+					<b>GetConnectionsFactory</b>
+				</td>
+				<td width="55%">
+					Returns connection factory of the specified type.
+				</td>				
+			</tr>
+		</table>
+	</div>
+	<div class="body_text">					
+		<table class="data_table" align="center">
+			<tr class="data_table_header">
+				<td colspan="2">	
+					Internal Methods
+				</td>
+			</tr>
+			<tr class="data_table_row">
+				<td width="45%">
+					<a name="_IDataConnector_AddConnectionTo"></a>				
+					<b>AddConnectionTo</b>
+				</td>
+				<td width="55%">
+					Adds new connection to the specified element.
+				</td>
+			</tr>				
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IDataConnector_RemoveConnection"></a>				
+					<b>RemoveConnection</b>
+				</td>
+				<td>
+					Removes specified connection.
+				</td>				
+			</tr>						
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IDataConnector_SetAddConnectionState"></a>				
+					<b>SetAddConnectionState</b>
+				</td>
+				<td>
+					Performs configuration of the internal connections manager.
+				</td>				
+			</tr>
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IDataConnector_ProcessAddConnection"></a>				
+					<b>ProcessAddConnection</b>
+				</td>
+				<td>
+					Adds new connection to the specified element.
+				</td>				
+			</tr>			
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IDataConnector_MoveConnection"></a>				
+					<b>MoveConnection</b>
+				</td>
+				<td>
+					Moves connection in connections list.
+				</td>				
+			</tr>			
+			<tr class="data_table_row">				
+				<td>
+					<a name="_IDataConnector_FindConnectionByPrevPtr"></a>				
+					<b>FindConnectionByPrevPtr</b>
+				</td>
+				<td>
+					Returns connection object by the specified previous pointer value.
+				</td>				
+			</tr>						
+		</table>	
+	</div>
+	<div class="body_note">	
+		<b>Note</b> As you can see all methods of this interface are <b>public</b> (in <b>C++</b> terminology).
+		<b>IDataConnector</b> methods form the second group (<b>Internal Methods</b>) presentes functionality for internal 
+			mechanisms.
+		It is not recommended to execute any of these methods.
+	</div>	
+		
+	<div class="body_subtitle">
+		Source	
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Source code that declares <b>IDataConnector</b> interface:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('IDataConnector_declaration')">
+				<img id="collapseimg_IDataConnector_declaration" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_IDataConnector_declaration">
+// IDataConnector declaration
+interface IDataConnector : public IObject
+{
+    virtual void		AddConnectionTo(IElement* pElement, int FactoryType) = 0;
+    virtual void		RemoveConnection(CConnection* pConnection) = 0;
+
+    virtual void		SetAddConnectionState(int iState, int Count) = 0;
+    virtual void		ProcessAddConnection(IElement* pElement) = 0;
+
+    virtual bool		MoveConnection(CConnection* pConnection, bool bIsMoveUp = false) = 0;
+
+    virtual IConnectionsFactory* GetConnectionsFactory(int FactoryType) = 0;
+
+    virtual CConnection*	FindConnectionByPrevPtr(CConnection* pConnection) = 0;
+};</pre>		
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">	
+		<b>Header:</b> Declared in: <span class="file_name">CmnElement.h</span>, include <span class="file_name">NetworkImporting.h</span>										
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference_Main.htm">Reference</a> 		
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>	
+</body>
+</html>	

@@ -1,0 +1,63 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImport", "..\..\Src\SDKDlls\NetworkImport\NetworkImport.vcproj", "{19703735-FF62-4DE1-8A04-FD0203B69CA0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuilderElements", "..\..\Src\SDKDlls\BuilderElements\BuilderElements.vcproj", "{34F2970B-2AE6-480E-9148-1CF5D91FF55F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrainersManager", "..\..\Src\SDKDlls\TrainersManager\TrainersManager.vcproj", "{DF3A4029-825C-400C-A798-0C33823E1ACB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptsMachine", "..\..\Src\SDKDlls\ScriptsMachine\ScriptsMachine.vcproj", "{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Multi-Byte = Debug Multi-Byte
+		Release = Release
+		Release Multi-Byte = Release Multi-Byte
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug.ActiveCfg = Debug|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug.Build.0 = Debug|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug Multi-Byte.ActiveCfg = Debug Multi-Byte|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug Multi-Byte.Build.0 = Debug Multi-Byte|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release.ActiveCfg = Release|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release.Build.0 = Release|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release Multi-Byte.ActiveCfg = Release Multi-Byte|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release Multi-Byte.Build.0 = Release Multi-Byte|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug.ActiveCfg = Debug|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug.Build.0 = Debug|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug Multi-Byte.ActiveCfg = Debug Multi-Byte|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug Multi-Byte.Build.0 = Debug Multi-Byte|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release.ActiveCfg = Release|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release.Build.0 = Release|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release Multi-Byte.ActiveCfg = Release Multi-Byte|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release Multi-Byte.Build.0 = Release Multi-Byte|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Debug.ActiveCfg = Debug|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Debug.Build.0 = Debug|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Debug Multi-Byte.ActiveCfg = Debug|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Debug Multi-Byte.Build.0 = Debug|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Release.ActiveCfg = Release|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Release.Build.0 = Release|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Release Multi-Byte.ActiveCfg = Release|Win32
+		{DF3A4029-825C-400C-A798-0C33823E1ACB}.Release Multi-Byte.Build.0 = Release|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Debug.ActiveCfg = Debug|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Debug.Build.0 = Debug|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Debug Multi-Byte.ActiveCfg = Debug|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Debug Multi-Byte.Build.0 = Debug|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Release.ActiveCfg = Release|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Release.Build.0 = Release|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Release Multi-Byte.ActiveCfg = Release|Win32
+		{7EC33899-A037-48DD-9E40-EEDB0C8C5D21}.Release Multi-Byte.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

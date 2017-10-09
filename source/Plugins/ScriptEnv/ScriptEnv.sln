@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptEnv", "ScriptEnv.vcproj", "{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EAA03C7D-E847-4422-928E-C9FF36569021} = {EAA03C7D-E847-4422-928E-C9FF36569021}
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E} = {360E86DA-A2F6-470D-AB3E-D868C023C06E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua", "..\..\include\Lua\Lua.vcproj", "{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawingControl", "..\..\controls\DrawingControl\DrawingControl.vcproj", "{360E86DA-A2F6-470D-AB3E-D868C023C06E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple2dCharting", "..\..\controls\Simple2dCharting\Simple2dCharting.vcproj", "{EAA03C7D-E847-4422-928E-C9FF36569021}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Debug.ActiveCfg = Debug|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Debug.Build.0 = Debug|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Release.ActiveCfg = Release|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Release.Build.0 = Release|Win32
+		{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}.Debug.ActiveCfg = Debug|Win32
+		{2688C31E-52A6-4D9A-AF3D-33AFD23E071C}.Release.ActiveCfg = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug.ActiveCfg = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug.Build.0 = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release.ActiveCfg = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release.Build.0 = Release|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Debug.ActiveCfg = Debug|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Debug.Build.0 = Debug|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release.ActiveCfg = Release|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

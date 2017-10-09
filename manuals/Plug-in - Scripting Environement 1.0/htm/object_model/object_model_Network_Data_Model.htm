@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Neural Network Data Model</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Neural Network Data Model
+	</div>
+	<div class="body_subtitle">
+		Introduction	
+	</div>
+	<div class="body_text">	
+		The main idea of this article is to tell about the main principles of the internal structure of neural network built 
+			with <b>Neuro Laboratory Environment</b>.
+	</div>
+	
+	<div class="body_subtitle">
+		Connections Factories
+	</div>
+	<div class="body_text">
+		Every network element has two connections factory onjects: they are inputs factory (type of this factory is 
+			<b>DC_INPUTS_FACTORY</b>) and outputs factory (type is <b>DC_OUTPUTS_FACTORY</b>).
+	</div>
+	<div class="body_subtitle">
+		Element Types	
+	</div>
+	<div class="body_text">
+		Network elements can be of three types: <b>ET_INPUT</b> (<i>Input Factory</i>, <i>Input</i>, <i>Constant Input</i>), 
+			<b>ET_PROCESSOR</b> (<i>Neuron</i>, <i>Neurons Layer</i>, ect.),
+			<b>ET_OUTPUT</b> (<i>Output Factory</i>, <i>Output</i>).
+		Elements of the first and the third types were added to give an opportunity to distribute data between ET_PROCESSOR
+			elements during the first step of network processing and to collect data after processing is done in required order.		
+		ET_PROCESSOR elements perform data flow and data processing.
+	</div>	
+	
+	<div class="body_subtitle">
+		Elements' Connection Model
+	</div>	
+	<div class="body_text">
+		Main description of the connection is <i>connection dimension</i>.
+		This description points to a number of signals must be passed through the connection.		
+	</div>	
+	<div class="body_text">
+		Every connection object (<b>CConnection</b> object in <b>Neuro Laboratory</b> terminology) has the following data fields: 
+		<ul>
+			<li>
+				<b>Element pointer</b> - pointer to parent element of opposite connection.
+			</li>
+			<li>
+				<b>Connection pointer</b> - pointer to opposite connection.
+			</li>
+			<li>
+				<b>Weights factory</b> - <b>CDataFactory</b> object that contains connection weights.
+			</li>
+			<li>
+				<b>Old weights factory</b> - <b>CDataFactory</b> object that contains temporary connection weights.
+				This factory can be used by applications during prcessing any algorithm.				
+			</li>
+			<li>
+				<b>Data factory</b> - <b>CDataFactory</b> object that contains data that is passed through connection.
+			</li>					
+			<li>
+				<b>Deltas factory</b> - <b>CDataFactory</b> object that contains connection deltas.
+				This factory can be also used to store temporary data during processing any alghorithm.
+			</li>
+		</ul>
+	</div>
+	<div class="body_note">
+		<b>Note</b> All data fctories have the same dimension which is coincident with connection dimension.
+	</div>
+	<div class="body_text">
+		<ul>
+			<li>
+				<b>Data presence flag</b> - this flag indicates whether connection already received data during processing 
+					current data flow circle throung the network.
+				This flag is being modified by 
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_setElementWaitDataState">setElementWaitDataState</a>
+					(sets this flag to <b>false</b> for both input and output connections factories),
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_elementFlowData">elementFlowData</a>
+					(sets this flag to <b>true</b> for output connections factory),
+					<a href="../scripts_language/scripts_language_Network_Element.htm#_Element_elementBackFlow">elementBackFlow</a>
+					(sets this flag to <b>true</b> for input connections factory).				
+			</li>		
+		</ul>			
+	</div>	
+	<div class="body_note">
+		<b>Note</b> that if element support functionality of <b>Layer Control</b> it store weights directly into it's object 
+			and ignores values that are stored into connection objects of it's input connections factory.
+	</div>	
+
+	<div class="figure_block">
+		<img src="../ArchImages/Cs_DM_Core.gif" class="figure"/><br/>
+		Figure 1. Connection data model.		
+	</div>		
+	<div class="body_text">
+		This figure displays the situation of connecting two <i>Neuron</i> elements <b>N1</b> and <b>N2</b>.
+	</div>
+
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="object_model_Main.htm">Object Model</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

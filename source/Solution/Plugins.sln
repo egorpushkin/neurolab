@@ -1,0 +1,62 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HopfieldLearning", "..\Plugins\HopfieldLearning\HopfieldLearning.vcproj", "{5CEAFAB8-E969-4B2B-97A7-EAF96F701F3D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessNetwork", "..\Plugins\ProcessNetwork\ProcessNetwork.vcproj", "{35E203B1-AE92-463C-A2B8-EE19F8568F9B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StatVerifier", "..\Plugins\StatVerifier\StatVerifier.vcproj", "{E80FD458-DD9B-4489-BDCC-76BA3D084B60}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptEnv", "..\Plugins\ScriptEnv\ScriptEnv.vcproj", "{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EAA03C7D-E847-4422-928E-C9FF36569021} = {EAA03C7D-E847-4422-928E-C9FF36569021}
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E} = {360E86DA-A2F6-470D-AB3E-D868C023C06E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LayersExporter", "..\Plugins\LayersExporter\LayersExporter.vcproj", "{9032F576-47AA-4C2C-8D09-7381EE3D4304}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple2dCharting", "..\controls\Simple2dCharting\Simple2dCharting.vcproj", "{EAA03C7D-E847-4422-928E-C9FF36569021}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawingControl", "..\controls\DrawingControl\DrawingControl.vcproj", "{360E86DA-A2F6-470D-AB3E-D868C023C06E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CEAFAB8-E969-4B2B-97A7-EAF96F701F3D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5CEAFAB8-E969-4B2B-97A7-EAF96F701F3D}.Debug|Win32.Build.0 = Debug|Win32
+		{5CEAFAB8-E969-4B2B-97A7-EAF96F701F3D}.Release|Win32.ActiveCfg = Release|Win32
+		{5CEAFAB8-E969-4B2B-97A7-EAF96F701F3D}.Release|Win32.Build.0 = Release|Win32
+		{35E203B1-AE92-463C-A2B8-EE19F8568F9B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{35E203B1-AE92-463C-A2B8-EE19F8568F9B}.Debug|Win32.Build.0 = Debug|Win32
+		{35E203B1-AE92-463C-A2B8-EE19F8568F9B}.Release|Win32.ActiveCfg = Release|Win32
+		{35E203B1-AE92-463C-A2B8-EE19F8568F9B}.Release|Win32.Build.0 = Release|Win32
+		{E80FD458-DD9B-4489-BDCC-76BA3D084B60}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E80FD458-DD9B-4489-BDCC-76BA3D084B60}.Debug|Win32.Build.0 = Debug|Win32
+		{E80FD458-DD9B-4489-BDCC-76BA3D084B60}.Release|Win32.ActiveCfg = Release|Win32
+		{E80FD458-DD9B-4489-BDCC-76BA3D084B60}.Release|Win32.Build.0 = Release|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Debug|Win32.Build.0 = Debug|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Release|Win32.ActiveCfg = Release|Win32
+		{9B0ABA07-3BE2-465D-8DA1-D5009E44D3CB}.Release|Win32.Build.0 = Release|Win32
+		{9032F576-47AA-4C2C-8D09-7381EE3D4304}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9032F576-47AA-4C2C-8D09-7381EE3D4304}.Debug|Win32.Build.0 = Debug|Win32
+		{9032F576-47AA-4C2C-8D09-7381EE3D4304}.Release|Win32.ActiveCfg = Release|Win32
+		{9032F576-47AA-4C2C-8D09-7381EE3D4304}.Release|Win32.Build.0 = Release|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Debug|Win32.Build.0 = Debug|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release|Win32.ActiveCfg = Release|Win32
+		{EAA03C7D-E847-4422-928E-C9FF36569021}.Release|Win32.Build.0 = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Debug|Win32.Build.0 = Debug|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release|Win32.ActiveCfg = Release|Win32
+		{360E86DA-A2F6-470D-AB3E-D868C023C06E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(DPCodeReviewSolutionGUID) = preSolution
+		DPCodeReviewSolutionGUID = {00000000-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal

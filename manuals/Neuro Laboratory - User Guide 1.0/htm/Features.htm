@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Features Overview</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Neuro Laboratory 1.0 - User Guide
+	</div>
+	<div class="page_title">		
+		Features Overview
+	</div>
+	<div class="body_subtitle">
+		Introduction
+	</div>
+	<div class="body_text"> 
+		<b>Neuro Laboratory</b> solution has modular structure.
+		The functionality of main module (<b>Neuro Laboratory Environment</b>) is extended by additional modules: 
+			plug-ins, trainers and additional tools (<b>Data Creator Tool</b>).		
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Neuro Laboratory Environment 1.0</span> Features
+	</div>
+	<div class="body_text">		
+		<ul>
+			<li>	
+				Building neural network of any required structure.
+				You can add various number of neuron layers and connect them in any way you need.
+				<b>Neuro Laboratory Environment</b> has fully functional build in editor which presents you an opportunity 
+					of visual modeling of neural network.
+			</li>		
+			<li>
+				<b>Neuron Functions Toolbox</b>. 
+				This toolbox must be used during configuring built network.
+				It contains the following functions: <i>Single Change</i>, <i>Hysteresis</i>, <i>Hyperbolic Tangent</i>,
+					<i>Sigmoid</i>, <i>Sin</i>, <i>Exponent</i> and <i>Linear</i>.
+			</li>	
+			<li>
+				<b>Network Elements Toolbox</b>. 
+				This toolbox must be used during building neural network using build in editor.
+				It contains the following elements: <i>Input</i>, <i>Input Factory</i>, <i>Constant Input</i>,
+					<i>Output</i>, <i>Output Factory</i>, <i>Neuron</i>, <i>Hopfield Layer</i>, <i>Neurons Layer</i>,
+					<i>RBF Layer</i> and <i>Winner Layer</i>.
+			</li>
+			<li>
+				Opportunity of verifying built network.
+			</li>				
+			<li>	
+				<b>Neuro Laboratory Project</b> manipulating.
+				You can save prepared network for latest usage.
+				It is also available to use project files in your custom applications using 
+					<b>Network Exporter Tool</b> and <b>Network Importing SDK</b>.							
+			</li>
+			<li>
+				Neuro Laboratory supports connecting external libraries for training neural network or its single elements
+					(network layers).
+				Such a library is called <b>trainer</b> in Neuro Laboratory terminology.
+				Trainers extend functionality of the main application module and each of them realizes any training algorithm.				
+			</li>
+			<li>
+				Neuro Laboratory supports one more way of extending its functionality.
+				Another type of libraries is called <b>plug-ins</b>.
+				In contrast to <b>trainers</b> such libraries has access to most environment control interfaces so 
+					they can be more closely integrated with <b>Neuro Laboratory Environment</b>.				
+			</li>
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Process Network Plug-in 1.0</span> Features
+	</div>	
+	<div class="body_text">
+		<ul>
+			<li>
+				Elementary processing of built neural network.
+				Input and output signals are presented in the form of ordinary list.
+			</li>
+			<li>
+				Visual processing of built neural network.
+				Input and output signals are presented as image symbols with customizable width and height parameters.
+			</li>
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Hopfield Training Plug-in 1.0</span> Features
+	</div>	
+	<div class="body_text">
+		<ul>
+			<li>
+				Performs training over selected <i>Hopfield Layer</i> elements with loaded data 
+					(<b>Data File</b> is used in this case).
+			</li>
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Scripting Environment Plug-in 1.0</span> Features
+	</div>
+	<div class="body_text">
+		<ul>
+			<li>
+				Create/Load solution with a various number of executable scripts. 
+			</li>
+			<li>
+				Attach any data files you need to this solution. 
+			</li>
+			<li>
+				Write script which has full access to the neural network built in the environment and to all attached data files. 			
+				API that extends functionality of the scripts language (<a href="http://www.lua.org/" target="_blank">Lua Engine</a> 
+					has been used),	provides access to control interfaces of the network object model and 
+					<b>Data Processing</b> engine.
+			</li>
+		</ul>	
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">RBF Trainer 1.0</span> Features
+	</div>			
+	<div class="body_text">
+		<ul>
+			<li>
+				Performs training selected layer of <b>Radial Basis Function</b> cells (<i>RBF Layer</i> element) 
+					with loaded data file.
+			</li>
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		<span class="method_name">Kohonen Trainer 1.0</span> Features
+	</div>	
+	<div class="body_text">
+		<ul>
+			<li>
+				Performs training selected layer using <b>Kohonen</b> training method 
+					(<i>Neurons Layer</i> is often used to be trained using this algorithm).
+			</li>
+		</ul>
+	</div>			
+	<div class="body_subtitle">
+		<span class="method_name">Back Propagation Trainer 1.0</span> Features
+	</div>			
+	<div class="body_text">
+		<ul>
+			<li>
+				Performs <b>Back Propagation</b> training over built network.
+			</li>
+			<li>
+				Has a wide set of parameters that can be configured 
+					(for example, you can specify training speed for output and hidden elements, algorithm termination
+					conditions).
+			</li>
+		</ul>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">Data Creator Tool 1.0</span> Features
+	</div>
+	<div class="body_text">
+		<ul>
+			<li>
+				Create/Load data file with various number of input and output symbols. 
+			</li>
+			<li>
+				Add/Remove/Modify any of existing data file symbols. 
+			</li>
+			<li>
+				Paint any symbol you require using built-in editor. 
+			</li>				
+			<li>
+				Load symbol from external file (<span class="file_name">*.bmp</span> and 
+					<span class="file_name">*.pgm</span> file types supported). 		
+			</li>
+		</ul>
+	</div>			
+	<div class="body_subtitle">
+		<span class="method_name">Data Processing SDK 1.0</span> Features
+	</div>			
+	<div class="body_text">
+		<ul>
+			<li>
+				This SDK includes source code of the main data processing mechanisms used in <b>Neuro Laboratory</b>.				
+			</li>
+			<li>
+				Contains complete documentation for developers.
+			</li>
+		</ul>
+	</div>	
+	<div class="body_subtitle">
+		<span class="method_name">Network Exporting Tool 1.0</span> Features
+	</div>			
+	<div class="body_text">
+		<ul>
+			<li>
+				Performs exporting neural network project with libraries and <b>Network Importing SDK</b>
+					source code for latest usage in your custom applications.
+			</li>
+			<li>
+				You have an opportunity to export currently loaded network project if the tool is used in cooperation with 
+					<b>Neuro Laboratory Environment</b>.
+			</li>
+		</ul>	
+	</div>		
+	<div class="body_subtitle">
+		<span class="method_name">Network Importing SDK 1.0</span> Features
+	</div>							
+	<div class="body_text">
+		<ul>
+			<li>
+				Contains libraries that implements functionality of network serialization and processing mechanisms.
+			</li>
+			<li>
+				Contains source code for integrating binary libraries with your applications.
+			</li>
+		</ul>	
+	</div>
+	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Network Layer Internal Data Model</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Network Layer Internal Data Model
+	</div>
+	<div class="body_subtitle">
+		Introduction	
+	</div>
+	<div class="body_text">
+		<b>Layer Controls</b> are the most often used network elements.
+		Every layer element can collect as many elementary elements of the same type as necessary.
+		For example <i>Neurols Layer</i> element can contain from <b>1</b> to <b>65535</b> single neurons.
+		A number af layer input connections is also limited to <b>65535</b>.		
+	</div>
+	<div class="body_text"> 
+		The following network elements supports <b>Layer Control</b> architecture:
+		<ul>
+			<li><i>Input Factory</i></li>
+			<li><i>Output Factory</i></li>			
+			<li><i>Hopfield Layer</i></li>			
+			<li><i>Neurons Layer</i></li>
+			<li><i>RBF Layer</i></li>						
+			<li><i>Winner Layer</i></li>			
+		</ul>
+	</div>
+	<div class="body_subtitle">
+		Layer Component View
+	</div>	
+	<div class="body_text">
+		Layer Control contains three independent parts:
+		<ul>
+			<li>
+				<b>Input Data Factory</b>. 
+				This factory object is used to store input data collected from layer input connections.
+			</li>
+			<li>
+				<b>Weights Matrix</b>.
+				Weights matrix presents an array of <b>CDataFactory</b> objects that stores layer weights.
+				Every data factory object corresponds to layer input connection (so amount of factories equals to amount of 
+					layer input connections).
+				The length of data factory from this array equals to layer's dimension.
+				<b>Figure 3</b> illustrates data model that created in every layer element.
+				Weights matrix also contains layer <b>Deltas</b> factory. 
+				This factory was added to store additional information about elementary layer elements.
+				Every element can store one <b>float</b> value in the corresponding cell of this factory.
+				So the dimension of this factory equals to the dimension of layer element.
+			</li>
+			<li>
+				<b>Output Data Factory</b>.
+				This factory object is used to store layer output data during layer processing before performing data flow 
+					through this element.
+			</li>						
+		</ul>	
+	</div>
+	<div class="figure_block">
+		<img src="../ArchImages/LC_DM_ComponentView.gif" class="figure"/><br/>
+		Figure 1. Component View.		
+	</div>
+	
+	<div class="body_subtitle">
+		Layer Logic View
+	</div>	
+	<div class="figure_block">
+		<img src="../ArchImages/LC_DM_LogicView.gif" class="figure"/><br/>
+		Figure 2. Logic View.		
+	</div>	
+	
+	<div class="body_subtitle">
+		Layer Data Structure
+	</div>	
+	<div class="figure_block">
+		<img src="../ArchImages/LC_DM_DataStructure.gif" class="figure"/><br/>
+		Figure 3. Data Structure.		
+	</div>	
+	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="object_model_Main.htm">Object Model</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>		

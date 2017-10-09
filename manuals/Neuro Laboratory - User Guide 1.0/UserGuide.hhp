@@ -1,0 +1,30 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=chm\Neuro Laboratory - User Guide.chm
+Contents file=Table of Contents.hhc
+Default topic=htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x419 Russian
+Title=Neuro Laboratory 1.0 - User Guide
+
+
+[FILES]
+htm\default.htm
+htm\Introduction.htm
+htm\usage\usage_Perceptron_Training.htm
+htm\usage\usage_Main.htm
+htm\toolbox\toolbox_Neuron_Functions.htm
+htm\toolbox\toolbox.htm
+htm\toolbox\toolbox_Network_Elements.htm
+htm\Images\split_line.gif
+htm\Images\collapse_button_collapsed.gif
+htm\Products_Family.htm
+htm\Features.htm
+htm\User_Interface.htm
+htm\usage\usage_Building_Network.htm
+htm\license.htm
+htm\registration.htm
+
+[INFOTYPES]
+

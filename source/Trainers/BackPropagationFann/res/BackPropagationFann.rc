@@ -1,0 +1,266 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\BackPropagationFann.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "Comments", "Back Propagation Neuro Laboratory Trainer"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Back Propagation Neuro Laboratory Trainer"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "BackPropagationFann.dll"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "BackPropagationFann.dll"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PARAMS_DLG DIALOGEX 0, 0, 254, 357
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Configure Back Propagation Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,140,335,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,335,50,14
+    GROUPBOX        "Training parameters",IDC_STATIC,7,87,240,76
+    LTEXT           "Learning rate:",IDC_STATIC,22,129,46,8
+    EDITTEXT        IDC_HIDDEN_SPEED,15,141,64,14,ES_AUTOHSCROLL
+    GROUPBOX        "Algorithm termination conditions",IDC_STATIC,7,165,240,
+                    47
+    LTEXT           "Appropriate MSE value:",IDC_STATIC,22,177,76,8
+    EDITTEXT        IDC_NETWORK_ERROR,15,190,92,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOOPS_NUMBER,119,190,82,14,ES_AUTOHSCROLL
+    LTEXT           "loop(s).",IDC_STATIC,208,192,26,8
+    LTEXT           "Terminate algorithm after ",IDC_STATIC,126,177,84,8
+    GROUPBOX        "Weights initialization",IDC_STATIC,7,7,240,78
+    EDITTEXT        IDC_START_RANDOM_VALUE,109,33,40,14,ES_AUTOHSCROLL
+    LTEXT           "to",IDC_INIT_STATIC_TO,154,36,8,8
+    EDITTEXT        IDC_END_RANDOM_VALUE,166,33,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CONSTANT_INIT_VALUE,143,50,40,14,ES_AUTOHSCROLL
+    LTEXT           "Select training method:",IDC_STATIC,22,99,75,8
+    COMBOBOX        IDC_TRAINING_METHOD,15,112,222,72,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,327,253,1
+    LTEXT           "Based on FANN code",IDC_STATIC,8,337,68,8
+    PUSHBUTTON      "?",IDC_SHOW_FANN_ABOUT,82,336,10,11
+    GROUPBOX        "Network structure",IDC_STATIC,7,215,240,106
+    LTEXT           "Choose the approach for construction of a FANN network:",
+                    IDC_STATIC,22,288,188,8
+    COMBOBOX        IDC_FANN_CONSTR_APPROACH,15,301,222,86,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use random values from",IDC_RANDOM_VALUES,"Button",
+                    BS_AUTORADIOBUTTON,15,35,93,10
+    CONTROL         "Use constant value for initialization",
+                    IDC_CONSTANT_VALUE,"Button",BS_AUTORADIOBUTTON,15,53,127,
+                    10
+    CONTROL         "Use adoptive empirical method",IDC_ADOPTIVE_METHOD,
+                    "Button",BS_AUTORADIOBUTTON,15,71,113,10
+    CONTROL         "Do not initialize weights",IDC_NO_INIT_WEIGHTS,"Button",
+                    BS_AUTORADIOBUTTON,15,17,91,10
+    LTEXT           "Hidden activation function:",IDC_STATIC,22,228,87,8
+    COMBOBOX        IDC_HIDDEN_ACT,15,241,167,59,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Output activation function:",IDC_STATIC,22,258,88,8
+    COMBOBOX        IDC_OUTPUT_ACT,15,271,167,59,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FANN_ABOUT DIALOGEX 0, 0, 300, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "FANN 1.2.0 Information"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,242,174,50,14
+    LTEXT           "Author:",IDC_STATIC,42,77,26,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,166,299,1
+    LTEXT           "FANN - Fast Artificial Neural Network Library is written in ANSI C. The library implements multilayer feedforward ANNs, up to 150 times faster than other libraries. FANN supports execution in fixed point, for fast execution on systems like the iPAQ. ",
+                    IDC_STATIC,11,7,275,25
+    LTEXT           "Copies of FANN can be obtained from our SourceForge project page, located at http://www.sourceforge.net/projects/fann/",
+                    IDC_STATIC,11,37,275,17
+    LTEXT           "FANN is available under the terms of the GNU Lesser General Public License. ",
+                    IDC_STATIC,11,60,246,8
+    LTEXT           "Software customization:",IDC_STATIC,42,101,78,8
+    LTEXT           "Evan Nemerson",IDC_STATIC,148,77,51,8
+    LTEXT           "Egor Pushkin",IDC_STATIC,148,101,42,8
+    LTEXT           "This wrapper tool (Back Propagation FANN Trainer) included in Neuro Laboratory package is an intelectual property of Scientific Software.",
+                    IDC_STATIC,11,118,275,20
+    LTEXT           "All rights reserved! Copyright (C) Scientific Software 2007",
+                    IDC_STATIC,54,152,186,8
+    LTEXT           "Version:",IDC_STATIC,42,89,27,8
+    LTEXT           "1.2.0",IDC_STATIC,148,89,18,8
+END
+
+IDD_NET_CONSTR_TOOL_DLG DIALOGEX 0, 0, 359, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Network Construction Tool"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,243,194,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,301,194,50,14
+    LTEXT           "Source network elements:",IDC_STATIC,15,7,84,8
+    LISTBOX         IDC_TARGET_LIST,183,19,132,78,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "FANN network structure:",IDC_STATIC,191,7,81,8
+    LISTBOX         IDC_SOURCE_LIST,7,19,132,78,LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">",IDC_ADD_SINGLE,147,19,28,14
+    PUSHBUTTON      "<",IDC_REMOVE_SINGLE,147,38,28,14
+    EDITTEXT        IDC_NET_DESCR,7,115,344,66,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "Textual description of FANN network:",IDC_STATIC,15,102,
+                    121,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,187,359,1
+    PUSHBUTTON      "Up",IDC_MOVE_UP,324,19,28,14
+    PUSHBUTTON      "Down",IDC_MOVE_DOWN,324,38,28,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PARAMS_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 350
+    END
+
+    IDD_FANN_ABOUT, DIALOG
+    BEGIN
+        VERTGUIDE, 11
+        VERTGUIDE, 42
+        VERTGUIDE, 148
+        VERTGUIDE, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_NET_CONSTR_TOOL_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+        HORZGUIDE, 19
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\BackPropagationFann.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

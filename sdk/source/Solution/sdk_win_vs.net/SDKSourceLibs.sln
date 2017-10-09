@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImporting_Lib", "..\..\Src\SDKLibs\NetworkImporting\NetworkImporting_Lib.vcproj", "{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Components_Lib", "..\..\Src\SDKLibs\Components\Components_Lib.vcproj", "{44E63282-6E6E-4500-AD6B-6236CC4C9A91}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataProcessing_Lib", "..\..\Src\SDKLibs\DataProcessing\DataProcessing_Lib.vcproj", "{297F7C25-0643-4586-9B9D-E56AE1AE34D6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Multi-Byte = Debug Multi-Byte
+		Release = Release
+		Release Multi-Byte = Release Multi-Byte
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug.ActiveCfg = Debug|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug.Build.0 = Debug|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug Multi-Byte.ActiveCfg = Debug Multi-Byte|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug Multi-Byte.Build.0 = Debug Multi-Byte|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release.ActiveCfg = Release|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release.Build.0 = Release|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release Multi-Byte.ActiveCfg = Release Multi-Byte|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release Multi-Byte.Build.0 = Release Multi-Byte|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug.ActiveCfg = Debug|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug.Build.0 = Debug|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug Multi-Byte.ActiveCfg = Debug Multi-Byte|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug Multi-Byte.Build.0 = Debug Multi-Byte|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release.ActiveCfg = Release|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release.Build.0 = Release|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release Multi-Byte.ActiveCfg = Release Multi-Byte|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release Multi-Byte.Build.0 = Release Multi-Byte|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug.ActiveCfg = Debug|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug.Build.0 = Debug|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug Multi-Byte.ActiveCfg = Debug Multi-Byte|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug Multi-Byte.Build.0 = Debug Multi-Byte|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release.ActiveCfg = Release|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release.Build.0 = Release|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release Multi-Byte.ActiveCfg = Release Multi-Byte|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release Multi-Byte.Build.0 = Release Multi-Byte|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>IObject Interface</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Data Processing SDK Documentation
+	</div>
+	<div class="page_title">		
+		IObject Interface
+	</div>
+	<pre class="body_declaration">
+interface IObject</pre>	
+	<div class="body_subtitle">
+		Remarks
+	</div>		
+	<div class="body_text">
+		The <b>IObject</b> interface is basic for the object model built in <b>Neuro Laboratory</b>.
+		All other interfaces implement it.
+		The <b>IObject</b> interface lets clients get pointers to other interfaces on a given object through the QueryInterface method.
+	</div>	
+	<div class="body_subtitle">
+		IObject members
+	</div>	
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_IObject_GetClassString">GetClassString</a></td>
+				<td width="65%">Returns class string for object that implements IObject interface.</td>				
+			</tr>
+			<tr class="data_table_row">			
+				<td><a href="#_IObject_QueryInterface">QueryInterface</a></td>
+				<td>Returns pointers to supported interfaces.</td>				
+			</tr>			
+		</table>
+	</div>	
+	<div class="body_subtitle">
+		<a name="_IObject_GetClassString"></a>	
+		<span class="method_name">IObject::GetClassString</span>
+	</div>	
+	<pre class="body_declaration">
+virtual CString GetClassString() = 0;</pre>	
+	<div class="body_subtitle">
+		<a name="_IObject_QueryInterface"></a>
+		<span class="method_name">IObject::QueryInterface</span>
+	</div>	
+	<pre class="body_declaration">
+virtual void QueryInterface(
+    int iIDD, 
+    void** ppvObject
+) = 0;</pre>
+	<div class="body_subtitle">
+		<span class="method_name">IObject::QueryInterface</span> Parameters
+	</div>
+	<div class="body_text">
+		<i>iIDD</i></br>
+		<div class="body_note">
+			[in] This parameter specifies interface identificator to be retrieved.
+		</div>
+		<i>ppvObject</i></br>
+		<div class="body_note">
+			[out] Address of pointer variable that receives the interface pointer requested in iIDD. Upon successful return, 
+				*ppvObject contains the requested interface pointer to the object. If the object does not support the interface 
+				specified in iIDD, *ppvObject is set to NULL. 
+		</div>		
+	</div>	
+	<div class="body_subtitle">	
+		<a name="_IObject_Using_Sample"></a>
+		Sample
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Sample of <b>IObject</b> core usage:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('iobject_usage_source')">
+				<img id="collapseimg_iobject_usage_source" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_iobject_usage_source">// pElement - pointer to some element object
+IElement* pElement;
+ASSERT(pElement != NULL);
+	
+ILayerControl* pLayerControl = NULL;
+pElement->QueryInterface(IDD_ILayerControl, (void**)&amp;pLayerControl);
+
+if (pLayerControl)
+{
+    // pElement supports ILayerControl
+} else
+{
+    // ILayerControl interface not supported
+}</pre>	
+	<div class="body_subtitle">	
+		Requirements				
+	</div>
+	<div class="body_text">				
+		<b>Header:</b> Declared in: <span class="file_name">CmnObjects.h</span>, include <span class="file_name">DataProcessing.h</span>		
+	</div>	
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="reference_Main.htm">Reference</a> | 
+		<a href="reference_Interface_Identificators.htm">Interface Identificators</a>
+	</div>
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>		
+</body>
+</html>

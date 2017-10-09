@@ -1,0 +1,6 @@
+; ScriptsNet.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ScriptsNet"
+
+EXPORTS
+    ; Explicit exports can go here

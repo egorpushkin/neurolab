@@ -1,0 +1,270 @@
+.department_title{
+	height: 20px;
+
+	padding-top: 4px;
+	padding-right: 4px;	
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 11px;
+	text-align: right;
+	
+	background-color: #59D9D4;	
+}
+
+.page_title{
+	height: 20px;
+		
+	padding-left: 4px;
+	margin-bottom: 8px;	
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+
+	border-bottom: 1px solid #999999;
+
+	background-color: #59D9D4;
+}
+
+.page_footer{
+	height: 20px;
+	
+	padding-top: 2px;	
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;	
+	text-align: center;		
+	
+	border-top: 1px solid #999999;	
+	border-bottom: 1px solid #999999;	
+
+	background-color: #59D9D4;
+}
+
+.body_text{
+	padding-top: 5px;
+	padding-bottom: 7px;
+	padding-right: 20px;
+	padding-left: 20px;
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.body_note{
+	padding-bottom: 5px;
+	padding-right: 40px;
+	padding-left: 40px;
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.file_name{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	
+	color: #3592D9;
+}
+
+.method_name{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	
+	color: #D11D35;
+}
+
+.folder{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	
+	color: #77283C;
+}
+
+.source_code_title{
+	height: 18px;
+
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	padding-left: 20px;
+	padding-right: 6px;
+	padding-top: 1px;	
+	padding-bottom: 1px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;	
+	
+	border: 1px solid #999999;
+
+	color: #000000;
+	background-color: #DDDDDD;	
+}
+
+span.left{
+	float: left;
+	text-align: left;	
+	
+	width: 80%;	
+}
+
+span.right{
+	float: right;
+	text-align: right;
+	
+	width: 18%;
+}
+
+.body_source_code{
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	padding-left: 20px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;	
+
+	font-family: "Courier New", Courier, mono;
+	font-size: 11px;
+	
+	border: 1px solid #CCCCCC;
+
+	color: #000066;
+	background-color: #f5f5f5;
+}
+
+.body_declaration{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	padding-left: 10px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;	
+
+	font-family: "Courier New", Courier, mono;
+	font-size: 11px;
+	font-weight: bold;	
+	
+	border: 1px solid #999999;
+
+	color: #000000;
+	background-color: #CCCCCC;
+}
+
+.body_title{	
+	height: 30px;
+	
+	padding-top: 10px;
+	padding-left: 5px;
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;	
+}
+
+.body_subtitle{
+	height: 20px;
+	
+	padding-top: 5px;
+	padding-left: 5px;
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.split_line{
+	height: 12px;
+	
+	margin-left: 20px;
+	margin-right: 20px;	
+
+	font-size: 3px;
+		
+	background-repeat: repeat-x;
+	background-position: center center;
+	background-image: url(Images/split_line.gif);
+}
+
+.data_table{
+	width: 80%;
+	
+	border-collapse: collapse;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+td{
+	border: 1px solid #999999;	
+	
+	padding-left: 5px;
+	padding-right: 3px;
+}
+
+.data_table_header{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	
+	background-color: #78F7F2;
+}
+
+.data_table_row{
+	vertical-align: top;
+	
+	height: 21px;
+}
+
+.figure_block{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	
+	padding-left: 20px;
+	padding-right: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;	
+
+	font-family: "Courier New", Courier, mono;
+	font-size: 11px;
+	font-weight: bold;	
+	
+	text-align: center;	
+}
+
+.figure{
+	border: 1px solid #CCCCCC;
+}
+
+.collapse_button{
+	border: 0px;
+}
+
+ol{
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+ul{
+	margin-top: 0px;
+	margin-bottom: 5px;
+
+	padding-top: 0px;
+	padding-bottom: 0px;
+}

@@ -1,0 +1,26 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "GuiLibRes.h"
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_GUI_DOCKBAR         BITMAP  MOVEABLE PURE   "res\\guidockbar.bmp"
+IDB_GUI_DOCKBAROFFICE   BITMAP  MOVEABLE PURE   "res\\guidockoffice.bmp"
+IDB_GUI_MDIICONS        BITMAP  MOVEABLE PURE   "res\\guimdiicons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_GUI_DEFAULT         BITMAP  DISCARDABLE     "res\\GuiDefault.bmp"
+
+#endif 

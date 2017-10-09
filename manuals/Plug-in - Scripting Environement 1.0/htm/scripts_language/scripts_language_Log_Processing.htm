@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Log Processing Package</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>	
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Scripting Environment 1.0 - Developer Guide
+	</div>
+	<div class="page_title">		
+		Log Processing Package
+	</div>
+	<div class="body_subtitle">
+		Description
+	</div>
+	<div class="body_text">
+		This package was added to the interpreter to power it with an opportunity of writing log of all made operations and 
+			notify about errors occured during the script execution. 
+		You can also inform <b>Scripting Environment</b> about the percentage of done work using the functionality provided 
+			by this package. 
+		This information will be presented as list of messages in fisrt case and as progress bar in the second one.
+	</div>
+	<div class="body_subtitle">
+		Package API
+	</div>
+	<div class="body_text">
+		Package API provides all functionality of the package.
+	</div>
+	<div class="body_text">
+		<table align="center" class="data_table">
+			<tr class="data_table_header">
+				<td colspan="2">
+					Initialization
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_LogProcessor_getLogProvider">getLogProvider</a></td>
+				<td width="65%">Returns Log Provider object.</td>				
+			</tr>
+		</table>
+	</div>
+	<div class="body_text">		
+		<table align="center" class="data_table">			
+			<tr class="data_table_header">
+				<td colspan="2">
+					Log Operations
+				</td>
+			</tr>
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_LogProcessor_clearLog">clearLog</a></td>
+				<td width="65%">Removes all messages form the log list.</td>				
+			</tr>						
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_LogProcessor_addLogMessage">addLogMessage</a></td>
+				<td width="65%">Adds new message.</td>				
+			</tr>	
+		</table>
+	</div>
+	<div class="body_text">		
+		<table align="center" class="data_table">					
+			<tr class="data_table_header">
+				<td colspan="2">
+					Percentage Manipulations
+				</td>
+			</tr>			
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_LogProcessor_setPercentage">setPercentage</a></td>
+				<td width="65%">Sets new percentage value.</td>				
+			</tr>			
+			<tr class="data_table_row">			
+				<td width="35%"><a href="#_LogProcessor_getPercentage">getPercentage</a></td>
+				<td width="65%">Receives current percentage value.</td>				
+			</tr>			
+		</table>		
+	</div>
+	
+	<!-- LogProcessor:getLogProvider description -->
+	<div class="body_subtitle">
+		<a name="_LogProcessor_getLogProvider"></a>	
+		<span class="method_name">getLogProvider</span>
+	</div>	
+	<pre class="body_declaration">
+Object getLogProvider();</pre>	
+	<div class="body_subtitle">
+		<span class="method_name">getLogProvider</span> Return Value
+	</div>
+	<div class="body_text">
+		This function returns object that refers to environment object that supports <b>ILogProvider</b> interface.
+		That object contains realization of ILogProvider members. 
+	</div>
+	
+	<!-- LogProcessor:clearLog description -->
+	<div class="body_subtitle">
+		<a name="_LogProcessor_clearLog"></a>	
+		<span class="method_name">clearLog</span>
+	</div>
+	<pre class="body_declaration">
+Void clearLog(
+    Object log_provider
+);</pre>
+
+	<!-- LogProcessor:addLogMessage description -->
+	<div class="body_subtitle">
+		<a name="_LogProcessor_addLogMessage"></a>	
+		<span class="method_name">addLogMessage</span>
+	</div>
+	<pre class="body_declaration">
+Void addLogMessage(
+    Object log_provider,
+    String message_type
+ [, String message_text = ""
+ [, String message_section = "" ]]
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">addLogMessage</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>log_provider</i></br>
+		<div class="body_note">
+			[in] This parameter specifies Log Provider object. It must be received using 
+				<a href="#_LogProcessor_getLogProvider">getLogProvider</a> call.
+		</div>		
+		<i>message_type</i></br>
+		<div class="body_note">
+			[in] This parameter specifies message type. The following types are commonly used: 
+				<b>"N"</b> - notification, 
+				<b>"W"</b> - warning, 
+				<b>"E"</b> - error.
+		</div>
+		<i>message_text</i></br>
+		<div class="body_note">
+			[in] Specifies message text. This f\parameter is optional.
+		</div>
+		<i>message_section</i></br>
+		<div class="body_note">
+			[in] Specifies message section. For example: <b>"Script Initialization"</b>. This parameter is optional.
+		</div>						
+	</div>
+	
+	<!-- LogProcessor:setPercentage description -->
+	<div class="body_subtitle">
+		<a name="_LogProcessor_setPercentage"></a>	
+		<span class="method_name">setPercentage</span>
+	</div>
+	<pre class="body_declaration">
+Void setPercentage(
+    Integer percentage_value
+);</pre>
+	<div class="body_subtitle">
+		<span class="method_name">setPercentage</span> Parameters
+	</div>	
+	<div class="body_text">
+		<i>percentage_value</i></br>
+		<div class="body_note">
+			[in] This parameter specifies new perventage value that must be passed to application.
+			This value must be in the range from 0 to 100.
+		</div>	
+	</div>	
+	
+	<!-- LogProcessor:getPercentage description -->
+	<div class="body_subtitle">
+		<a name="_LogProcessor_getPercentage"></a>	
+		<span class="method_name">getPercentage</span>
+	</div>
+	<pre class="body_declaration">
+Integer getPercentage();</pre>
+	<div class="body_subtitle">
+		<span class="method_name">setPercentage</span> Return Value
+	</div>	
+	<div class="body_text">
+		Returns current percentage value.
+	</div>		
+
+	<!-- LogProcessor sample usage -->
+	<div class="body_subtitle">
+		Example Code
+	</div>
+	<div class="source_code_title">
+		<span class="left">
+			Sample of <b>Log Processor</b> usage:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('logprocessor_usage_source')">
+				<img id="collapseimg_logprocessor_usage_source" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_logprocessor_usage_source">
+-- Receive Log Provider main object reference
+log_provider = getLogProvider();
+
+-- Clear Log window before starting processing new algorithm
+clearLog(log_provider);
+
+-- Add test log message
+addLogMessage(log_provider, "N", "Starting algorithm...", "Log Demo Script");
+
+-- Wrong function call.
+-- Function must has at least 2 arguments
+addLogMessage(log_provider);
+
+-- Set/GetPercentage functions test
+percentage = getPercentage();
+addLogMessage(log_provider, percentage, 
+    "Receiving percentage set by application.", "Log Demo Script");
+setPercentage(25);
+percentage = getPercentage();
+addLogMessage(log_provider, percentage, 
+    "Percentage after executing setPercentage(25).", "Log Demo Script");
+</pre>	
+	<div class="body_text">
+		This script types the following output in log list window:	
+	</div>	
+	<pre class="body_source_code">
+N	Starting algorithm...				Log Demo Script
+0	Receiving percentage set by application.		Log Demo Script
+25	Percentage after executing setPercentage(25).		Log Demo Script
+</pre>
+	<div class="body_note">
+		<b>Note</b> that wrong function call has no any effect and no messages would be added to the log.
+	</div>
+
+	<div class="body_subtitle">
+		See Also
+	</div>	
+	<div class="body_text">
+		<a href="scripts_language_Main.htm">Scripts Language</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	
+	<div class="page_footer">
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

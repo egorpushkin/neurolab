@@ -1,0 +1,247 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir="."
+	BuildSystem="automakefile"
+	BuildMakeFile="makefile">
+	<Config
+		Name="Debug"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="../../../Bin/winall_mingw34/%bdAreasBuilder.exe"
+		CompilerConfigName="Latest Version"
+		Defines="">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ -c %xup %defd -g -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ %xup -g -o "%o" %objs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='make -f "makefile" CFG=%b'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='make -f "makefile" rebuild CFG=%b'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Includes>
+			<Include Dir="../../../Src/Projects/IntependentNNPTools"/>
+			<Include Dir="../../../Include"/>
+			<Include Dir="../../../ExternalEngines/Include"/>
+			<Include Dir="../../../ExternalEngines/Include/iconv"/>
+			<Include Dir="../../../Src/Projects/IndependentNNPTools/StorageProcessor/Common"/>
+		</Includes>
+		<Libs PreObjects="0">
+			<Lib File="../../../Lib/winall_mingw34/%bdComponents_Lib.a"/>
+			<Lib File="../../../Lib/winall_mingw34/%bdDataProcessing_Lib.a"/>
+			<Lib File="../../../ExternalEngines/Lib/winall_mingw34/libxml2.a"/>
+		</Libs>
+	</Config>
+	<Config
+		Name="Release"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="../../../Bin/winall_mingw34/%bdAreasBuilder.exe"
+		CompilerConfigName="Latest Version"
+		Defines="">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ -c %xup %defd -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ %xup -o "%o" %objs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='make -f "makefile" CFG=%b'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='make -f "makefile" rebuild CFG=%b'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+		<Includes>
+			<Include Dir="../../../Src/Projects/IntependentNNPTools"/>
+			<Include Dir="../../../Include"/>
+			<Include Dir="../../../ExternalEngines/Include"/>
+			<Include Dir="../../../ExternalEngines/Include/iconv"/>
+			<Include Dir="../../../Src/Projects/IndependentNNPTools/StorageProcessor/Common"/>
+		</Includes>
+		<Libs PreObjects="0">
+			<Lib File="../../../Lib/winall_mingw34/%bdComponents_Lib.a"/>
+			<Lib File="../../../Lib/winall_mingw34/%bdDataProcessing_Lib.a"/>
+			<Lib File="../../../ExternalEngines/Lib/winall_mingw34/libxml2.a"/>
+		</Libs>
+	</Config>
+	<Files>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl">
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/AreasBuilderCmd.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/AreasBuilderTool.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Serialization/AreasExporter.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Serialization/AreasExporter.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Areas/AreasHolder.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Areas/AreasHolder.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/AreasProject.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/AreasProject.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Image/Band.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Image/Band.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Engine/BuilderEngine.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Engine/BuilderEngine.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/ErrorCodes.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Interfaces/IAreasProject.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Areas/MapConfig.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Areas/MapConfig.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Image/MultispectralImage.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/Image/MultispectralImage.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/NetworkProject/NetworkProject.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/NetworkProject/NetworkProject.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/PrecompiledHeader.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Workspace/WsCommon.h"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Serialization/XMLProjectParser.cpp"/>
+			<F N="../../../Src/Projects/IndependentNNPTools/AreasBuilder/Serialization/XMLProjectParser.h"/>
+		</Folder>
+		<Folder
+			Name="Other Files"
+			Filters="">
+			<F
+				N="makefile"
+				Type="Makefile"/>
+		</Folder>
+	</Files>
+</Project>

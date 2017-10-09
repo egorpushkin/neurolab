@@ -1,0 +1,101 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Components_Lib", "..\..\..\Src\SDKLibs\Components\Components_Lib.vcproj", "{44E63282-6E6E-4500-AD6B-6236CC4C9A91}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataProcessing_Lib", "..\..\..\Src\SDKLibs\DataProcessing\DataProcessing_Lib.vcproj", "{297F7C25-0643-4586-9B9D-E56AE1AE34D6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImporting_Lib", "..\..\..\Src\SDKLibs\NetworkImporting\NetworkImporting_Lib.vcproj", "{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuilderElements", "..\..\..\Src\SDKDlls\BuilderElements\BuilderElements.vcproj", "{34F2970B-2AE6-480E-9148-1CF5D91FF55F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NetworkImport", "..\..\..\Src\SDKDlls\NetworkImport\NetworkImport.vcproj", "{19703735-FF62-4DE1-8A04-FD0203B69CA0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StorageProcessor", "..\..\..\Src\Projects\IndependentNNPTools\StorageProcessor\StorageProcessor.vcproj", "{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleHelpersKit", "..\..\..\Src\Projects\IndependentNNPTools\ConsoleHelpersKit\ConsoleHelpersKit.vcproj", "{CD63352C-E263-4820-802B-A429A83A4348}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstructTool", "..\..\..\Src\Projects\IndependentNNPTools\ConstructTool\ConstructTool.vcproj", "{60C8CA02-136B-41EF-9E66-F84223EDD183}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProcessTool", "..\..\..\Src\Projects\IndependentNNPTools\ProcessTool\ProcessTool.vcproj", "{A69101AF-10B9-43BA-9C32-F11E1B13FC48}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjectConverter", "..\..\..\Src\Projects\IndependentNNPTools\ProjectConverter\ProjectConverter.vcproj", "{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TrainTool", "..\..\..\Src\Projects\IndependentNNPTools\TrainTool\TrainTool.vcproj", "{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug.ActiveCfg = Debug|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Debug.Build.0 = Debug|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release.ActiveCfg = Release|Win32
+		{44E63282-6E6E-4500-AD6B-6236CC4C9A91}.Release.Build.0 = Release|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug.ActiveCfg = Debug|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Debug.Build.0 = Debug|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release.ActiveCfg = Release|Win32
+		{297F7C25-0643-4586-9B9D-E56AE1AE34D6}.Release.Build.0 = Release|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug.ActiveCfg = Debug|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Debug.Build.0 = Debug|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release.ActiveCfg = Release|Win32
+		{08B659DC-68B4-45EE-9A0C-54C5A2F87F30}.Release.Build.0 = Release|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug.ActiveCfg = Debug|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Debug.Build.0 = Debug|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release.ActiveCfg = Release|Win32
+		{34F2970B-2AE6-480E-9148-1CF5D91FF55F}.Release.Build.0 = Release|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug.ActiveCfg = Debug|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Debug.Build.0 = Debug|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release.ActiveCfg = Release|Win32
+		{19703735-FF62-4DE1-8A04-FD0203B69CA0}.Release.Build.0 = Release|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Debug.ActiveCfg = Debug|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Debug.Build.0 = Debug|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Release.ActiveCfg = Release|Win32
+		{7D3113CA-2A7E-4B83-8583-9DE335EFC62E}.Release.Build.0 = Release|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Debug.ActiveCfg = Debug|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Debug.Build.0 = Debug|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Release.ActiveCfg = Release|Win32
+		{CD63352C-E263-4820-802B-A429A83A4348}.Release.Build.0 = Release|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Debug.ActiveCfg = Debug|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Debug.Build.0 = Debug|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Release.ActiveCfg = Release|Win32
+		{60C8CA02-136B-41EF-9E66-F84223EDD183}.Release.Build.0 = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Debug.ActiveCfg = Debug|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Debug.Build.0 = Debug|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.ActiveCfg = Release|Win32
+		{A69101AF-10B9-43BA-9C32-F11E1B13FC48}.Release.Build.0 = Release|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Debug.ActiveCfg = Debug|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Debug.Build.0 = Debug|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Release.ActiveCfg = Release|Win32
+		{CB13885A-C8BC-4121-A2E5-E34E4EC1227B}.Release.Build.0 = Release|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Debug.ActiveCfg = Debug|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Debug.Build.0 = Debug|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Release.ActiveCfg = Release|Win32
+		{9A3615CC-0B68-4BBA-97B1-4EC6CE13E5E0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

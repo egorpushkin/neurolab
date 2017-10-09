@@ -1,0 +1,262 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\ProcessNetwork.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROCESS_NETWORK DIALOGEX 0, 0, 336, 294
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Network elements",IDC_STATIC,7,7,322,260
+    LTEXT           "Network inputs:",IDC_STATIC,25,17,52,8
+    LTEXT           "Network outputs:",IDC_STATIC,183,17,57,8
+    CONTROL         "",IDC_INPUTS_CTRL,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,15,28,149,221
+    CONTROL         "",IDC_OUTPUTS_CTRL,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,172,28,149,221
+    LTEXT           "Total:",IDC_STATIC,25,253,20,8
+    LTEXT           "Total:",IDC_STATIC,181,253,20,8
+    LTEXT           "0",IDC_TOTAL_INPUTS,48,253,52,8
+    LTEXT           "0",IDC_TOTAL_OUTPUTS,204,253,53,8
+    PUSHBUTTON      "Process",IDC_PROCESS_NETWORK,146,273,50,14
+END
+
+IDD_PROCESS_MAIN DIALOGEX 0, 0, 356, 346
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Processing network"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,266,325,50,14
+    CONTROL         "",IDC_MAIN_TAB,"SysTabControl32",0x0,7,7,342,312
+END
+
+IDD_PROCESS_VISUAL DIALOGEX 0, 0, 336, 294
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Input data:",IDC_STATIC,69,31,38,8
+    LTEXT           "Output data:",IDC_STATIC,222,31,43,8
+    LTEXT           "Processing network:",IDC_STATIC,135,17,66,8
+    PUSHBUTTON      "Process",IDC_PROCESS_NETWORK,146,254,50,14
+    GROUPBOX        "Elements visualization",IDC_STATIC,7,7,322,200
+    PUSHBUTTON      "",IDC_INPUT_CTRL_SETTINGS,117,184,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_INPUT_CTRL_MARKER,139,184,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_OUTPUT_CTRL_SETTINGS,294,184,16,14,BS_ICON
+    LTEXT           "Total inputs:",IDC_STATIC,25,187,41,8
+    LTEXT           "0",IDC_INPUTS_COUNT,70,187,25,8
+    LTEXT           "Total outputs:",IDC_STATIC,182,187,46,8
+    LTEXT           "0",IDC_OUTPUTS_COUNT,231,187,25,8
+    PUSHBUTTON      "Button1",IDC_INPUT_CTRL_EDITOR,95,184,16,14,BS_ICON
+    GROUPBOX        "Perfomance benchmark",IDC_STATIC,7,208,322,34
+    LTEXT           "Total time required:",IDC_STATIC,25,222,64,8
+    LTEXT           "0",IDC_REQUIRED_TIME,99,222,54,8,0,WS_EX_RIGHT
+    LTEXT           "msec",IDC_STATIC,159,222,17,8
+END
+
+IDD_PROCESS_SIGNALS DIALOGEX 0, 0, 336, 294
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Input data",IDC_STATIC,7,7,322,130
+    PUSHBUTTON      "",IDC_INPUT_CTRL_SETTINGS,257,24,16,14,BS_ICON
+    PUSHBUTTON      "",IDC_INPUT_CTRL_MARKER,279,24,16,14,BS_ICON
+    LTEXT           "Total inputs:",IDC_STATIC,165,27,41,8
+    LTEXT           "0",IDC_INPUTS_COUNT,210,27,25,8
+    PUSHBUTTON      "Button1",IDC_INPUT_CTRL_EDITOR,235,24,16,14,BS_ICON
+    PUSHBUTTON      "Process",IDC_PROCESS_NETWORK,146,273,50,14
+    GROUPBOX        "Output data",IDC_STATIC,7,138,322,130
+    CONTROL         "",IDC_OUTPUT_ZOOM,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,318,145,9,119
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PROCESS_NETWORK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_PROCESS_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 339
+    END
+
+    IDD_PROCESS_VISUAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_PROCESS_SIGNALS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CTRL_MARKER         ICON                    "res\\ctrl_marker.ico"
+IDI_CTRL_PROP           ICON                    "res\\ctrl_prop.ico"
+IDI_CTRL_EDITOR         ICON                    "res\\ctrl_editor.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e3"
+        BEGIN
+            VALUE "Comments", "Process Network Neuro Laboratory Plig-in"
+            VALUE "CompanyName", "Scientific Software - Neuro Research Group"
+            VALUE "FileDescription", "Process Network Neuro Laboratory Plig-in"
+            VALUE "FileVersion", "1.1.0.1"
+            VALUE "InternalName", "ProcessNetwork.dll"
+            VALUE "LegalCopyright", "Copyright (c) Scientific Software - Neuro Research Group.  All rights reserved."
+            VALUE "OriginalFilename", "ProcessNetwork.dll"
+            VALUE "ProductName", "Neuro Laboratory Environment"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1251
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\ProcessNetwork.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

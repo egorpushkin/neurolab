@@ -1,0 +1,6 @@
+; SignalProcessors.def : Declares the module parameters for the DLL.
+
+LIBRARY      "SignalProcessors"
+
+EXPORTS
+    ; Explicit exports can go here

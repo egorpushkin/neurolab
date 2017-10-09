@@ -1,0 +1,40 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=chm\Network Importing SDK Documentation.chm
+Contents file=Table of Contents.hhc
+Default topic=htm\default.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=Network Importing SDK Documentation
+
+
+[FILES]
+htm\Introduction.htm
+htm\appendix_A.htm
+htm\appendix_B.htm
+htm\default.htm
+htm\Images\collapse_button_collapsed.gif
+htm\Images\split_line.gif
+htm\object_model\object_model_Main.htm
+htm\reference\reference_Network_Control_Interfaces.htm
+htm\reference\IComponent.htm
+htm\reference\IElementsCollection.htm
+htm\reference\IImportManager.htm
+htm\reference\INetworkProcessor.htm
+htm\reference\reference_Main.htm
+htm\object_model\object_model_Network_Data_Model.htm
+htm\object_model\object_model_Layer_Architect.htm
+htm\reference\reference_Element_Constants.htm
+htm\reference\ILayerControl.htm
+htm\reference\IConnectionsFactory.htm
+htm\reference\IDataConnector.htm
+htm\reference\IDataFlow.htm
+htm\reference\IElement.htm
+htm\reference\sFunction.htm
+htm\reference\CConnection.htm
+htm\samples\samples_Main.htm
+htm\samples\samples_ImportNetworkTest.htm
+
+[INFOTYPES]
+

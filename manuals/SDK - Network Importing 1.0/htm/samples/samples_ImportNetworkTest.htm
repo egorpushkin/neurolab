@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Samples - NetworkImportTest</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<link href="../style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../Scripts/collapse_engine.js"></script>		
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0">
+	<div class="department_title">		
+		Network Importing SDK Documentation
+	</div>
+	<div class="page_title">		
+		NetworkImportTest Sample
+	</div>
+	<div class="body_subtitle">
+		Introduction
+	</div>
+	<div class="body_text">	
+		<b>Network Importing SDK</b> provides simple mechanisms for parsing and manipulating with object and data models
+			of neural network built in <b>Neuro Laboratory</b>.
+		This sample demonstrates usage of these mechanisms in applications development.
+	</div>
+	
+	<div class="body_subtitle">
+		Compiling and Executing Sample	
+	</div>
+	<div class="body_text">
+		After <b>Network Importing SDK</b> installation all samples are located at 
+			<span class="file_name">&quot;$Network_Importing_SDK_Dir&quot;\Samples</span> folder.
+		These samples refer to <b>Network Importing SDK Source</b> and <b>Data Processing SDK Source</b>.
+		It is not required to modify any references to these packages.
+		You can compile sample projects as is.
+		The only operation you must perform before executing any sample is execute 
+			<span class="file_name">PrepareLibs.bat</span> file (or 
+			<span class="file_name">PrepareLibsD.bat</span> for <b>Debug</b> mode).
+		It will copy all necessary libraries in 
+			<span class="file_name">Bin_Release</span> folder (or 
+			<span class="file_name">Bin_Debug</span> for <b>Debug</b> mode).		
+	</div>
+	<div class="figure_block">
+		<img src="../ScreenShots/scr_ImportNetworkTest.gif" class="figure"/><br/>
+		Screenshot of the main NetworkImportTest window.
+	</div>
+	
+	<div class="body_subtitle">
+		Source Overview	
+	</div>
+	<div class="body_text">
+		After you include into your solution all necessary files and projects you would have to initialize 
+			<b>CImportManagerComponent</b> component.	
+	</div>	
+	<div class="source_code_title">
+		<span class="left">
+			<b>CImportManagerComponent</b> declaring, initialization and usage:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('CImportManagerComponent_usage')">
+				<img id="collapseimg_CImportManagerComponent_usage" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_CImportManagerComponent_usage">
+// Declaring CImportManagerComponent object
+CImportManagerComponent tmImportComponent;
+// Loading and initialization component
+bool bRet = tmImportComponent.LoadComponent();
+if (!bRet)
+{
+    // LoadComponent method returns <b>false</b> in case of any arrors have been 
+    //  occupied during component's libraries loading and initialization.
+    // Posibly one of required libraries has not been found or it's content
+    //  was wrong.
+    AfxMessageBox("Error loading Import Network component.");
+    return FALSE;
+}
+
+// Main application window class
+CImportNetworkTestDlg dlg;
+dlg.SetImportManager(tmImportComponent.GetImportManager());
+
+m_pMainWnd = &dlg;
+INT_PTR nResponse = dlg.DoModal();
+if (nResponse == IDOK)
+{
+    // TODO: Place code here to handle when the dialog is
+    //  dismissed with OK
+}
+else if (nResponse == IDCANCEL)
+{
+    // TODO: Place code here to handle when the dialog is
+    //  dismissed with Cancel
+}
+
+// You must execute UnloadComponent method to unload libraries and 
+//  perform memory unallocations.
+tmImportComponent.UnloadComponent();
+</pre>	
+
+	<div class="body_text">
+		After you initialize <b>CImportManagerComponent</b> you can get access to control interfaces 
+			<b>IImportManager</b>, <b>IElementsCollection</b> and <b>INetworkProcessor</b>.
+		The following source demonstrates usage of <b>IElementsCollection</b> control interface.
+	
+	</div>	
+	<div class="source_code_title">
+		<span class="left">
+			<b>IElementsCollection</b> querying and usage:
+		</span>
+		<span class="right">
+			<a href="#top" onclick="return toggle_collapse('IElementsCollection_usage')">
+				<img id="collapseimg_IElementsCollection_usage" src="../Images/collapse_button.gif" class="collapse_button" align="absmiddle"/>
+			</a>
+		</span>
+	</div>
+	<pre class="body_source_code" id="collapseobj_IElementsCollection_usage">
+// pImportManager points to IImportManager object returned by 
+//  CImportManagerComponent::GetImportManager() method.
+
+// Loading Neuro Laboratory project file.
+bool bRet = pImportManager->LoadNLProject(tmProjectPath);
+if (!bRet)
+{
+    // Display warning and terminate algorithm.
+}
+
+// We can query IElementsCollection interface using pImportManager object.
+IElementsCollection* pElementsCollection = NULL;
+pImportManager->QueryInterface(IDD_IElementsCollection, 
+    (void**)&amp;pElementsCollection);
+
+// It is imposible during normal NetworkImport.dll library functioning.
+ASSERT(pElementsCollection != NULL);
+
+// Enumerating project's network elements.
+//  We use enumerator with index '6' to avoid synchronization troubles
+//  (Enumerators in the range from '0' to '5' are used by internal libraries).
+pElementsCollection->CreateElementsEnumerator(6);
+while (IElement* pElement = pElementsCollection->GetNextElement(6))
+{
+    // Perform any required manipulations with every network element from loaded project file.
+}	
+</pre>
+
+	
+	<div class="body_subtitle">
+		See Also	
+	</div>
+	<div class="body_text">
+		<a href="samples_Main.htm">Samples</a>
+	</div>	
+	<div class="split_line"></div>	
+	<div class="body_text">
+		<a href="http://www.scientific-soft.com/" target="_blank">Scientific Software - Neuro Research Group</a>	
+	</div>		
+	<div class="page_footer">		
+		Copyright (c) Scientific Software 2005
+	</div>
+</body>
+</html>	

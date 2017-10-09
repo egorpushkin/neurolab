@@ -1,0 +1,137 @@
+END-USER LICENSE AGREEMENT FOR SCIENTIFIC SOFTWARE PRODUCT
+NEURO LABORATORY 1.0
+
+IMPORTANT-READ CAREFULLY: 
+This End-User License Agreement ("EULA") is a 
+legal agreement between you (either an individual or 
+a single entity) and Scientific Software Corporation 
+or one of its affiliates ("Scientific Software") 
+for the Scientific Software products that accompanies this EULA, 
+which includes computer software and may include associated media, 
+printed materials, "online" or electronic documentation, 
+and Internet-based services ("Software").  
+An amendment or addendum to this EULA may accompany the Software.  
+YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA BY INSTALLING, 
+COPYING, OR OTHERWISE USING THE SOFTWARE. IF YOU DO NOT AGREE, 
+DO NOT INSTALL, COPY, OR USE THE SOFTWARE; YOU MAY RETURN IT 
+TO YOUR PLACE OF PURCHASE FOR A FULL REFUND, IF APPLICABLE.
+
+ 1. GRANT OF LICENSE. 
+    Scientific Software grants you the following rights provided that 
+    you comply with all terms and conditions of this EULA:
+
+    1.1	Installation and use. You may install, use, access, 
+        display and run one copy of the Software on a single 
+        computer, such as a workstation, terminal or other 
+        device ("Workstation Computer").
+
+    1.2	Software registration. You must register your application 
+        copy after installation. Registration procedure means 
+        exchanging public/private data required for running 
+        any Scientific Software application on your computer.
+        Please, read User Guide documentation for more 
+        information about registration process.
+
+    1.3 Personal accounts at http://www.scientific-soft.com/.
+        You must specify only valid information during registration
+        and latest account usage. You cannot let access to your
+        personal account to someone else. If you fail one of these 
+        conditions your personal account would be locked.
+
+    1.4 Storage/Network Use. You may also store or install a 
+        copy of the Software on a storage device, such as a 
+        network server, used only to install or run the 
+        Software on your other Workstation Computers over an 
+        internal network; however, you must acquire and 
+        dedicate an additional license for each separate 
+        Workstation Computer on or from which the Software is 
+        installed, used, accessed, displayed or run. A license 
+	for the Software may not be shared or used concurrently 
+        on different Workstation Computers. 
+
+ 2. RESERVATION OF RIGHTS AND OWNERSHIP.  
+    Scientific Software reserves all rights not expressly granted 
+    to you in this EULA.  The Software is protected by copyright and 
+    other intellectual property laws and treaties. Scientific Software 
+    or its suppliers own the title, copyright, and other 
+    intellectual property rights in the Software.  The Software 
+    is licensed, not sold.
+
+ 3. LIMITATIONS ON REVERSE ENGINEERING,
+    DECOMPILATION, AND DISASSEMBLY.  
+    You may not reverse engineer, decompile, or disassemble the
+    Software, except and only to the extent that such activity 
+    is expressly permitted by applicable law notwithstanding
+    this limitation.
+
+ 4. NO RENTAL/COMMERCIAL HOSTING. 
+    You may not rent, lease, lend or provide commercial hosting
+    services with the Software.
+
+ 5. LINKS TO THIRD PARTY SITES.  
+    You may link to third party sites through the use of the
+    Software.  The third party sites are not under the control 
+    of Scientific Software, and Scientific Software is not 
+    responsible for the contents of any third party sites, 
+    any links contained in third party sites, or any changes 
+    or updates to third party sites.  Scientific Software is not 
+    responsible for webcasting or any other form of transmission 
+    received from any third party sites.  Scientific Software 
+    is providing these links to third party sites to you only as 
+    a convenience, and the inclusion of any link does not imply 
+    an endorsement by Scientific Software of the third party site.
+
+ 6. ADDITIONAL SOFTWARE/SERVICES.  
+    This EULA applies to updates, supplements, add-on 
+    components, product support services, or Internet-based 
+    services components, of the Software that you may obtain 
+    from Scientific Software after the date you obtain your 
+    initial copy of the Software, unless you accept updated 
+    terms or another agreement governs.  Scientific Software
+    reserves the right to discontinue any Internet-based services 
+    provided to you or made available to you through the use 
+    of the Software.
+
+ 7. UPGRADES.
+    To use Software identified as an upgrade, you must first 
+    be licensed for the software identified by Scientific Software as 
+    eligible for the upgrade. After upgrading, you may no 
+    longer use the software that formed the basis for your 
+    upgrade eligibility. 
+
+ 8. NOT FOR RESALE SOFTWARE.  
+    Software identified as "Not For Resale" or "NFR," may not 
+    be sold or otherwise transferred for value, or used for any 
+    purpose other than demonstration, test or evaluation.
+
+ 9. ACADEMIC EDITION SOFTWARE.  
+    To use Software identified as "Academic Edition" or "AE," 
+    you must be a "Qualified Educational User."   For 
+    qualification-related questions, please contact the 
+    Scientific Software Sales Information Center.
+
+10. SOFTWARE TRANSFER.  Internal.  
+    You may move the Software to a different Workstation 
+    Computer. After the transfer, you must completely remove 
+    the Software from the former Workstation Computer.
+
+11. TERMINATION.  
+    Without prejudice to any other rights, Scientific Software may 
+    terminate this EULA if you fail to comply with the terms 
+    and conditions of this EULA. In such event, you must 
+    destroy all copies of the Software and all of its 
+    component parts.
+
+12. ENTIRE AGREEMENT; SEVERABILITY.  
+    This EULA (including any addendum or amendment to this EULA 
+    which is included with the Software) is the entire agreement 
+    between you and Scientific Software relating to the Software 
+    and the support services (if any) and they supersede all prior 
+    or contemporaneous oral or written communications, proposals 
+    and representations with respect to the Software or any 
+    other subject matter covered by this EULA.  To the extent 
+    the terms of any Scientific Software policies or programs for
+    support services conflict with the terms of this EULA, the
+    terms of this EULA shall control.  If any provision of this 
+    EULA is held to be void, invalid, unenforceable or illegal, 
+    the other provisions shall continue in full force and effect.

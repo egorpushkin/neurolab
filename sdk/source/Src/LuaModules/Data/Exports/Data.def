@@ -1,0 +1,3 @@
+LIBRARY core.dll
+EXPORTS
+luaopen_data_core
