@@ -7,7 +7,7 @@
 There is special place in my heart for **Neuro Laboratory** project. 
 Ages ago it was built. My views on technology and tooling I use have changed rather drastically.
 And yet it was the first commercial product I designed, built and brought to market
-and some of the ideas behind still sound very appealing to me. 
+and some of the ideas behind it are still very appealing to me. 
 
 There is a lot of hype around machine learning these days.
 It was much quieter back in the day when I worked on my Master Thesis and used ANNs as a foundation of my research. 
@@ -27,7 +27,7 @@ process of defining architecture of a software system and tracking its evolution
 to production-grade solution.  
 
 I do believe that the work on this project - a suite of tens of components with nearly hundred thousand lines of code -
-helped me to understand that and to some extend defined initial vector of my career. 
+helped me to understand that and to some extent defined initial vector of my career. 
 
 **October, 2017**
 
